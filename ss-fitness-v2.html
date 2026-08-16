@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS Fitness | Premier Gym & Transformation Hub North Karachi</title>
+    <meta name="description" content="SS Fitness in Sector 11-B North Karachi. Bodybuilding, Fat Loss, Weight Gain, Personal Training with Senior Trainer Shahzaib Qureshi, Boxfit, PowerFit, Zumba & Yoga.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e74c3c', // Red accent
+                        primaryDark: '#c0392b',
+                        secondary: '#1a1a1a', // Slate dark
+                        darkBg: '#0d0d0d',
+                        cardBg: '#171717',
+                        cardHover: '#222222',
+                        borderDark: '#262626'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0d0d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e74c3c;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c0392b;
+        }
+
+        .glass-nav {
+            background: rgba(13, 13, 13, 0.90);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glow-red {
+            box-shadow: 0 0 25px rgba(231, 76, 60, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-white selection:bg-primary selection:text-white">
+
+    <!-- 1. PREVIEW BANNER -->
+    <div id="preview-banner" class="sticky top-0 z-50 bg-gradient-to-r from-primary via-red-600 to-primary text-white text-xs sm:text-sm font-medium py-2.5 px-4 text-center shadow-lg flex items-center justify-between">
+        <div class="flex-1 text-center flex items-center justify-center gap-2">
+            <span class="inline-block animate-pulse text-base">✨</span>
+            <span>This is a preview created by <strong>Muhammad Siddique</strong> — let me know what you think!</span>
+        </div>
+        <a href="https://wa.me/923442650081?text=Hi%20Muhammad%20Siddique,%20I%20reviewed%20the%20SS%20Fitness%20website%20preview!" target="_blank" class="hidden md:inline-flex items-center gap-1 bg-black/40 hover:bg-black/60 px-3 py-1 rounded-full text-xs transition duration-200 border border-white/20">
+            Contact Designer
+        </a>
+    </div>
+
+    <!-- 2. STICKY NAVBAR -->
+    <header id="navbar" class="fixed top-9 left-0 right-0 z-40 transition-all duration-300 py-4 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primaryDark flex items-center justify-center font-bold text-xl text-white shadow-lg group-hover:scale-105 transition transform">
+                    SS
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-bold font-serif tracking-wider uppercase text-white group-hover:text-primary transition">SS Fitness</span>
+                    <span class="block text-[10px] tracking-widest text-gray-400 uppercase -mt-1">North Karachi Twp</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+                <a href="#about" class="text-gray-300 hover:text-primary transition">About Us</a>
+                <a href="#services" class="text-gray-300 hover:text-primary transition">Programs</a>
+                <a href="#gallery" class="text-gray-300 hover:text-primary transition">Gym Gallery</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-primary transition">Transformations</a>
+                <a href="#faq" class="text-gray-300 hover:text-primary transition">FAQ</a>
+                <a href="#contact" class="text-gray-300 hover:text-primary transition">Contact</a>
+            </nav>
+
+            <!-- Header Action Button -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="tel:+923442650081" class="text-xs text-gray-300 hover:text-white flex items-center gap-2">
+                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    <span>+92 344 2650081</span>
+                </a>
+                <a href="#contact" class="bg-primary hover:bg-primaryDark text-white text-xs uppercase tracking-wider font-semibold py-2.5 px-5 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
+                    Start Free Trial
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2 text-gray-300 hover:text-white focus:outline-none">
+                <svg class="w-7 h-7" id="hamburger-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-cardBg/95 backdrop-blur-xl border-b border-borderDark mt-3 rounded-2xl p-6 shadow-2xl transition-all">
+            <nav class="flex flex-col gap-4 text-base font-medium">
+                <a href="#about" class="mobile-nav-link text-gray-300 hover:text-primary py-1 border-b border-white/5">About Us</a>
+                <a href="#services" class="mobile-nav-link text-gray-300 hover:text-primary py-1 border-b border-white/5">Programs</a>
+                <a href="#gallery" class="mobile-nav-link text-gray-300 hover:text-primary py-1 border-b border-white/5">Gym Gallery</a>
+                <a href="#testimonials" class="mobile-nav-link text-gray-300 hover:text-primary py-1 border-b border-white/5">Transformations</a>
+                <a href="#faq" class="mobile-nav-link text-gray-300 hover:text-primary py-1 border-b border-white/5">FAQ</a>
+                <a href="#contact" class="mobile-nav-link text-gray-300 hover:text-primary py-1 border-b border-white/5">Contact</a>
+                <div class="pt-2 flex flex-col gap-3">
+                    <a href="tel:+923442650081" class="text-sm text-gray-300 flex items-center justify-center gap-2 bg-white/5 py-2.5 rounded-xl">
+                        📞 +92 344 2650081
+                    </a>
+                    <a href="#contact" class="mobile-nav-link text-center bg-primary text-white font-semibold py-3 rounded-xl shadow-lg">
+                        Start Free Trial
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 3. HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80&auto=format&fit=crop" alt="SS Fitness Gym North Karachi" class="w-full h-full object-cover object-center scale-105">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/70"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-black/50"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto text-center space-y-8 pt-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/40 text-primary text-xs sm:text-sm font-semibold tracking-wider uppercase">
+                <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                Sector 11-B North Karachi's #1 Fitness & Body Transformation Center
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold font-serif leading-tight tracking-tight">
+                Build Muscle, Burn Fat, <br class="hidden sm:block"/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-orange-500 to-yellow-500">Transform Your Life</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg md:text-xl font-light leading-relaxed">
+                Join Karachi's powerhouse gym for bodybuilding, extreme weight gain, rapid fat loss, personal training with Founder & Senior Trainer Shahzaib Qureshi, Boxfit, Zumba & Yoga.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-3 text-xs sm:text-sm text-gray-300">
+                <span class="bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10">🏋️ Senior Trainer: Shahzaib Qureshi</span>
+                <span class="bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10">🔥 Customized Diet & Workout Plans</span>
+                <span class="bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10">⚡ Modern Heavy Duty Equipment</span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="#contact" class="w-full sm:w-auto bg-primary hover:bg-primaryDark text-white font-semibold py-4 px-8 rounded-full shadow-2xl transition transform hover:-translate-y-1 text-center glow-red">
+                    Join SS Fitness Today
+                </a>
+                <a href="https://wa.me/923442650081?text=Hi%20SS%20Fitness,%20I'd%20like%20to%20inquire%20about%20gym%20membership%20and%20personal%20training." target="_blank" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-semibold py-4 px-8 rounded-full transition text-center flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5 text-green-500 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.572-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    WhatsApp Gym Desk
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ANIMATED STATS SECTION -->
+    <section class="py-16 bg-cardBg/80 border-y border-borderDark relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center" id="stats-container">
+                <div class="p-6 rounded-2xl bg-darkBg/50 border border-borderDark hover:border-primary/50 transition">
+                    <div class="text-3xl sm:text-5xl font-bold font-serif text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">
+                        <span class="counter" data-target="1200">0</span>+
+                    </div>
+                    <p class="text-xs sm:text-sm text-gray-400 mt-2 uppercase tracking-wider">Members Transformed</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-darkBg/50 border border-borderDark hover:border-primary/50 transition">
+                    <div class="text-3xl sm:text-5xl font-bold font-serif text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">
+                        <span class="counter" data-target="8">0</span>+
+                    </div>
+                    <p class="text-xs sm:text-sm text-gray-400 mt-2 uppercase tracking-wider">Years Experience</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-darkBg/50 border border-borderDark hover:border-primary/50 transition">
+                    <div class="text-3xl sm:text-5xl font-bold font-serif text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">
+                        <span class="counter" data-target="100">0</span>%
+                    </div>
+                    <p class="text-xs sm:text-sm text-gray-400 mt-2 uppercase tracking-wider">Results Guaranteed</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-darkBg/50 border border-borderDark hover:border-primary/50 transition">
+                    <div class="text-3xl sm:text-5xl font-bold font-serif text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">
+                        <span class="counter" data-target="15">0</span>+
+                    </div>
+                    <p class="text-xs sm:text-sm text-gray-400 mt-2 uppercase tracking-wider">Daily Classes & Sessions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ABOUT SECTION (Two-column) -->
+    <section id="about" class="py-24 px-4 sm:px-6 relative">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <!-- Left Column: Image Stack -->
+            <div class="relative reveal">
+                <div class="relative rounded-3xl overflow-hidden border border-borderDark shadow-2xl group">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80&auto=format&fit=crop" alt="Shahzaib Qureshi Senior Trainer SS Fitness" class="w-full h-[480px] object-cover group-hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                </div>
+                
+                <div class="absolute -bottom-6 -right-2 sm:right-6 bg-gradient-to-br from-cardBg to-darkBg p-6 rounded-2xl border border-primary/40 shadow-2xl max-w-xs">
+                    <div class="flex items-center gap-3">
+                        <div class="p-3 bg-primary/20 rounded-xl text-primary font-bold text-xl">
+                            🏆
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-white">Shahzaib Qureshi</p>
+                            <p class="text-xs text-gray-400">Founder & Head Transformation Coach</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Content -->
+            <div class="space-y-6 reveal">
+                <span class="text-primary text-sm font-bold tracking-widest uppercase">About SS Fitness</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-serif leading-tight">
+                    Karachi's Ultimate <span class="text-primary">Body Transformation Gym</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    SS Fitness, located in Sector 11-B, North Karachi, is built on a single mission: guiding everyday individuals to achieve extraordinary physical strength and peak fitness. Founded by senior body transformation trainer <strong>Shahzaib Qureshi</strong>, our gym combines intense motivation with scientific training protocols.
+                </p>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Whether your goal is gaining lean muscle mass, cutting body fat, perfecting powerlifting technique, or boosting daily stamina through Boxfit and group conditioning, SS Fitness provides the energy, equipment, and personal coaching required for success.
+                </p>
+
+                <!-- Checkmark Feature List -->
+                <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                    <div class="flex items-center gap-3 bg-cardBg p-3 rounded-xl border border-borderDark">
+                        <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-xs sm:text-sm font-medium text-gray-200">1-on-1 Personal Training</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-cardBg p-3 rounded-xl border border-borderDark">
+                        <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-xs sm:text-sm font-medium text-gray-200">Customized Diet & Macro Plans</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-cardBg p-3 rounded-xl border border-borderDark">
+                        <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-xs sm:text-sm font-medium text-gray-200">Heavy Duty Free Weights & Racks</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-cardBg p-3 rounded-xl border border-borderDark">
+                        <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-xs sm:text-sm font-medium text-gray-200">Zumba, Yoga & Meditation</span>
+                    </div>
+                </div>
+
+                <div class="pt-4 flex items-center gap-6">
+                    <a href="#services" class="bg-primary hover:bg-primaryDark text-white font-medium py-3 px-6 rounded-full text-sm transition">
+                        Explore Programs
+                    </a>
+                    <a href="#contact" class="text-primary hover:underline text-sm font-semibold flex items-center gap-1">
+                        Contact Trainer &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SERVICES GRID -->
+    <section id="services" class="py-24 bg-cardBg/50 border-t border-borderDark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal">
+                <span class="text-primary text-sm font-bold tracking-widest uppercase">Training Programs</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-serif">Comprehensive Fitness & Bodybuilding Services</h2>
+                <p class="text-gray-400 text-sm sm:text-base">Designed for beginners, fitness enthusiasts, and competitive athletes alike in North Karachi.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="bg-cardBg rounded-2xl overflow-hidden border border-borderDark hover:border-primary/60 transition group duration-300 hover:-translate-y-2 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80&auto=format&fit=crop" alt="Bodybuilding & Muscle Gain" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent"></div>
+                            <span class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Hypertrophy</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold font-serif group-hover:text-primary transition">Bodybuilding & Weight Gain</h3>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                Structured hypertrophy splits, progressive overload guidance, and high-calorie nutrition strategies tailored to pack on solid muscle mass effectively.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-white transition">
+                            Start Bodybuilding Plan <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-cardBg rounded-2xl overflow-hidden border border-borderDark hover:border-primary/60 transition group duration-300 hover:-translate-y-2 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80&auto=format&fit=crop" alt="Personal Training" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent"></div>
+                            <span class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">1-on-1 Coaching</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold font-serif group-hover:text-primary transition">Personal Training with Shahzaib Qureshi</h3>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                Dedicated 1-on-1 coaching by senior trainer Shahzaib Qureshi. Direct supervision, form correction, tailored meal plans, and weekly weigh-ins.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-white transition">
+                            Book Personal Trainer <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-cardBg rounded-2xl overflow-hidden border border-borderDark hover:border-primary/60 transition group duration-300 hover:-translate-y-2 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80&auto=format&fit=crop" alt="Group Workouts & Boxfit" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent"></div>
+                            <span class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">High Energy</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold font-serif group-hover:text-primary transition">Group Workouts & Boxfit</h3>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                High-intensity group cardiovascular training and boxing conditioning drills that melt fat, boost speed, and build explosive functional endurance.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-white transition">
+                            Join Boxfit Class <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Program 4 -->
+                <div class="bg-cardBg rounded-2xl overflow-hidden border border-borderDark hover:border-primary/60 transition group duration-300 hover:-translate-y-2 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80&auto=format&fit=crop" alt="PowerFit & StrengthCore" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent"></div>
+                            <span class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Powerlifting</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold font-serif group-hover:text-primary transition">PowerFit & StrengthCore Training</h3>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                Heavy compound lifts including deadlifts, squats, bench press, and core stabilizing exercises designed to increase maximum force output and joint safety.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-white transition">
+                            Inquire PowerFit <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Program 5 -->
+                <div class="bg-cardBg rounded-2xl overflow-hidden border border-borderDark hover:border-primary/60 transition group duration-300 hover:-translate-y-2 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=800&q=80&auto=format&fit=crop" alt="Fat Loss & Body Transformation" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent"></div>
+                            <span class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Fat Shred</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold font-serif group-hover:text-primary transition">Fat Loss & Body Transformation</h3>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                Rapid weight-loss and body sculpting programs combining circuit metabolic training, targeted cardio, and calorie deficit nutrition plans.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-white transition">
+                            Start Transformation <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Program 6 -->
+                <div class="bg-cardBg rounded-2xl overflow-hidden border border-borderDark hover:border-primary/60 transition group duration-300 hover:-translate-y-2 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80&auto=format&fit=crop" alt="Zumba, Yoga & Meditation" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent"></div>
+                            <span class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Mind & Body</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold font-serif group-hover:text-primary transition">Zumba, Yoga & Meditation</h3>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                Enhance flexibility, improve posture, reduce mental stress, and enjoy fun dance cardio sessions through our weekly guided Yoga & Zumba classes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#contact" class="inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-white transition">
+                            Join Yoga & Zumba <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. IMAGE GALLERY (6-item grid + Lightbox) -->
+    <section id="gallery" class="py-24 px-4 sm:px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16 reveal">
+                <span class="text-primary text-sm font-bold tracking-widest uppercase">Inside SS Fitness</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-serif">Gym Facilities & Workouts</h2>
+                <p class="text-gray-400 text-sm">Click any image to enlarge and view our gym environment in North Karachi.</p>
+            </div>
+
+            <!-- 6 Grid Items -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item group relative h-72 rounded-2xl overflow-hidden cursor-pointer border border-borderDark reveal" data-src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80&auto=format&fit=crop" data-caption="SS Fitness Dumbbell & Free Weight Rack Area">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80&auto=format&fit=crop" alt="Gym Heavy Dumbbells" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-wider">Gym Floor</span>
+                        <h4 class="text-lg font-bold text-white font-serif">Free Weight Dumbbell Rack</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative h-72 rounded-2xl overflow-hidden cursor-pointer border border-borderDark reveal" data-src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=1200&q=80&auto=format&fit=crop" data-caption="Intensity Barbell Training Area">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&q=80&auto=format&fit=crop" alt="Barbell Training" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-wider">Compound Lifts</span>
+                        <h4 class="text-lg font-bold text-white font-serif">Heavy Barbell Power Station</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative h-72 rounded-2xl overflow-hidden cursor-pointer border border-borderDark reveal" data-src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=1200&q=80&auto=format&fit=crop" data-caption="Modern Gym Equipment & Cables">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&q=80&auto=format&fit=crop" alt="Gym Cable Machines" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-wider">Isolation Machines</span>
+                        <h4 class="text-lg font-bold text-white font-serif">Cable & Machine Station</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative h-72 rounded-2xl overflow-hidden cursor-pointer border border-borderDark reveal" data-src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=1200&q=80&auto=format&fit=crop" data-caption="Heavy Weightlifting Squat Rack">
+                    <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=80&auto=format&fit=crop" alt="Squat Rack Station" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-wider">Strength Zone</span>
+                        <h4 class="text-lg font-bold text-white font-serif">Powerlifting & Squat Racks</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative h-72 rounded-2xl overflow-hidden cursor-pointer border border-borderDark reveal" data-src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1200&q=80&auto=format&fit=crop" data-caption="Atmospheric Gym Environment & Cardio Zone">
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&q=80&auto=format&fit=crop" alt="Cardio Zone" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-wider">Cardio Floor</span>
+                        <h4 class="text-lg font-bold text-white font-serif">Treadmills & Endurance Zone</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative h-72 rounded-2xl overflow-hidden cursor-pointer border border-borderDark reveal" data-src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1200&q=80&auto=format&fit=crop" data-caption="Bodybuilding Conditioning & Transformation">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80&auto=format&fit=crop" alt="Bodybuilding Conditioning" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-wider">Transformation</span>
+                        <h4 class="text-lg font-bold text-white font-serif">Bodybuilding Conditioning</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl hidden flex items-center justify-center p-4">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white text-3xl hover:text-primary focus:outline-none z-10">&times;</button>
+        <div class="max-w-4xl w-full max-h-[85vh] flex flex-col items-center justify-center text-center">
+            <img id="lightbox-img" src="" alt="Enlarged Gym View" class="max-h-[75vh] w-auto object-contain rounded-xl shadow-2xl border border-white/10">
+            <p id="lightbox-caption" class="text-gray-300 text-sm mt-4 font-serif"></p>
+        </div>
+    </div>
+
+    <!-- 8. TESTIMONIALS SLIDER -->
+    <section id="testimonials" class="py-24 bg-cardBg/60 border-y border-borderDark relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center space-y-3 mb-12 reveal">
+                <span class="text-primary text-sm font-bold tracking-widest uppercase">Member Success</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-serif">Real Transformations</h2>
+            </div>
+
+            <div class="relative bg-darkBg border border-borderDark rounded-3xl p-8 sm:p-12 shadow-2xl" id="testimonial-container">
+                <div id="testimonial-slides">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide flex flex-col items-center text-center space-y-6">
+                        <div class="flex text-yellow-500 text-xl gap-1">★★★★★</div>
+                        <p class="text-gray-200 text-base sm:text-lg italic leading-relaxed font-serif max-w-2xl">
+                            "Under Shahzaib Qureshi's personal training, I gained 8kg of solid muscular body mass in just 4 months. The customized diet and powerlifting techniques made all the difference!"
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&q=80&auto=format&fit=crop" alt="Client Hamza Abbasi" class="w-12 h-12 rounded-full object-cover border-2 border-primary">
+                            <div class="text-left">
+                                <h4 class="font-bold text-white text-sm">Hamza Abbasi</h4>
+                                <span class="text-xs text-gray-400">Sector 11-B, North Karachi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide hidden flex flex-col items-center text-center space-y-6">
+                        <div class="flex text-yellow-500 text-xl gap-1">★★★★★</div>
+                        <p class="text-gray-200 text-base sm:text-lg italic leading-relaxed font-serif max-w-2xl">
+                            "Joined the fat loss and Boxfit group conditioning program at SS Fitness. Dropped 14kg in 3.5 months while retaining muscle mass. The energetic atmosphere in Sector 11-B is unmatched!"
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80&auto=format&fit=crop" alt="Client Usman Siddiqui" class="w-12 h-12 rounded-full object-cover border-2 border-primary">
+                            <div class="text-left">
+                                <h4 class="font-bold text-white text-sm">Usman Siddiqui</h4>
+                                <span class="text-xs text-gray-400">North Karachi Township</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide hidden flex flex-col items-center text-center space-y-6">
+                        <div class="flex text-yellow-500 text-xl gap-1">★★★★★</div>
+                        <p class="text-gray-200 text-base sm:text-lg italic leading-relaxed font-serif max-w-2xl">
+                            "SS Fitness has top quality machinery, spacious weightlifting benches, and clean facilities. Coach Shahzaib personally monitors form on squats and deadlifts to prevent injuries."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&q=80&auto=format&fit=crop" alt="Client Bilal Farooqui" class="w-12 h-12 rounded-full object-cover border-2 border-primary">
+                            <div class="text-left">
+                                <h4 class="font-bold text-white text-sm">Bilal Farooqui</h4>
+                                <span class="text-xs text-gray-400">Gym Member</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Navigation Dots -->
+                <div class="flex justify-center gap-3 mt-8" id="testimonial-dots">
+                    <button class="dot-btn w-3 h-3 rounded-full bg-primary transition" data-index="0" aria-label="Slide 1"></button>
+                    <button class="dot-btn w-3 h-3 rounded-full bg-gray-600 transition" data-index="1" aria-label="Slide 2"></button>
+                    <button class="dot-btn w-3 h-3 rounded-full bg-gray-600 transition" data-index="2" aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ ACCORDION -->
+    <section id="faq" class="py-24 px-4 sm:px-6 relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center space-y-3 mb-16 reveal">
+                <span class="text-primary text-sm font-bold tracking-widest uppercase">Frequently Asked Questions</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-serif">Got Questions About Joining?</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-cardBg border border-borderDark rounded-2xl overflow-hidden transition reveal">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center font-bold font-serif text-lg text-white hover:text-primary focus:outline-none">
+                        <span>Where is SS Fitness located in Karachi?</span>
+                        <svg class="faq-icon w-5 h-5 text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        We are located conveniently at Sector 11-B, North Karachi Township, Karachi City, Sindh. Easy access with ample street parking.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-cardBg border border-borderDark rounded-2xl overflow-hidden transition reveal">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center font-bold font-serif text-lg text-white hover:text-primary focus:outline-none">
+                        <span>How can I get personal training with Shahzaib Qureshi?</span>
+                        <svg class="faq-icon w-5 h-5 text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        Senior Trainer Shahzaib Qureshi accepts limited personal training slots each month to ensure dedicated focus. You can sign up via our contact form or contact us directly on WhatsApp at +92 344 2650081.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-cardBg border border-borderDark rounded-2xl overflow-hidden transition reveal">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center font-bold font-serif text-lg text-white hover:text-primary focus:outline-none">
+                        <span>Are customized diet plans included with membership?</span>
+                        <svg class="faq-icon w-5 h-5 text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        Yes! All transformation packages and personal training enrollments include personalized high-protein muscle gain or caloric deficit fat loss diet charts based on locally available Pakistani foods.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-cardBg border border-borderDark rounded-2xl overflow-hidden transition reveal">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center font-bold font-serif text-lg text-white hover:text-primary focus:outline-none">
+                        <span>Is SS Fitness beginner-friendly?</span>
+                        <svg class="faq-icon w-5 h-5 text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        Absolutely! Our instructors introduce newcomers to basic gym etiquette, correct weightlifting stance, and machine adjustments during their first week so you feel completely confident.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item bg-cardBg border border-borderDark rounded-2xl overflow-hidden transition reveal">
+                    <button class="faq-btn w-full p-6 text-left flex justify-between items-center font-bold font-serif text-lg text-white hover:text-primary focus:outline-none">
+                        <span>What are the gym timings?</span>
+                        <svg class="faq-icon w-5 h-5 text-primary transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        SS Fitness is open Monday through Saturday from 6:00 AM to 11:30 PM with separate dedicated timings for general fitness, personal training, and group Zumba/Yoga sessions.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. CONTACT SECTION -->
+    <section id="contact" class="py-24 bg-cardBg/40 border-t border-borderDark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+                
+                <!-- Contact Details Cards -->
+                <div class="space-y-8 reveal">
+                    <div>
+                        <span class="text-primary text-sm font-bold tracking-widest uppercase">Get Started</span>
+                        <h2 class="text-3xl sm:text-5xl font-bold font-serif mt-2">Start Your Body Transformation</h2>
+                        <p class="text-gray-400 text-sm mt-3">Visit SS Fitness in North Karachi or send us a message to claim your free trial pass & personal fitness consultation.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Location Card -->
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-cardBg border border-borderDark hover:border-primary/50 transition">
+                            <div class="p-3 bg-primary/20 rounded-xl text-primary text-xl">📍</div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Gym Address</h4>
+                                <p class="text-gray-400 text-xs sm:text-sm">Sector 11-B North Karachi Twp, Karachi City, Sindh, Pakistan</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone & WhatsApp -->
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-cardBg border border-borderDark hover:border-primary/50 transition">
+                            <div class="p-3 bg-primary/20 rounded-xl text-primary text-xl">📞</div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Phone & WhatsApp</h4>
+                                <p class="text-gray-400 text-xs sm:text-sm">+92 344 2650081</p>
+                                <a href="https://wa.me/923442650081" target="_blank" class="inline-block mt-1 text-xs text-green-400 hover:underline">Click to chat on WhatsApp &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-cardBg border border-borderDark hover:border-primary/50 transition">
+                            <div class="p-3 bg-primary/20 rounded-xl text-primary text-xl">✉️</div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Email Address</h4>
+                                <p class="text-gray-400 text-xs sm:text-sm">ssfitness76@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <!-- Instagram -->
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-cardBg border border-borderDark hover:border-primary/50 transition">
+                            <div class="p-3 bg-primary/20 rounded-xl text-primary text-xl">📸</div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Instagram Handle</h4>
+                                <a href="https://instagram.com" target="_blank" class="text-gray-300 hover:text-primary text-xs sm:text-sm font-medium">@ssfitness8</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Form -->
+                <div class="bg-cardBg border border-borderDark p-8 sm:p-10 rounded-3xl shadow-2xl relative reveal">
+                    <h3 class="text-2xl font-bold font-serif mb-2">Claim Free Trial / Inquiry</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm mb-6">Fill out your information and Coach Shahzaib Qureshi will get in touch with you.</p>
+
+                    <!-- Success Alert -->
+                    <div id="form-success" class="hidden mb-6 p-4 rounded-xl bg-green-900/40 border border-green-500 text-green-200 text-xs sm:text-sm">
+                        🎉 Awesome! Your trial request has been sent. We will call/WhatsApp you shortly!
+                    </div>
+
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1">Your Full Name *</label>
+                            <input type="text" id="form-name" required placeholder="e.g. Shahzaib Ahmed" class="w-full bg-darkBg border border-borderDark rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition">
+                            <p id="err-name" class="hidden text-xs text-red-500 mt-1">Please enter your name.</p>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-1">Phone Number / WhatsApp *</label>
+                                <input type="tel" id="form-phone" required placeholder="+92 344 1234567" class="w-full bg-darkBg border border-borderDark rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition">
+                                <p id="err-phone" class="hidden text-xs text-red-500 mt-1">Please enter a valid phone number.</p>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-1">Fitness Goal *</label>
+                                <select id="form-goal" class="w-full bg-darkBg border border-borderDark rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition">
+                                    <option value="Bodybuilding & Muscle Gain">Bodybuilding & Muscle Gain</option>
+                                    <option value="Fat Loss & Shredding">Fat Loss & Shredding</option>
+                                    <option value="Personal Training with Shahzaib">Personal Training (1-on-1)</option>
+                                    <option value="Boxfit & Group Workouts">Boxfit & Group Workouts</option>
+                                    <option value="Powerlifting & Core">Powerlifting & Core Strength</option>
+                                    <option value="Zumba & Yoga">Zumba, Yoga & Meditation</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1">Additional Notes / Message</label>
+                            <textarea id="form-message" rows="3" placeholder="Tell us about your current workout level or fitness goals..." class="w-full bg-darkBg border border-borderDark rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-primary hover:bg-primaryDark text-white font-bold py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 uppercase tracking-wider text-xs glow-red">
+                            Get Your Free Trial Pass
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FOOTER -->
+    <footer class="bg-black border-t border-borderDark py-12 px-4 sm:px-6 text-gray-400 text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <!-- Col 1 -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-xl bg-primary flex items-center justify-center font-bold text-white text-base">SS</div>
+                    <span class="text-xl font-bold font-serif text-white tracking-wider">SS FITNESS GYM</span>
+                </div>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    Sector 11-B North Karachi's premier destination for bodybuilding, weight gain, fat loss, personal training, and group fitness.
+                </p>
+            </div>
+
+            <!-- Col 2 -->
+            <div class="space-y-3">
+                <h4 class="text-white font-bold uppercase tracking-wider text-xs">Quick Links</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#about" class="hover:text-primary transition">About SS Fitness</a></li>
+                    <li><a href="#services" class="hover:text-primary transition">Our Programs</a></li>
+                    <li><a href="#gallery" class="hover:text-primary transition">Gym Gallery</a></li>
+                    <li><a href="#testimonials" class="hover:text-primary transition">Member Reviews</a></li>
+                    <li><a href="#faq" class="hover:text-primary transition">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3 -->
+            <div class="space-y-3">
+                <h4 class="text-white font-bold uppercase tracking-wider text-xs">Services</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#services" class="hover:text-primary transition">Bodybuilding</a></li>
+                    <li><a href="#services" class="hover:text-primary transition">Personal Training</a></li>
+                    <li><a href="#services" class="hover:text-primary transition">Boxfit Workouts</a></li>
+                    <li><a href="#services" class="hover:text-primary transition">PowerFit Conditioning</a></li>
+                    <li><a href="#services" class="hover:text-primary transition">Zumba & Yoga</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4 -->
+            <div class="space-y-3">
+                <h4 class="text-white font-bold uppercase tracking-wider text-xs">Contact Desk</h4>
+                <p class="text-xs">📍 Sector 11-B North Karachi Twp, Karachi</p>
+                <p class="text-xs">📞 Phone: +92 344 2650081</p>
+                <p class="text-xs">✉️ Email: ssfitness76@gmail.com</p>
+                <p class="text-xs text-primary font-semibold">📸 Instagram: @ssfitness8</p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+            <p>© 2026 SS Fitness Gym North Karachi. All rights reserved.</p>
+            <p class="text-gray-400">Upgraded preview created by <span class="text-primary font-semibold">Muhammad Siddique</span></p>
+        </div>
+    </footer>
+
+    <!-- 12. FLOATING WHATSAPP BUTTON (Bottom Right) -->
+    <a href="https://wa.me/923442650081?text=Hi%20SS%20Fitness,%20I'd%20like%20to%20inquire%20about%20gym%20membership." target="_blank" aria-label="WhatsApp SS Fitness" class="fixed bottom-6 right-6 z-50 bg-green-600 hover:bg-green-500 text-white p-4 rounded-full shadow-2xl transition transform hover:scale-110 flex items-center justify-center glow-red group">
+        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.572-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span class="absolute right-full mr-3 bg-black/90 text-white text-xs px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition duration-200 pointer-events-none">Chat on WhatsApp</span>
+    </a>
+
+    <!-- 13. BACK-TO-TOP BUTTON (Bottom Left) -->
+    <button id="back-to-top" aria-label="Back to Top" class="fixed bottom-6 left-6 z-50 bg-cardBg/90 hover:bg-primary border border-white/20 text-white p-3 rounded-full shadow-2xl transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+    </button>
+
+    <!-- VANILLA JAVASCRIPT FEATURES -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar Scroll Glassmorphism Effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('glass-nav');
+                    navbar.classList.remove('py-4');
+                    navbar.classList.add('py-2');
+                } else {
+                    navbar.classList.remove('glass-nav');
+                    navbar.classList.remove('py-2');
+                    navbar.classList.add('py-4');
+                }
+
+                // Back to Top button visibility
+                const backToTop = document.getElementById('back-to-top');
+                if (window.scrollY > 300) {
+                    backToTop.classList.remove('opacity-0', 'pointer-events-none');
+                    backToTop.classList.add('opacity-100', 'pointer-events-auto');
+                } else {
+                    backToTop.classList.add('opacity-0', 'pointer-events-none');
+                    backToTop.classList.remove('opacity-100', 'pointer-events-auto');
+                }
+            });
+
+            // Back to top click handler
+            document.getElementById('back-to-top').addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Scroll Reveal Animations (IntersectionObserver)
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // Animated Counter Stats
+            const counters = document.querySelectorAll('.counter');
+            let counted = false;
+
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !counted) {
+                        counted = true;
+                        counters.forEach(counter => {
+                            const target = +counter.getAttribute('data-target');
+                            const duration = 2000;
+                            const increment = target / (duration / 16);
+
+                            let current = 0;
+                            const updateCounter = () => {
+                                current += increment;
+                                if (current < target) {
+                                    counter.innerText = Math.ceil(current);
+                                    setTimeout(updateCounter, 16);
+                                } else {
+                                    counter.innerText = target;
+                                }
+                            };
+                            updateCounter();
+                        });
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const statsSection = document.getElementById('stats-container');
+            if (statsSection) statsObserver.observe(statsSection);
+
+            // Gallery Lightbox Modal
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const lightboxClose = document.getElementById('lightbox-close');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const src = item.getAttribute('data-src');
+                    const caption = item.getAttribute('data-caption');
+                    lightboxImg.src = src;
+                    lightboxCaption.textContent = caption;
+                    lightbox.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            const closeLightbox = () => {
+                lightbox.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            };
+
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                    closeLightbox();
+                }
+            });
+
+            // Testimonial Auto-Playing Slider
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const dotBtns = document.querySelectorAll('.dot-btn');
+            let currentSlide = 0;
+            let slideInterval;
+
+            const showSlide = (index) => {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.remove('hidden');
+                    } else {
+                        slide.classList.add('hidden');
+                    }
+                });
+
+                dotBtns.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.remove('bg-gray-600');
+                        dot.classList.add('bg-primary', 'scale-125');
+                    } else {
+                        dot.classList.add('bg-gray-600');
+                        dot.classList.remove('bg-primary', 'scale-125');
+                    }
+                });
+                currentSlide = index;
+            };
+
+            const nextSlide = () => {
+                let next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            };
+
+            const startSlideTimer = () => {
+                slideInterval = setInterval(nextSlide, 6000);
+            };
+
+            dotBtns.forEach(dot => {
+                dot.addEventListener('click', (e) => {
+                    clearInterval(slideInterval);
+                    const idx = parseInt(e.target.getAttribute('data-index'));
+                    showSlide(idx);
+                    startSlideTimer();
+                });
+            });
+
+            startSlideTimer();
+
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const btn = item.querySelector('.faq-btn');
+                const content = item.querySelector('.faq-content');
+                const icon = item.querySelector('.faq-icon');
+
+                btn.addEventListener('click', () => {
+                    const isOpen = !content.classList.contains('hidden');
+
+                    faqItems.forEach(otherItem => {
+                        otherItem.querySelector('.faq-content').classList.add('hidden');
+                        otherItem.querySelector('.faq-icon').classList.remove('rotate-180');
+                    });
+
+                    if (!isOpen) {
+                        content.classList.remove('hidden');
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+
+            // Form Live Validation
+            const contactForm = document.getElementById('contact-form');
+            const formName = document.getElementById('form-name');
+            const formPhone = document.getElementById('form-phone');
+            const errName = document.getElementById('err-name');
+            const errPhone = document.getElementById('err-phone');
+            const formSuccess = document.getElementById('form-success');
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let valid = true;
+
+                if (!formName.value.trim()) {
+                    errName.classList.remove('hidden');
+                    valid = false;
+                } else {
+                    errName.classList.add('hidden');
+                }
+
+                if (!formPhone.value.trim() || formPhone.value.trim().length < 8) {
+                    errPhone.classList.remove('hidden');
+                    valid = false;
+                } else {
+                    errPhone.classList.add('hidden');
+                }
+
+                if (valid) {
+                    formSuccess.classList.remove('hidden');
+                    contactForm.reset();
+                    setTimeout(() => {
+                        formSuccess.classList.add('hidden');
+                    }, 8000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
