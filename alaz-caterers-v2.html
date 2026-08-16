@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alaz Caterers — Catering Services in Gulshan-e-Iqbal, Karachi | Weddings & Events</title>
+    <meta name="description" content="Alaz Caterers in Gulshan-e-Iqbal, Karachi. Wedding menus, Mehndi menus, private parties, and corporate event catering. Where thoughtful menus meet professional service.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: '#c0392b', light: '#e74c3c', dark: '#922b21' },
+                        accent: { DEFAULT: '#f39c12', light: '#f5b041', dark: '#d4a017' },
+                        cream: '#fef9f5',
+                        charcoal: '#2c1810',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'Segoe UI', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                        'slide-left': 'slideLeft 0.8s ease-out forwards',
+                        'slide-right': 'slideRight 0.8s ease-out forwards',
+                        'scale-in': 'scaleIn 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+                        slideUp: { '0%': { opacity: 0, transform: 'translateY(40px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
+                        slideLeft: { '0%': { opacity: 0, transform: 'translateX(-40px)' }, '100%': { opacity: 1, transform: 'translateX(0)' } },
+                        slideRight: { '0%': { opacity: 0, transform: 'translateX(40px)' }, '100%': { opacity: 1, transform: 'translateX(0)' } },
+                        scaleIn: { '0%': { opacity: 0, transform: 'scale(0.9)' }, '100%': { opacity: 1, transform: 'scale(1)' } },
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Scroll animations */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.15s; }
+        .reveal-delay-2 { transition-delay: 0.3s; }
+        .reveal-delay-3 { transition-delay: 0.45s; }
+
+        /* Hero overlay */
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(44,24,16,0.85) 0%, rgba(192,57,43,0.7) 50%, rgba(243,156,18,0.5) 100%);
+        }
+
+        /* Card hover */
+        .service-card { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .service-card:hover { transform: translateY(-10px); }
+        .service-card .card-img { transition: transform 0.6s ease; }
+        .service-card:hover .card-img { transform: scale(1.1); }
+
+        /* Gallery lightbox */
+        .lightbox {
+            position: fixed; inset: 0; z-index: 9999;
+            background: rgba(0,0,0,0.92);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+        }
+        .lightbox.open { opacity: 1; pointer-events: all; }
+        .lightbox img { max-width: 90%; max-height: 85vh; border-radius: 12px; box-shadow: 0 25px 50px rgba(0,0,0,0.5); }
+
+        /* Testimonial slider */
+        .testimonial-track { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+
+        /* FAQ accordion */
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
+        .faq-item.open .faq-answer { max-height: 300px; padding-top: 1rem; padding-bottom: 1.5rem; }
+        .faq-item.open .faq-icon { transform: rotate(180deg); }
+        .faq-icon { transition: transform 0.3s ease; }
+
+        /* Floating buttons */
+        .float-btn { transition: all 0.3s ease; }
+        .float-btn:hover { transform: scale(1.1); }
+
+        /* Nav scroll effect */
+        .nav-scrolled { background: rgba(255,255,255,0.97) !important; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .nav-scrolled .nav-link { color: #555 !important; }
+        .nav-scrolled .nav-link:hover { color: #c0392b !important; }
+        .nav-scrolled .logo-text { color: #c0392b !important; }
+
+        /* Counter animation */
+        .counter { font-variant-numeric: tabular-nums; }
+
+        /* Form */
+        .form-input { transition: all 0.3s ease; }
+        .form-input:focus { box-shadow: 0 0 0 3px rgba(192,57,43,0.15); }
+        .form-error { color: #e74c3c; font-size: 0.8rem; margin-top: 4px; display: none; }
+        .form-error.show { display: block; }
+
+        /* Mobile menu */
+        .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .mobile-menu.open { max-height: 400px; }
+
+        /* Image loading */
+        img { background: #f3f4f6; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #c0392b; border-radius: 4px; }
+    </style>
+</head>
+<body class="font-sans bg-white text-charcoal overflow-x-hidden">
+
+    <!-- Preview Banner -->
+    <div class="bg-gradient-to-r from-primary to-accent text-white text-center py-3 px-4 text-sm font-semibold sticky top-0 z-50">
+        ✨ This is a preview created by Muhammad Siddique — let me know what you think!
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-12 left-0 right-0 z-40 transition-all duration-300 bg-transparent py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#home" class="flex flex-col">
+                <span class="logo-text text-xl font-bold text-white transition-colors">Alaz Caterers</span>
+                <span class="text-xs text-white/70 font-normal">Gulshan-e-Iqbal · Karachi</span>
+            </a>
+            <ul class="hidden md:flex gap-8 items-center">
+                <li><a href="#services" class="nav-link text-white/90 text-sm font-medium hover:text-accent transition-colors">Services</a></li>
+                <li><a href="#gallery" class="nav-link text-white/90 text-sm font-medium hover:text-accent transition-colors">Gallery</a></li>
+                <li><a href="#testimonials" class="nav-link text-white/90 text-sm font-medium hover:text-accent transition-colors">Reviews</a></li>
+                <li><a href="#faq" class="nav-link text-white/90 text-sm font-medium hover:text-accent transition-colors">FAQ</a></li>
+                <li><a href="#contact" class="bg-primary hover:bg-primary-light text-white px-6 py-2.5 rounded-lg text-sm font-semibold transition-all hover:shadow-lg">Book Event</a></li>
+            </ul>
+            <button id="mobileBtn" class="md:hidden text-white text-2xl">☰</button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="mobile-menu md:hidden bg-white/95 backdrop-blur-lg">
+            <div class="px-6 py-4 flex flex-col gap-4">
+                <a href="#services" class="text-charcoal hover:text-primary font-medium">Services</a>
+                <a href="#gallery" class="text-charcoal hover:text-primary font-medium">Gallery</a>
+                <a href="#testimonials" class="text-charcoal hover:text-primary font-medium">Reviews</a>
+                <a href="#faq" class="text-charcoal hover:text-primary font-medium">FAQ</a>
+                <a href="#contact" class="bg-primary text-white px-6 py-2.5 rounded-lg text-center font-semibold">Book Event</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <img src="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/a0b2161f0_generated_image.png" alt="Elegant catering display" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 text-center px-6 max-w-4xl">
+            <span class="inline-block text-accent-light text-sm font-bold tracking-widest uppercase mb-6 px-5 py-2 border border-accent rounded-full animate-fade-in">Catering · Gulshan-e-Iqbal, Karachi</span>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold text-white leading-tight mb-6 animate-slide-up">Where Every Plate<br><span class="text-accent-light italic">Becomes a Memory</span></h1>
+            <p class="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto animate-slide-up reveal-delay-1">Karachi-based catering bringing flavour, hospitality, and variety to every occasion. From weddings to corporate events — we make your event effortless.</p>
+            <div class="flex gap-4 justify-center flex-wrap animate-slide-up reveal-delay-2">
+                <a href="#contact" class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg font-semibold transition-all hover:shadow-2xl hover:-translate-y-1">Book Your Event</a>
+                <a href="#services" class="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white border-2 border-white/30 px-8 py-4 rounded-lg font-semibold transition-all hover:-translate-y-1">View Services</a>
+            </div>
+        </div>
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-primary-dark py-12">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center reveal">
+                <div class="counter text-4xl md:text-5xl font-bold text-accent-light" data-target="500">0</div>
+                <div class="text-sm text-white/60 uppercase tracking-wide mt-2">Events Catered</div>
+            </div>
+            <div class="text-center reveal reveal-delay-1">
+                <div class="counter text-4xl md:text-5xl font-bold text-accent-light" data-target="100">0</div>
+                <div class="text-sm text-white/60 uppercase tracking-wide mt-2">Menu Options</div>
+            </div>
+            <div class="text-center reveal reveal-delay-2">
+                <div class="counter text-4xl md:text-5xl font-bold text-accent-light" data-target="10">0</div>
+                <div class="text-sm text-white/60 uppercase tracking-wide mt-2">Years Experience</div>
+            </div>
+            <div class="text-center reveal reveal-delay-3">
+                <div class="counter text-4xl md:text-5xl font-bold text-accent-light" data-target="98">0</div>
+                <div class="text-sm text-white/60 uppercase tracking-wide mt-2">% Satisfaction</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 bg-cream">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <span class="text-accent text-sm font-bold tracking-widest uppercase">What We Cater</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mt-3 mb-4">Our Services</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Tailored culinary experiences for every occasion — backed by reliable planning and polished execution.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Wedding -->
+                <div class="service-card bg-white rounded-2xl overflow-hidden shadow-md reveal">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/a0b2161f0_generated_image.png" alt="Wedding catering" class="card-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-7">
+                        <h3 class="text-xl font-bold mb-3">Wedding Menus</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Tailored menus, tastings, and polished service for ceremonies and receptions. Plated, buffet, or cocktail style.</p>
+                    </div>
+                </div>
+                <!-- Mehndi -->
+                <div class="service-card bg-white rounded-2xl overflow-hidden shadow-md reveal reveal-delay-1">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/fe3db8d35_generated_image.png" alt="Mehndi event" class="card-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-7">
+                        <h3 class="text-xl font-bold mb-3">Mehndi Mayo</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Colourful, festive catering for Mehndi and Mayo events. Custom menus with traditional flavours and modern presentation.</p>
+                    </div>
+                </div>
+                <!-- Private Party -->
+                <div class="service-card bg-white rounded-2xl overflow-hidden shadow-md reveal reveal-delay-2">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/4b8720d14_generated_image.png" alt="Private party" class="card-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-7">
+                        <h3 class="text-xl font-bold mb-3">Private Parties</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Flexible catering for birthdays, anniversaries, and celebrations with crowd-pleasing options and seamless hosting.</p>
+                    </div>
+                </div>
+                <!-- Corporate -->
+                <div class="service-card bg-white rounded-2xl overflow-hidden shadow-md reveal reveal-delay-3">
+                    <div class="overflow-hidden h-56">
+                        <img src="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/e67553f5b_generated_image.png" alt="Corporate event" class="card-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-7">
+                        <h3 class="text-xl font-bold mb-3">Corporate Events</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Reliable catering for meetings, luncheons, and corporate galas with on-time delivery, setup, and professional staff.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <div class="relative">
+                    <img src="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/10d76e976_generated_image.png" alt="Professional caterer plating food" class="w-full aspect-square object-cover rounded-3xl shadow-xl">
+                    <div class="absolute -bottom-6 -right-6 bg-accent text-white px-8 py-4 rounded-2xl shadow-lg">
+                        <div class="text-3xl font-bold">25+</div>
+                        <div class="text-sm">Years of Service</div>
+                    </div>
+                </div>
+            </div>
+            <div class="reveal reveal-delay-1">
+                <span class="text-accent text-sm font-bold tracking-widest uppercase">About Us</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mt-3 mb-6">Thoughtful Menus,<br>Professional Service</h2>
+                <p class="text-gray-500 text-lg mb-4">Alaz Caterers is a Karachi-based catering service created to bring flavour, hospitality, and variety to every occasion. We believe food is about hygienic preparation, thoughtful menus, and event-focused service.</p>
+                <p class="text-gray-500 text-lg mb-8">From menu planning to flawless service — leave the catering to us so you can focus on your guests. We personally attend each event to ensure every detail meets the highest standards.</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">✓</span><span class="text-sm font-medium">Custom Menu Planning</span></div>
+                    <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">✓</span><span class="text-sm font-medium">Professional Staff</span></div>
+                    <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">✓</span><span class="text-sm font-medium">Hygienic Preparation</span></div>
+                    <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">✓</span><span class="text-sm font-medium">On-Time Delivery</span></div>
+                    <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">✓</span><span class="text-sm font-medium">Buffet & Plated Style</span></div>
+                    <div class="flex items-center gap-3"><span class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">✓</span><span class="text-sm font-medium">Setup & Cleanup</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 px-6 bg-cream">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <span class="text-accent text-sm font-bold tracking-widest uppercase">Portfolio</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mt-3 mb-4">Event Gallery</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">A glimpse of our catering at events across Karachi.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="gallery-item reveal cursor-pointer overflow-hidden rounded-2xl group relative" data-img="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/a0b2161f0_generated_image.png">
+                    <img src="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/a0b2161f0_generated_image.png" alt="Wedding catering" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold text-sm">Wedding Reception</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-1 cursor-pointer overflow-hidden rounded-2xl group relative" data-img="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/fe3db8d35_generated_image.png">
+                    <img src="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/fe3db8d35_generated_image.png" alt="Mehndi event" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold text-sm">Mehndi Mayo</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-2 cursor-pointer overflow-hidden rounded-2xl group relative" data-img="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/4b8720d14_generated_image.png">
+                    <img src="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/4b8720d14_generated_image.png" alt="Birthday party" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold text-sm">Birthday Party</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal cursor-pointer overflow-hidden rounded-2xl group relative" data-img="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/e67553f5b_generated_image.png">
+                    <img src="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/e67553f5b_generated_image.png" alt="Corporate event" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold text-sm">Corporate Lunch</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-1 cursor-pointer overflow-hidden rounded-2xl group relative" data-img="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/10d76e976_generated_image.png">
+                    <img src="https://media.base44.com/images/public/6a7b142eb51036a590c3b629/10d76e976_generated_image.png" alt="Chef plating" class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-semibold text-sm">Behind the Scenes</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal reveal-delay-2 cursor-pointer overflow-hidden rounded-2xl group relative bg-gradient-to-br from-primary to-accent">
+                    <div class="w-full h-64 flex flex-col items-center justify-center text-white p-6 text-center">
+                        <div class="text-5xl mb-3">🍽️</div>
+                        <h4 class="font-bold text-lg">Your Event Next?</h4>
+                        <p class="text-sm text-white/80 mt-2">Book Alaz Caterers today</p>
+                        <a href="#contact" class="mt-4 bg-white text-primary px-5 py-2 rounded-lg text-sm font-semibold hover:bg-cream transition-colors">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <span class="text-accent text-sm font-bold tracking-widest uppercase">Reviews</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mt-3 mb-4">What Clients Say</h2>
+            </div>
+            <div class="relative overflow-hidden">
+                <div id="testimonialTrack" class="testimonial-track flex">
+                    <!-- Testimonial 1 -->
+                    <div class="min-w-full px-4">
+                        <div class="bg-cream rounded-3xl p-10 text-center">
+                            <div class="text-6xl text-accent mb-4">"</div>
+                            <p class="text-lg text-gray-600 italic mb-6 leading-relaxed">At Alaz Caterers, our commitment is to deliver top-quality food and exceptional service at every event. I personally attend each one to ensure every detail meets the highest standards.</p>
+                            <div class="flex items-center justify-center gap-1 mb-4">
+                                <span class="text-accent text-lg">★</span><span class="text-accent text-lg">★</span><span class="text-accent text-lg">★</span><span class="text-accent text-lg">★</span><span class="text-accent text-lg">★</span>
+                            </div>
+                            <div class="font-bold">Daniyal Aslam</div>
+                            <div class="text-sm text-gray-400">Owner, Alaz Caterers</div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="min-w-full px-4">
+                        <div class="bg-cream rounded-3xl p-10 text-center">
+                            <div class="text-6xl text-accent mb-4">"</div>
+                            <p class="text-lg text-gray-600 italic mb-6 leading-relaxed">The food was absolutely delicious and the service was impeccable. Alaz Caterers made our wedding reception unforgettable. Every guest was raving about the menu!</p>
+                            <div class="flex items-center justify-center gap-1 mb-4">
+                                <span class="text-accent text-lg">★</span><span class="text-accent text-lg">★</span><span class="text-accent text-lg">★</span><span class="text-accent text-lg">★</span><span class="text-accent text-lg">★</span>
+                            </div>
+                            <div class="font-bold">Sana Khan</div>
+                            <div class="text-sm text-gray-400">Wedding Client, Gulshan-e-Iqbal</div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="min-w-full px-4">
+                        <div class="bg-cream rounded-3xl p-10 text-center">
+                            <div class="text-6xl text-accent mb-4">"</div>
+                            <p class="text-lg text-gray-600 italic mb-6 leading-relaxed">We hired Alaz Caterers for our corporate luncheon and they exceeded expectations. Professional staff, on-time setup, and excellent food. Highly recommend for corporate events.</p>
+                            <div class="flex items-center justify-center gap-1 mb-4">
+                                <span class="text-accent text-lg">★</span><span class="text-accent text-lg">★</span><span class="text-accent text-lg">★</span><span class="text-accent text-lg">★</span><span class="text-accent text-lg">★</span>
+                            </div>
+                            <div class="font-bold">Ahmed Raza</div>
+                            <div class="text-sm text-gray-400">Corporate Client, Karachi</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dots -->
+                <div id="testimonialDots" class="flex justify-center gap-2 mt-8">
+                    <button class="dot w-3 h-3 rounded-full bg-primary transition-all" data-slide="0"></button>
+                    <button class="dot w-3 h-3 rounded-full bg-gray-300 transition-all" data-slide="1"></button>
+                    <button class="dot w-3 h-3 rounded-full bg-gray-300 transition-all" data-slide="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 px-6 bg-cream">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <span class="text-accent text-sm font-bold tracking-widest uppercase">Questions</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mt-3 mb-4">Frequently Asked</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="faq-item bg-white rounded-2xl shadow-sm overflow-hidden reveal">
+                    <button class="w-full px-8 py-5 flex justify-between items-center text-left">
+                        <span class="font-bold text-lg">What types of events do you cater for?</span>
+                        <span class="faq-icon text-primary text-xl">▼</span>
+                    </button>
+                    <div class="faq-answer px-8">
+                        <p class="text-gray-500">We cater for weddings, Mehndi events, birthdays, anniversaries, corporate meetings, luncheons, galas, and private parties. No event is too big or small — we tailor our service to your needs.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl shadow-sm overflow-hidden reveal reveal-delay-1">
+                    <button class="w-full px-8 py-5 flex justify-between items-center text-left">
+                        <span class="font-bold text-lg">Can we customize our menu?</span>
+                        <span class="faq-icon text-primary text-xl">▼</span>
+                    </button>
+                    <div class="faq-answer px-8">
+                        <p class="text-gray-500">Absolutely! We offer custom menu planning tailored to your event type, preferences, and budget. We also provide menu tastings for wedding events.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl shadow-sm overflow-hidden reveal reveal-delay-2">
+                    <button class="w-full px-8 py-5 flex justify-between items-center text-left">
+                        <span class="font-bold text-lg">Do you provide staff and setup?</span>
+                        <span class="faq-icon text-primary text-xl">▼</span>
+                    </button>
+                    <div class="faq-answer px-8">
+                        <p class="text-gray-500">Yes, our service includes professional staff, on-time delivery, setup, and cleanup. We handle everything so you can focus on enjoying your event.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl shadow-sm overflow-hidden reveal reveal-delay-3">
+                    <button class="w-full px-8 py-5 flex justify-between items-center text-left">
+                        <span class="font-bold text-lg">How far in advance should we book?</span>
+                        <span class="faq-icon text-primary text-xl">▼</span>
+                    </button>
+                    <div class="faq-answer px-8">
+                        <p class="text-gray-500">For weddings and large events, we recommend booking 2-4 weeks in advance. For smaller parties, 1 week notice is usually sufficient. Contact us for availability.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl shadow-sm overflow-hidden reveal">
+                    <button class="w-full px-8 py-5 flex justify-between items-center text-left">
+                        <span class="font-bold text-lg">What areas do you serve?</span>
+                        <span class="faq-icon text-primary text-xl">▼</span>
+                    </button>
+                    <div class="faq-answer px-8">
+                        <p class="text-gray-500">We're based in Gulshan-e-Iqbal, Karachi, and cater to events across the city. Contact us to confirm availability for your location.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <span class="text-accent text-sm font-bold tracking-widest uppercase">Get In Touch</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mt-3 mb-4">Book Your Event</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">Contact Alaz Caterers for catering inquiries, menu planning, and event bookings.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="reveal">
+                    <h3 class="text-2xl font-bold mb-6">Contact Us</h3>
+                    <p class="text-gray-500 text-lg mb-8">Reach out to discuss your event catering needs. We'll help you plan the perfect menu.</p>
+                    <div class="space-y-5">
+                        <a href="tel:03152062398" class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-xl bg-cream border border-accent/30 flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-white transition-all">📞</div>
+                            <div>
+                                <div class="text-xs text-gray-400 uppercase tracking-wide">Phone</div>
+                                <div class="font-semibold group-hover:text-primary transition-colors">0315-2062398</div>
+                            </div>
+                        </a>
+                        <a href="mailto:alazcaterers@gmail.com" class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-xl bg-cream border border-accent/30 flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-white transition-all">✉️</div>
+                            <div>
+                                <div class="text-xs text-gray-400 uppercase tracking-wide">Email</div>
+                                <div class="font-semibold group-hover:text-primary transition-colors">alazcaterers@gmail.com</div>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-cream border border-accent/30 flex items-center justify-center text-xl">📍</div>
+                            <div>
+                                <div class="text-xs text-gray-400 uppercase tracking-wide">Address</div>
+                                <div class="font-semibold">Ambreen Apartments, Block 2, Gulshan-e-Iqbal, Karachi</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-cream border border-accent/30 flex items-center justify-center text-xl">🕐</div>
+                            <div>
+                                <div class="text-xs text-gray-400 uppercase tracking-wide">Hours</div>
+                                <div class="font-semibold">Available 24 Hours · Sat & Sun</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Form -->
+                <div class="reveal reveal-delay-1">
+                    <form id="contactForm" class="bg-cream rounded-3xl p-8 shadow-sm space-y-5">
+                        <div>
+                            <label class="block text-sm text-gray-500 font-semibold mb-2 uppercase tracking-wide">Your Name</label>
+                            <input type="text" name="name" class="form-input w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-primary" placeholder="Enter your name" required>
+                            <div class="form-error">Please enter your name</div>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-500 font-semibold mb-2 uppercase tracking-wide">Phone Number</label>
+                            <input type="tel" name="phone" class="form-input w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-primary" placeholder="03XX XXXXXXX" required>
+                            <div class="form-error">Please enter your phone number</div>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-500 font-semibold mb-2 uppercase tracking-wide">Event Type</label>
+                            <select name="eventType" class="form-input w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-primary" required>
+                                <option value="">Select event type</option>
+                                <option>Wedding</option>
+                                <option>Mehndi / Mayo</option>
+                                <option>Birthday / Private Party</option>
+                                <option>Corporate Event</option>
+                                <option>Other</option>
+                            </select>
+                            <div class="form-error">Please select an event type</div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm text-gray-500 font-semibold mb-2 uppercase tracking-wide">Event Date</label>
+                                <input type="date" name="date" class="form-input w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-primary">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-gray-500 font-semibold mb-2 uppercase tracking-wide">Guests</label>
+                                <input type="number" name="guests" class="form-input w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-primary" placeholder="100">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-500 font-semibold mb-2 uppercase tracking-wide">Message</label>
+                            <textarea name="message" class="form-input w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-primary resize-none" rows="4" placeholder="Tell us about your event..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-bold text-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">Request Catering Quote</button>
+                        <div id="formSuccess" class="hidden bg-green-50 text-green-700 p-4 rounded-xl text-center font-medium">✓ Thank you! We'll get back to you soon.</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="text-2xl font-bold mb-3 text-accent-light">Alaz Caterers</div>
+            <p class="text-white/70 mb-2">Catering Services in Gulshan-e-Iqbal, Karachi</p>
+            <p class="text-white/50 text-sm">© 2026 Alaz Caterers. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923152062398" target="_blank" class="float-btn fixed bottom-6 right-6 z-40 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-xl hover:bg-green-600">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.247 3.481 5.236 3.48 8.407-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.661zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="float-btn fixed bottom-6 left-6 z-40 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-xl opacity-0 pointer-events-none transition-opacity">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+    </button>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-4xl" onclick="closeLightbox()">×</button>
+        <img id="lightboxImg" src="" alt="Gallery image">
+    </div>
+
+    <script>
+        // ===== Navbar Scroll Effect =====
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // ===== Mobile Menu =====
+        const mobileBtn = document.getElementById('mobileBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+
+        // ===== Scroll Reveal Animations =====
+        const reveals = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => revealObserver.observe(el));
+
+        // ===== Animated Counters =====
+        const counters = document.querySelectorAll('.counter');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.dataset.target);
+                    let current = 0;
+                    const increment = target / 50;
+                    const update = () => {
+                        current += increment;
+                        if (current < target) {
+                            el.textContent = Math.ceil(current) + (target >= 100 ? '+' : '');
+                            requestAnimationFrame(update);
+                        } else {
+                            el.textContent = target + (target >= 100 ? '+' : '');
+                        }
+                    };
+                    update();
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(c => counterObserver.observe(c));
+
+        // ===== Gallery Lightbox =====
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        galleryItems.forEach(item => {
+            if (item.dataset.img) {
+                item.addEventListener('click', () => {
+                    lightboxImg.src = item.dataset.img;
+                    lightbox.classList.add('open');
+                });
+            }
+        });
+        function closeLightbox() { lightbox.classList.remove('open'); }
+
+        // ===== Testimonial Slider =====
+        const track = document.getElementById('testimonialTrack');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+        const totalSlides = 3;
+
+        function goToSlide(n) {
+            currentSlide = n;
+            track.style.transform = `translateX(-${n * 100}%)`;
+            dots.forEach((d, i) => {
+                d.classList.toggle('bg-primary', i === n);
+                d.classList.toggle('bg-gray-300', i !== n);
+            });
+        }
+        dots.forEach(dot => dot.addEventListener('click', () => goToSlide(parseInt(dot.dataset.slide))));
+        // Auto-advance
+        setInterval(() => goToSlide((currentSlide + 1) % totalSlides), 6000);
+
+        // ===== FAQ Accordion =====
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('button').addEventListener('click', () => {
+                faqItems.forEach(i => { if (i !== item) i.classList.remove('open'); });
+                item.classList.toggle('open');
+            });
+        });
+
+        // ===== Back to Top =====
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.style.opacity = '1';
+                backToTop.style.pointerEvents = 'all';
+            } else {
+                backToTop.style.opacity = '0';
+                backToTop.style.pointerEvents = 'none';
+            }
+        });
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // ===== Form Validation =====
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let valid = true;
+            ['name', 'phone', 'eventType'].forEach(field => {
+                const input = form.querySelector(`[name="${field}"]`);
+                const error = input.parentElement.querySelector('.form-error');
+                if (!input.value.trim()) {
+                    error.classList.add('show');
+                    valid = false;
+                } else {
+                    error.classList.remove('show');
+                }
+            });
+            if (valid) {
+                document.getElementById('formSuccess').classList.remove('hidden');
+                form.reset();
+                setTimeout(() => document.getElementById('formSuccess').classList.add('hidden'), 4000);
+            }
+        });
+
+        // ===== Smooth Scroll =====
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', (e) => {
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    mobileMenu.classList.remove('open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
