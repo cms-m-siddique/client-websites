@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashee's Beauty Parlor | Premier Salon & Bridal Studio Karachi</title>
+    <meta name="description" content="Kashee's Beauty Parlor on Tariq Road, Karachi - Pakistan's famous salon for Bridal Makeup, Party Makeup, Hair Cuts, Coloring, Hair Extensions, Guinot Facials, Acrylic Nails, and Massages.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#c9a227',
+                            light: '#e6c86e',
+                            dark: '#9a7a18',
+                            50: '#fcf8eb',
+                        },
+                        secondary: {
+                            DEFAULT: '#f5e6d3',
+                            light: '#faf2e8',
+                            dark: '#e0cbb2',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.98) !important;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+            padding-top: 0.75rem !important;
+            padding-bottom: 0.75rem !important;
+        }
+        .nav-scrolled .nav-text {
+            color: #1f2937 !important;
+        }
+        .nav-scrolled .nav-logo {
+            color: #1f2937 !important;
+        }
+        @keyframes pulse-subtle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .animate-pulse-subtle {
+            animation: pulse-subtle 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-sans bg-amber-50/20 text-gray-800 antialiased selection:bg-primary selection:text-white">
+
+    <!-- 1. PREVIEW BANNER -->
+    <div class="bg-gradient-to-r from-amber-900 via-yellow-700 to-amber-900 text-amber-100 text-xs sm:text-sm font-medium py-2 px-4 text-center sticky top-0 z-50 shadow-md border-b border-primary/30 flex items-center justify-center gap-2">
+        <span class="inline-block animate-spin text-amber-300">✨</span>
+        <span>This is a preview created by <strong>Muhammad Siddique</strong> — let me know what you think!</span>
+    </div>
+
+    <!-- 2. STICKY NAVBAR -->
+    <header id="navbar" class="fixed top-[37px] left-0 right-0 z-40 transition-all duration-300 py-5 px-4 lg:px-8">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary-dark via-primary to-primary-light flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg group-hover:rotate-6 transition-transform">
+                    K
+                </div>
+                <div>
+                    <span class="nav-logo font-serif font-bold text-xl lg:text-2xl text-white tracking-wide transition-colors">Kashee's</span>
+                    <span class="block text-[10px] uppercase tracking-widest text-primary-light font-semibold">Beauty Parlor</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#home" class="nav-text text-white/90 hover:text-primary transition-colors py-1">Home</a>
+                <a href="#services" class="nav-text text-white/90 hover:text-primary transition-colors py-1">Services</a>
+                <a href="#about" class="nav-text text-white/90 hover:text-primary transition-colors py-1">About Us</a>
+                <a href="#gallery" class="nav-text text-white/90 hover:text-primary transition-colors py-1">Gallery</a>
+                <a href="#testimonials" class="nav-text text-white/90 hover:text-primary transition-colors py-1">Reviews</a>
+                <a href="#faq" class="nav-text text-white/90 hover:text-primary transition-colors py-1">FAQ</a>
+                <a href="#contact" class="nav-text text-white/90 hover:text-primary transition-colors py-1">Contact</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#contact" class="bg-gradient-to-r from-primary to-primary-dark text-white hover:from-primary-dark hover:to-primary text-xs uppercase tracking-wider font-semibold px-5 py-2.5 rounded-full shadow-lg hover:shadow-primary/30 transition-all transform hover:-translate-y-0.5">
+                    Book Appointment
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white nav-text focus:outline-none p-2" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-primary/20 mt-3 rounded-2xl p-6 shadow-2xl space-y-4">
+            <a href="#home" class="mobile-link block text-gray-800 font-medium hover:text-primary transition-colors">Home</a>
+            <a href="#services" class="mobile-link block text-gray-800 font-medium hover:text-primary transition-colors">Services</a>
+            <a href="#about" class="mobile-link block text-gray-800 font-medium hover:text-primary transition-colors">About Us</a>
+            <a href="#gallery" class="mobile-link block text-gray-800 font-medium hover:text-primary transition-colors">Gallery</a>
+            <a href="#testimonials" class="mobile-link block text-gray-800 font-medium hover:text-primary transition-colors">Reviews</a>
+            <a href="#faq" class="mobile-link block text-gray-800 font-medium hover:text-primary transition-colors">FAQ</a>
+            <a href="#contact" class="mobile-link block text-gray-800 font-medium hover:text-primary transition-colors">Contact</a>
+            <a href="#contact" class="mobile-link block text-center bg-primary text-white font-semibold py-3 rounded-xl shadow-md">Book Appointment</a>
+        </div>
+    </header>
+
+    <!-- 3. HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&q=80&auto=format&fit=crop');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/60"></div>
+        
+        <div class="relative max-w-5xl mx-auto text-center text-white space-y-8 z-10 pt-10">
+            <div class="inline-flex items-center gap-2 bg-primary/20 border border-primary/40 backdrop-blur-md px-4 py-1.5 rounded-full text-primary-light text-xs sm:text-sm uppercase tracking-widest font-medium animate-pulse-subtle">
+                <i class="fa-solid fa-crown text-primary"></i> Karachi's Premier Beauty Sanctuary
+            </div>
+            
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tight text-amber-50">
+                Unveil Your Extraordinary <br class="hidden sm:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-light via-primary to-amber-200">Beauty & Glamour</span>
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg md:text-xl font-light leading-relaxed">
+                One of Pakistan's most famous salons offering complete salon facilities under one roof with well-experienced ladies staff.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="#services" class="w-full sm:w-auto bg-gradient-to-r from-primary via-yellow-600 to-primary-dark text-white font-semibold px-8 py-4 rounded-full shadow-xl shadow-primary/20 hover:scale-105 transition-all text-center">
+                    Explore Our Services <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                </a>
+                <a href="#contact" class="w-full sm:w-auto border-2 border-primary-light/60 hover:border-primary text-white hover:bg-primary/20 font-medium px-8 py-4 rounded-full transition-all text-center backdrop-blur-sm">
+                    Book Consultation
+                </a>
+            </div>
+
+            <!-- Trust Badge Floating -->
+            <div class="pt-8 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-gray-300">
+                <div class="flex items-center gap-2 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
+                    <div class="flex text-amber-400">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="font-semibold text-white">4.9/5</span> (15,000+ Reviews)
+                </div>
+                <div class="flex items-center gap-2 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
+                    <i class="fa-solid fa-location-dot text-primary"></i> Tariq Road, Karachi
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ANIMATED STATS SECTION -->
+    <section class="py-12 bg-gradient-to-r from-amber-950 via-neutral-900 to-amber-950 text-white border-y border-primary/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center" id="stats-container">
+                <div class="p-4 reveal">
+                    <div class="font-serif text-3xl sm:text-5xl font-bold text-primary mb-2 flex items-center justify-center">
+                        <span class="counter" data-target="25">0</span><span class="text-primary-light">+</span>
+                    </div>
+                    <p class="text-gray-300 text-xs sm:text-sm font-medium uppercase tracking-wider">Years of Excellence</p>
+                </div>
+                <div class="p-4 reveal">
+                    <div class="font-serif text-3xl sm:text-5xl font-bold text-primary mb-2 flex items-center justify-center">
+                        <span class="counter" data-target="50000">0</span><span class="text-primary-light">+</span>
+                    </div>
+                    <p class="text-gray-300 text-xs sm:text-sm font-medium uppercase tracking-wider">Happy Brides</p>
+                </div>
+                <div class="p-4 reveal">
+                    <div class="font-serif text-3xl sm:text-5xl font-bold text-primary mb-2 flex items-center justify-center">
+                        <span class="counter" data-target="100">0</span><span class="text-primary-light">+</span>
+                    </div>
+                    <p class="text-gray-300 text-xs sm:text-sm font-medium uppercase tracking-wider">Expert Ladies Staff</p>
+                </div>
+                <div class="p-4 reveal">
+                    <div class="font-serif text-3xl sm:text-5xl font-bold text-primary mb-2 flex items-center justify-center">
+                        <span class="counter" data-target="15">0</span><span class="text-primary-light">+</span>
+                    </div>
+                    <p class="text-gray-300 text-xs sm:text-sm font-medium uppercase tracking-wider">Beauty Awards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SERVICES GRID -->
+    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+            <span class="text-primary font-semibold text-xs sm:text-sm uppercase tracking-widest">Complete Beauty Suite</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-gray-900 mt-2 mb-4">Our Premium Salon Services</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary-light via-primary to-primary-dark mx-auto rounded-full mb-6"></div>
+            <p class="text-gray-600 text-base">
+                All high-end beauty and aesthetic treatments performed under one roof using Guinot facials, acrylic & gel nail art, hair extensions, and expert styling.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-amber-100/80 group hover:shadow-2xl hover:border-primary/40 transition-all duration-300 flex flex-col reveal">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&q=80&auto=format&fit=crop" alt="Bridal & Valima Make-up" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <span class="absolute top-4 right-4 bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider shadow">Signature</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Bridal & Valima Make-up</h3>
+                        <p class="text-gray-600 text-sm mt-2 leading-relaxed">
+                            Bespoke bridal transformations tailored to your outfit and personal vision. High-definition long-lasting makeup with signature Kashee glow.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs text-amber-800 font-medium bg-secondary px-2.5 py-1 rounded">Includes Hair & Dupatta</span>
+                        <a href="#contact" class="text-primary font-semibold text-sm hover:underline flex items-center gap-1">Book Now <i class="fa-solid fa-angle-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-amber-100/80 group hover:shadow-2xl hover:border-primary/40 transition-all duration-300 flex flex-col reveal">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&q=80&auto=format&fit=crop" alt="Engagement & Party Make-up" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Engagement & Party Make-up</h3>
+                        <p class="text-gray-600 text-sm mt-2 leading-relaxed">
+                            Glamorous airbrush and traditional makeup for engagements, nikah, and festive parties. Accentuate your best features with effortless elegance.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs text-amber-800 font-medium bg-secondary px-2.5 py-1 rounded">Glam & HD Makeup</span>
+                        <a href="#contact" class="text-primary font-semibold text-sm hover:underline flex items-center gap-1">Book Now <i class="fa-solid fa-angle-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-amber-100/80 group hover:shadow-2xl hover:border-primary/40 transition-all duration-300 flex flex-col reveal">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=800&q=80&auto=format&fit=crop" alt="Hair Cuts, Coloring & Styling" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Hair Cuts, Coloring & Styling</h3>
+                        <p class="text-gray-600 text-sm mt-2 leading-relaxed">
+                            Precision hair styling, trendy cuts, balayage, highlights, keratin treatments, and protein conditioning for healthy, radiant locks.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs text-amber-800 font-medium bg-secondary px-2.5 py-1 rounded">Custom Haircare</span>
+                        <a href="#contact" class="text-primary font-semibold text-sm hover:underline flex items-center gap-1">Book Now <i class="fa-solid fa-angle-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-amber-100/80 group hover:shadow-2xl hover:border-primary/40 transition-all duration-300 flex flex-col reveal">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80&auto=format&fit=crop" alt="Permanent & Temporary Hair Extensions" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Permanent & Temporary Hair Extensions</h3>
+                        <p class="text-gray-600 text-sm mt-2 leading-relaxed">
+                            Seamless 100% human hair extensions designed for extra volume, length, and dramatic bridal hairstyles without causing damage.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs text-amber-800 font-medium bg-secondary px-2.5 py-1 rounded">Volume & Length</span>
+                        <a href="#contact" class="text-primary font-semibold text-sm hover:underline flex items-center gap-1">Book Now <i class="fa-solid fa-angle-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-amber-100/80 group hover:shadow-2xl hover:border-primary/40 transition-all duration-300 flex flex-col reveal">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80&auto=format&fit=crop" alt="Guinot Facials" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Guinot Facials & Skincare</h3>
+                        <p class="text-gray-600 text-sm mt-2 leading-relaxed">
+                            Deep cleansing Guinot Paris facials, anti-aging therapies, whitening treatments, and deep skin hydration for an effortless glow.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs text-amber-800 font-medium bg-secondary px-2.5 py-1 rounded">Guinot Skincare</span>
+                        <a href="#contact" class="text-primary font-semibold text-sm hover:underline flex items-center gap-1">Book Now <i class="fa-solid fa-angle-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-amber-100/80 group hover:shadow-2xl hover:border-primary/40 transition-all duration-300 flex flex-col reveal">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&q=80&auto=format&fit=crop" alt="Acrylic & Gel Nail Art" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Acrylic & Gel Nail Art</h3>
+                        <p class="text-gray-600 text-sm mt-2 leading-relaxed">
+                            3D nail art, acrylic extensions, chrome finishes, and long-lasting gel manicures customized to complement your dress.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs text-amber-800 font-medium bg-secondary px-2.5 py-1 rounded">Custom Nail Bar</span>
+                        <a href="#contact" class="text-primary font-semibold text-sm hover:underline flex items-center gap-1">Book Now <i class="fa-solid fa-angle-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 7 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-amber-100/80 group hover:shadow-2xl hover:border-primary/40 transition-all duration-300 flex flex-col reveal">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800&q=80&auto=format&fit=crop" alt="Manicures & Pedicures" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Manicures & Pedicures</h3>
+                        <p class="text-gray-600 text-sm mt-2 leading-relaxed">
+                            Relaxing spa manicures and paraffin pedicures designed to exfoliate, nourish, and leave hands and feet soft and beautifully groomed.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs text-amber-800 font-medium bg-secondary px-2.5 py-1 rounded">Spa Care</span>
+                        <a href="#contact" class="text-primary font-semibold text-sm hover:underline flex items-center gap-1">Book Now <i class="fa-solid fa-angle-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 8 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-amber-100/80 group hover:shadow-2xl hover:border-primary/40 transition-all duration-300 flex flex-col reveal">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1583001809873-a128495da465?w=800&q=80&auto=format&fit=crop" alt="Eye Lashes Extension" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Eye Lashes Extension</h3>
+                        <p class="text-gray-600 text-sm mt-2 leading-relaxed">
+                            Voluminous mink eyelash extensions and lash lifting for mesmerizing, defined eyes that require zero mascara.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs text-amber-800 font-medium bg-secondary px-2.5 py-1 rounded">Lash Artistry</span>
+                        <a href="#contact" class="text-primary font-semibold text-sm hover:underline flex items-center gap-1">Book Now <i class="fa-solid fa-angle-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 9 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-amber-100/80 group hover:shadow-2xl hover:border-primary/40 transition-all duration-300 flex flex-col reveal">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800&q=80&auto=format&fit=crop" alt="Massages & Scrubs" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">Massages, Scrubs & Waxing</h3>
+                        <p class="text-gray-600 text-sm mt-2 leading-relaxed">
+                            Full body aromatherapy massages, whitening body scrubs, and hygienic waxing services for total body rejuvenation.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs text-amber-800 font-medium bg-secondary px-2.5 py-1 rounded">Rejuvenation</span>
+                        <a href="#contact" class="text-primary font-semibold text-sm hover:underline flex items-center gap-1">Book Now <i class="fa-solid fa-angle-right text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ABOUT SECTION -->
+    <section id="about" class="py-20 bg-gradient-to-b from-secondary/40 to-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left Column: Image Stack -->
+                <div class="relative reveal">
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80&auto=format&fit=crop" alt="Kashee's Parlor Interior" class="w-full h-[450px] object-cover">
+                    </div>
+                    <div class="absolute -bottom-8 -right-4 sm:-right-8 z-20 bg-white p-6 rounded-2xl shadow-xl border border-primary/20 max-w-xs">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary text-2xl font-bold">
+                                🌟
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-gray-900">Iconic Reputation</h4>
+                                <p class="text-xs text-gray-500">One of the famous salons in Pakistan with complete facilities.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+                </div>
+
+                <!-- Right Column: Text Content -->
+                <div class="space-y-6 reveal">
+                    <span class="text-primary font-semibold text-xs sm:text-sm uppercase tracking-widest">About Kashee's Beauty Parlor</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                        Pakistan's Renowned Beauty Sanctuary Under One Roof
+                    </h2>
+                    <p class="text-gray-600 text-base leading-relaxed">
+                        One of the famous salons in Pakistan offering complete salon facilities. All beauty services under one roof with well-experienced ladies staff.
+                    </p>
+                    <p class="text-gray-600 text-base leading-relaxed">
+                        Located at <strong>Plot # 178/A Block-2, Najeeb Corner, Tariq Road, Karachi</strong>, Kashee's Beauty Parlor provides an exquisite experience where artistry and luxury combine to give you the perfect look for every occasion.
+                    </p>
+
+                    <!-- Feature Checkmarks List -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center text-xs shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-800">100% Well-Experienced Ladies Staff</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center text-xs shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-800">All Beauty Services Under One Roof</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center text-xs shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-800">Guinot Facials & Premium Brands</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center text-xs shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-800">Hygienic & Sanitized Environment</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="#contact" class="inline-flex items-center gap-3 bg-gray-900 text-white hover:bg-primary font-semibold px-8 py-3.5 rounded-full shadow-lg transition-all">
+                            <span>Visit Our Salon</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. IMAGE GALLERY WITH LIGHTBOX -->
+    <section id="gallery" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+            <span class="text-primary font-semibold text-xs sm:text-sm uppercase tracking-widest">Our Work Showcase</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-gray-900 mt-2 mb-4">Glamour & Style Portfolio</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary-light via-primary to-primary-dark mx-auto rounded-full mb-6"></div>
+            <p class="text-gray-600 text-base">Click on any image to view our bridal and beauty transformations in full resolution.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Item 1 -->
+            <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 reveal gallery-item" data-src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=1200&q=80&auto=format&fit=crop" data-title="Bridal & Valima Make-up">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&q=80&auto=format&fit=crop" alt="Bridal Make-up" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-xs text-primary-light uppercase tracking-wider font-semibold">Bridal Studio</span>
+                        <h3 class="font-serif text-xl font-bold mt-1">Bridal & Valima Make-up</h3>
+                        <p class="text-xs text-gray-300 mt-1">Signature HD glow and defined eyes</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 reveal gallery-item" data-src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80&auto=format&fit=crop" data-title="Engagement & Party Make-up">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80&auto=format&fit=crop" alt="Engagement Make-up" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-xs text-primary-light uppercase tracking-wider font-semibold">Party Makeup</span>
+                        <h3 class="font-serif text-xl font-bold mt-1">Engagement & Party Make-up</h3>
+                        <p class="text-xs text-gray-300 mt-1">Luminous finish with subtle highlights</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 reveal gallery-item" data-src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&q=80&auto=format&fit=crop" data-title="Hair Cuts, Coloring & Extensions">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80&auto=format&fit=crop" alt="Hair Cuts & Extensions" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-xs text-primary-light uppercase tracking-wider font-semibold">Hair Extensions</span>
+                        <h3 class="font-serif text-xl font-bold mt-1">Hair Cuts, Coloring & Extensions</h3>
+                        <p class="text-xs text-gray-300 mt-1">Voluminous hair extension styling</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 reveal gallery-item" data-src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80&auto=format&fit=crop" data-title="Guinot Facials">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80&auto=format&fit=crop" alt="Guinot Facials" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-xs text-primary-light uppercase tracking-wider font-semibold">Skincare</span>
+                        <h3 class="font-serif text-xl font-bold mt-1">Guinot Facials</h3>
+                        <p class="text-xs text-gray-300 mt-1">Deep skin cleansing & revitalization</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 reveal gallery-item" data-src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200&q=80&auto=format&fit=crop" data-title="Acrylic & Gel Nail Art">
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&q=80&auto=format&fit=crop" alt="Acrylic & Gel Nail Art" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-xs text-primary-light uppercase tracking-wider font-semibold">Nail Art</span>
+                        <h3 class="font-serif text-xl font-bold mt-1">Acrylic & Gel Nail Art</h3>
+                        <p class="text-xs text-gray-300 mt-1">Custom embellished gel nails</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 reveal gallery-item" data-src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1200&q=80&auto=format&fit=crop" data-title="Massages & Body Scrubs">
+                <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800&q=80&auto=format&fit=crop" alt="Massages & Scrubs" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div class="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-xs text-primary-light uppercase tracking-wider font-semibold">Spa</span>
+                        <h3 class="font-serif text-xl font-bold mt-1">Massages & Scrubs</h3>
+                        <p class="text-xs text-gray-300 mt-1">Soothing body scrub and massage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 transition-opacity duration-300">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white text-3xl hover:text-primary transition-colors focus:outline-none" aria-label="Close Lightbox">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl max-h-[90vh] text-center space-y-3">
+            <img id="lightbox-img" src="" alt="Gallery View" class="max-w-full max-h-[80vh] rounded-xl shadow-2xl mx-auto object-contain">
+            <h3 id="lightbox-caption" class="font-serif text-xl font-bold text-amber-200"></h3>
+        </div>
+    </div>
+
+    <!-- 8. TESTIMONIALS CAROUSEL -->
+    <section id="testimonials" class="py-20 bg-gradient-to-br from-neutral-900 via-amber-950 to-neutral-900 text-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 reveal">
+                <span class="text-primary-light font-semibold text-xs sm:text-sm uppercase tracking-widest">Client Testimonials</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-2">What Our Clients Say</h2>
+            </div>
+
+            <!-- Carousel Slider Wrapper -->
+            <div class="relative min-h-[280px]" id="testimonial-slider">
+                
+                <!-- Slide 1 -->
+                <div class="testimonial-slide opacity-100 transition-opacity duration-700 space-y-6 text-center">
+                    <div class="flex justify-center text-amber-400 text-xl gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <blockquote class="font-serif text-lg sm:text-2xl text-amber-50 italic max-w-3xl mx-auto leading-relaxed">
+                        "Kashee's made my wedding day pure perfection! From the signature bridal makeup to the intricate hair styling, everyone at the hall was stunned. The staff was super attentive."
+                    </blockquote>
+                    <div>
+                        <h4 class="font-semibold text-lg text-primary-light">Ayesha Khan</h4>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Bridal Makeup Client • Karachi</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="testimonial-slide opacity-0 absolute inset-0 transition-opacity duration-700 space-y-6 text-center pointer-events-none">
+                    <div class="flex justify-center text-amber-400 text-xl gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <blockquote class="font-serif text-lg sm:text-2xl text-amber-50 italic max-w-3xl mx-auto leading-relaxed">
+                        "The Guinot facial treatment gave my skin an unbelievable glow before my Valima function. Kashee's salon on Tariq Road is truly unmatched in quality and service."
+                    </blockquote>
+                    <div>
+                        <h4 class="font-semibold text-lg text-primary-light">Sana Tariq</h4>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Valima Client • Karachi</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="testimonial-slide opacity-0 absolute inset-0 transition-opacity duration-700 space-y-6 text-center pointer-events-none">
+                    <div class="flex justify-center text-amber-400 text-xl gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <blockquote class="font-serif text-lg sm:text-2xl text-amber-50 italic max-w-3xl mx-auto leading-relaxed">
+                        "I got my hair extensions and engagement party makeup done here. The acrylic nail art was flawless and stayed intact for weeks. Highly recommended!"
+                    </blockquote>
+                    <div>
+                        <h4 class="font-semibold text-lg text-primary-light">Fatima Zahra</h4>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Engagement Client • Karachi</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Dots Nav -->
+            <div class="flex justify-center gap-3 mt-8">
+                <button class="dot-btn w-3 h-3 rounded-full bg-primary transition-all duration-300" data-slide="0" aria-label="Slide 1"></button>
+                <button class="dot-btn w-3 h-3 rounded-full bg-white/30 hover:bg-white/60 transition-all duration-300" data-slide="1" aria-label="Slide 2"></button>
+                <button class="dot-btn w-3 h-3 rounded-full bg-white/30 hover:bg-white/60 transition-all duration-300" data-slide="2" aria-label="Slide 3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ ACCORDION -->
+    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="text-center mb-12 reveal">
+            <span class="text-primary font-semibold text-xs sm:text-sm uppercase tracking-widest">Help & Info</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 mt-2">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-4" id="faq-accordion">
+            <!-- FAQ 1 -->
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden reveal">
+                <button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between font-serif font-semibold text-gray-900 hover:text-primary transition-colors focus:outline-none">
+                    <span>How far in advance should I book my Bridal Makeup appointment?</span>
+                    <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">
+                    We recommend booking your bridal appointments 1 to 3 months in advance to secure your preferred date and time slot, especially during peak wedding seasons in Karachi.
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden reveal">
+                <button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between font-serif font-semibold text-gray-900 hover:text-primary transition-colors focus:outline-none">
+                    <span>What skincare products do you use for facials?</span>
+                    <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">
+                    We exclusively use authentic Guinot Paris skincare products alongside dermatologically tested formulations suited specifically for Asian skin types.
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden reveal">
+                <button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between font-serif font-semibold text-gray-900 hover:text-primary transition-colors focus:outline-none">
+                    <span>Where is Kashee's Beauty Parlor located?</span>
+                    <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">
+                    Our salon is located at Plot # 178/A Block-2, Najeeb Corner, Tariq Road, Karachi.
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden reveal">
+                <button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between font-serif font-semibold text-gray-900 hover:text-primary transition-colors focus:outline-none">
+                    <span>Do you offer full service packages?</span>
+                    <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">
+                    Yes! All beauty services are available under one roof including Bridal Makeup, Engagement Makeup, Guinot Facials, Hair Extensions, Manicures/Pedicures, Waxing, and Massages.
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden reveal">
+                <button class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between font-serif font-semibold text-gray-900 hover:text-primary transition-colors focus:outline-none">
+                    <span>Is all the staff female at Kashee's Beauty Parlor?</span>
+                    <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content hidden px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">
+                    Yes, absolutely. All services are performed by well-experienced ladies staff to ensure complete comfort and privacy for all our female clients.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-secondary/30 border-t border-primary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Info Column -->
+                <div class="space-y-8 reveal">
+                    <div>
+                        <span class="text-primary font-semibold text-xs sm:text-sm uppercase tracking-widest">Get In Touch</span>
+                        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-gray-900 mt-2">Visit Or Book An Appointment</h2>
+                        <p class="text-gray-600 mt-4 leading-relaxed">
+                            Have a question or want to reserve your date? Contact our reception team or fill out the form to secure your appointment.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white shadow-sm border border-amber-100">
+                            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Salon Location</h4>
+                                <p class="text-gray-600 text-sm mt-1">Plot # 178/A Block-2, Najeeb Corner, Tariq Road, Karachi</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white shadow-sm border border-amber-100">
+                            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Phone Contact</h4>
+                                <p class="text-gray-600 text-sm mt-1">(021) 34553381</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white shadow-sm border border-amber-100">
+                            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Email Address</h4>
+                                <p class="text-gray-600 text-sm mt-1">kasheesbeautytips@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white shadow-sm border border-amber-100">
+                            <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Salon Hours</h4>
+                                <p class="text-gray-600 text-sm mt-1">Monday – Sunday: 11:00 AM – 8:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="bg-white p-8 rounded-3xl shadow-xl border border-primary/20 reveal">
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">Book Your Appointment</h3>
+                    <p class="text-sm text-gray-500 mb-6">Fill in your details below and our coordinator will confirm your time slot.</p>
+
+                    <form id="booking-form" class="space-y-4" novalidate>
+                        <div id="form-message" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1" for="name">Full Name *</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm" placeholder="Your Name">
+                            <span class="error-msg text-xs text-red-500 hidden mt-1">Please enter your full name.</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1" for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm" placeholder="(021) 34553381">
+                                <span class="error-msg text-xs text-red-500 hidden mt-1">Please enter a valid phone number.</span>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1" for="email">Email Address *</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm" placeholder="name@example.com">
+                                <span class="error-msg text-xs text-red-500 hidden mt-1">Please enter a valid email address.</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1" for="service">Select Service *</label>
+                                <select id="service" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm bg-white">
+                                    <option value="">Select Service</option>
+                                    <option value="Bridal Makeup">Professional Bridal & Valima Make-up</option>
+                                    <option value="Party Makeup">Engagement & Party Make-up</option>
+                                    <option value="Hair Cut">Hair Cuts/Coloring & Styling</option>
+                                    <option value="Extensions">Permanent & Temporary Hair Extensions</option>
+                                    <option value="Mani Pedi">Manicures & Pedicures</option>
+                                    <option value="Waxing">Waxing</option>
+                                    <option value="Guinot Facial">Guinot Facials</option>
+                                    <option value="Nail Art">Acrylic & Gel Nail Art</option>
+                                    <option value="Eye Lashes">Eye Lashes Extension</option>
+                                    <option value="Massages">Massages & Scrubs</option>
+                                </select>
+                                <span class="error-msg text-xs text-red-500 hidden mt-1">Please select a service.</span>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1" for="date">Preferred Date *</label>
+                                <input type="date" id="date" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm">
+                                <span class="error-msg text-xs text-red-500 hidden mt-1">Please select a date.</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1" for="notes">Special Requirements / Notes</label>
+                            <textarea id="notes" rows="3" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm" placeholder="Mention any specific requests..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-primary via-yellow-600 to-primary-dark text-white font-semibold py-4 rounded-xl shadow-lg hover:shadow-primary/30 hover:scale-[1.01] transition-all">
+                            Confirm Booking Request
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FOOTER -->
+    <footer class="bg-gray-950 text-gray-400 py-12 border-t border-primary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-white font-serif font-bold">K</div>
+                        <span class="font-serif font-bold text-xl text-white">Kashee's</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        One of the famous salons in Pakistan offering complete salon facilities under one roof with well-experienced ladies staff.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-semibold text-white mb-4 text-sm">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Services Grid</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-colors">About Salon</a></li>
+                        <li><a href="#gallery" class="hover:text-primary transition-colors">Photo Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-semibold text-white mb-4 text-sm">Services Offered</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#services" class="hover:text-primary transition-colors">Bridal & Party Makeup</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Guinot Facials & Skincare</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Hair Cuts, Coloring & Extensions</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Acrylic Nails, Massages & Waxing</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-semibold text-white mb-4 text-sm">Connect With Us</h4>
+                    <div class="flex gap-3 text-lg mb-4">
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-primary hover:text-white flex items-center justify-center transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-primary hover:text-white flex items-center justify-center transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram text-xs"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-primary hover:text-white flex items-center justify-center transition-colors" aria-label="YouTube"><i class="fa-brands fa-youtube text-xs"></i></a>
+                    </div>
+                    <p class="text-xs text-gray-500">Tariq Road, Karachi, Pakistan</p>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">
+                <p>&copy; 2026 Kashee's Beauty Parlor. All rights reserved. Built with elegance & precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 12. FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/922134553381?text=Hello%20Kashee%27s%20Beauty%20Parlor,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20service." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-500 text-white rounded-full flex items-center justify-center text-2xl shadow-2xl hover:bg-emerald-600 hover:scale-110 transition-all duration-300 border-2 border-white" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- 13. BACK-TO-TOP BUTTON -->
+    <button id="back-to-top" class="fixed bottom-6 left-6 z-50 w-12 h-12 bg-gray-900/80 text-white rounded-full hidden items-center justify-center shadow-xl hover:bg-primary hover:scale-110 transition-all duration-300 border border-white/20" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // 1. Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // 2. Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 3. Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // 4. Animated Stats Counter
+        const counterElements = document.querySelectorAll('.counter');
+        let animated = false;
+
+        const statsSection = document.getElementById('stats-container');
+        if (statsSection) {
+            const statsObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && !animated) {
+                    animated = true;
+                    counterElements.forEach(counter => {
+                        const target = +counter.getAttribute('data-target');
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
+                        let current = 0;
+
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                counter.innerText = Math.ceil(current).toLocaleString();
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.innerText = target.toLocaleString();
+                            }
+                        };
+                        updateCounter();
+                    });
+                }
+            }, { threshold: 0.3 });
+            statsObserver.observe(statsSection);
+        }
+
+        // 5. Gallery Lightbox Modal
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const src = item.getAttribute('data-src');
+                const title = item.getAttribute('data-title');
+                lightboxImg.src = src;
+                lightboxCaption.innerText = title;
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+            });
+        });
+
+        const closeLightbox = () => {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                closeLightbox();
+            }
+        });
+
+        // 6. Testimonial Auto-Advance Slider
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.dot-btn');
+        let currentSlide = 0;
+        let slideInterval;
+
+        const showSlide = (index) => {
+            slides.forEach((slide, idx) => {
+                if (idx === index) {
+                    slide.classList.remove('opacity-0', 'pointer-events-none');
+                    slide.classList.add('opacity-100');
+                } else {
+                    slide.classList.add('opacity-0', 'pointer-events-none');
+                    slide.classList.remove('opacity-100');
+                }
+            });
+            dots.forEach((dot, idx) => {
+                if (idx === index) {
+                    dot.classList.remove('bg-white/30');
+                    dot.classList.add('bg-primary');
+                } else {
+                    dot.classList.add('bg-white/30');
+                    dot.classList.remove('bg-primary');
+                }
+            });
+            currentSlide = index;
+        };
+
+        const startSlider = () => {
+            slideInterval = setInterval(() => {
+                let next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            }, 6000);
+        };
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                const slideIdx = parseInt(dot.getAttribute('data-slide'));
+                showSlide(slideIdx);
+                startSlider();
+            });
+        });
+
+        startSlider();
+
+        // 7. FAQ Accordion
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                const isOpen = !content.classList.contains('hidden');
+
+                // Close all others
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-toggle i').forEach(i => i.classList.remove('rotate-180'));
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    icon.classList.add('rotate-180');
+                }
+            });
+        });
+
+        // 8. Form Validation
+        const bookingForm = document.getElementById('booking-form');
+        const formMessage = document.getElementById('form-message');
+
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            const inputs = bookingForm.querySelectorAll('input[required], select[required]');
+            inputs.forEach(input => {
+                const error = input.nextElementSibling;
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.classList.add('border-red-500');
+                    if (error && error.classList.contains('error-msg')) error.classList.remove('hidden');
+                } else {
+                    input.classList.remove('border-red-500');
+                    if (error && error.classList.contains('error-msg')) error.classList.add('hidden');
+                }
+            });
+
+            // Email check
+            const emailInput = document.getElementById('email');
+            if (emailInput.value && !/\S+@\S+\.\S+/.test(emailInput.value)) {
+                isValid = false;
+                emailInput.classList.add('border-red-500');
+            }
+
+            if (isValid) {
+                formMessage.className = "p-4 rounded-xl text-sm font-medium bg-emerald-100 text-emerald-800 border border-emerald-300 block";
+                formMessage.innerHTML = "✨ <strong>Thank you!</strong> Your appointment request has been received. Our Kashee's coordinator will call you shortly to confirm.";
+                bookingForm.reset();
+            } else {
+                formMessage.className = "p-4 rounded-xl text-sm font-medium bg-red-100 text-red-800 border border-red-300 block";
+                formMessage.innerText = "Please fill in all required fields accurately before submitting.";
+            }
+        });
+
+        // 9. Back-To-Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('hidden');
+                backToTopBtn.classList.add('flex');
+            } else {
+                backToTopBtn.classList.add('hidden');
+                backToTopBtn.classList.remove('flex');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
