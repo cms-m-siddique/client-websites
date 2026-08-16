@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Salon | Men's Salon & Grooming in DHA Phase 6 Karachi</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1a1a1a',
+                            gold: '#c9a227',
+                            'gold-hover': '#b08c1e',
+                            'gold-light': '#fdfaf2',
+                            'gold-border': '#e2cb76',
+                            card: '#242424',
+                            surface: '#2e2e2e'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #f3f4f6;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f5d77f 0%, #c9a227 50%, #9e7b13 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #d8b233 0%, #c9a227 50%, #a38117 100%);
+        }
+        .gold-glow {
+            box-shadow: 0 0 25px rgba(201, 162, 39, 0.25);
+        }
+        .gold-glow-lg {
+            box-shadow: 0 0 40px rgba(201, 162, 39, 0.35);
+        }
+    </style>
+</head>
+<body class="bg-[#121212] text-gray-200 antialiased selection:bg-[#c9a227] selection:text-black">
+
+    <!-- 1. PREVIEW BANNER -->
+    <div class="bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-600 text-black text-center text-xs sm:text-sm font-semibold py-2.5 px-4 sticky top-0 z-50 shadow-md flex items-center justify-center gap-2">
+        <span>✨ This is a preview created by <strong>Muhammad Siddique</strong> — let me know what you think!</span>
+    </div>
+
+    <!-- 2. STICKY NAVBAR -->
+    <header id="navbar" class="fixed top-[36px] left-0 right-0 z-40 transition-all duration-300 py-4 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto flex items-center justify-between bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl px-5 py-3 shadow-xl transition-all duration-300" id="navContainer">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl gold-gradient-bg flex items-center justify-center text-black font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                    <i class="fa-solid font-bold fa-scissors"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold font-heading tracking-wide text-white block leading-none">ELITE <span class="gold-gradient-text">SALON</span></span>
+                    <span class="text-[10px] uppercase tracking-widest text-amber-400/80 font-medium">Men's Grooming</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="hover:text-[#c9a227] transition-colors text-white/90">Home</a>
+                <a href="#services" class="hover:text-[#c9a227] transition-colors text-white/90">Services</a>
+                <a href="#about" class="hover:text-[#c9a227] transition-colors text-white/90">About Us</a>
+                <a href="#gallery" class="hover:text-[#c9a227] transition-colors text-white/90">Gallery</a>
+                <a href="#testimonials" class="hover:text-[#c9a227] transition-colors text-white/90">Reviews</a>
+                <a href="#faq" class="hover:text-[#c9a227] transition-colors text-white/90">FAQ</a>
+                <a href="#contact" class="hover:text-[#c9a227] transition-colors text-white/90">Contact</a>
+            </nav>
+
+            <!-- Book CTA Button -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="tel:03055311702" class="text-xs text-amber-400 hover:text-amber-300 flex items-center gap-1.5 font-medium">
+                    <i class="fa-solid fa-phone"></i> 0305 5311702
+                </a>
+                <a href="#contact" class="gold-gradient-bg text-black font-semibold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl hover:brightness-110 transition-all shadow-md gold-glow">
+                    Book Appointment
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-white hover:text-[#c9a227] p-2 focus:outline-none" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu Drawer -->
+        <div id="mobileMenu" class="hidden md:hidden max-w-7xl mx-auto mt-2 bg-[#1a1a1a]/95 backdrop-blur-xl border border-amber-500/20 rounded-2xl p-6 shadow-2xl space-y-4">
+            <a href="#home" class="mobile-nav-link block text-gray-200 hover:text-[#c9a227] py-2 border-b border-white/5 font-medium">Home</a>
+            <a href="#services" class="mobile-nav-link block text-gray-200 hover:text-[#c9a227] py-2 border-b border-white/5 font-medium">Services</a>
+            <a href="#about" class="mobile-nav-link block text-gray-200 hover:text-[#c9a227] py-2 border-b border-white/5 font-medium">About Us</a>
+            <a href="#gallery" class="mobile-nav-link block text-gray-200 hover:text-[#c9a227] py-2 border-b border-white/5 font-medium">Gallery</a>
+            <a href="#testimonials" class="mobile-nav-link block text-gray-200 hover:text-[#c9a227] py-2 border-b border-white/5 font-medium">Reviews</a>
+            <a href="#faq" class="mobile-nav-link block text-gray-200 hover:text-[#c9a227] py-2 border-b border-white/5 font-medium">FAQ</a>
+            <a href="#contact" class="mobile-nav-link block text-gray-200 hover:text-[#c9a227] py-2 font-medium">Contact</a>
+            
+            <div class="pt-2 flex flex-col gap-3">
+                <a href="#contact" class="mobile-nav-link text-center gold-gradient-bg text-black font-semibold py-3 rounded-xl uppercase tracking-wider text-sm shadow-md">
+                    Book Appointment Now
+                </a>
+                <a href="tel:03055311702" class="text-center text-amber-400 py-2 text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i> Call 0305 5311702
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 overflow-hidden">
+        <!-- Hero Background Image with Mask Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600&q=80&auto=format&fit=crop" 
+                 alt="Elite Salon Barbershop Interior" 
+                 class="w-full h-full object-cover object-center scale-105 filter brightness-75">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/80 to-black/60"></div>
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto text-center px-4 reveal">
+            <!-- Tag Badges -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 border border-amber-500/30 backdrop-blur-md mb-6">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                <span class="text-xs uppercase tracking-widest text-amber-300 font-semibold">DHA Phase 6 • Karachi</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold font-heading text-white leading-tight mb-6">
+                Grooming Excellence For The <span class="gold-gradient-text italic">Modern Gentleman</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                Experience bespoke precision haircuts, hot towel shaves, and luxury male facial treatments in a sophisticated, masculine atmosphere.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-16">
+                <a href="#contact" class="w-full sm:w-auto gold-gradient-bg text-black font-bold text-sm uppercase tracking-widest px-8 py-4 rounded-xl hover:brightness-110 transition-all shadow-xl gold-glow flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-calendar-check"></i> Book Your Experience
+                </a>
+                <a href="#services" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/20 font-medium text-sm uppercase tracking-widest px-8 py-4 rounded-xl backdrop-blur-md transition-all flex items-center justify-center gap-2">
+                    Explore Services <i class="fa-solid fa-arrow-down text-xs text-amber-400"></i>
+                </a>
+            </div>
+
+            <!-- Trust Highlights Badges -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-white/10 pt-8">
+                <div class="flex items-center justify-center gap-3 text-left">
+                    <div class="text-amber-400 text-2xl"><i class="fa-solid fa-star"></i></div>
+                    <div>
+                        <div class="text-white font-bold text-sm">4.9 / 5 Rating</div>
+                        <div class="text-xs text-gray-400">Over 500+ Reviews</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-3 text-left">
+                    <div class="text-amber-400 text-2xl"><i class="fa-solid fa-user-shield"></i></div>
+                    <div>
+                        <div class="text-white font-bold text-sm">Master Barbers</div>
+                        <div class="text-xs text-gray-400">Certified Experts</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-3 text-left">
+                    <div class="text-amber-400 text-2xl"><i class="fa-solid fa-pump-soap"></i></div>
+                    <div>
+                        <div class="text-white font-bold text-sm">Premium Products</div>
+                        <div class="text-xs text-gray-400">100% Organic Oils</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center gap-3 text-left">
+                    <div class="text-amber-400 text-2xl"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <div class="text-white font-bold text-sm">Bokhari Comm</div>
+                        <div class="text-xs text-gray-400">DHA Phase 6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ANIMATED STATS SECTION -->
+    <section class="py-12 bg-[#181818] border-y border-white/5 relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center" id="statsContainer">
+                
+                <div class="stat-item p-6 rounded-2xl bg-[#222222] border border-white/5 shadow-lg reveal">
+                    <div class="text-4xl sm:text-5xl font-extrabold gold-gradient-text font-heading mb-2">
+                        <span class="counter" data-target="12" data-suffix="+">0</span>
+                    </div>
+                    <div class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Years of Excellence</div>
+                </div>
+
+                <div class="stat-item p-6 rounded-2xl bg-[#222222] border border-white/5 shadow-lg reveal">
+                    <div class="text-4xl sm:text-5xl font-extrabold gold-gradient-text font-heading mb-2">
+                        <span class="counter" data-target="15000" data-suffix="+">0</span>
+                    </div>
+                    <div class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Satisfied Clients</div>
+                </div>
+
+                <div class="stat-item p-6 rounded-2xl bg-[#222222] border border-white/5 shadow-lg reveal">
+                    <div class="text-4xl sm:text-5xl font-extrabold gold-gradient-text font-heading mb-2">
+                        <span class="counter" data-target="8" data-suffix="">0</span>
+                    </div>
+                    <div class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Master Barbers</div>
+                </div>
+
+                <div class="stat-item p-6 rounded-2xl bg-[#222222] border border-white/5 shadow-lg reveal">
+                    <div class="text-4xl sm:text-5xl font-extrabold gold-gradient-text font-heading mb-2">
+                        <span class="counter" data-target="99" data-suffix="%">0</span>
+                    </div>
+                    <div class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Customer Retention</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SERVICES GRID SECTION -->
+    <section id="services" class="py-24 px-4 bg-[#121212] relative">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Section Title -->
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-xs uppercase tracking-widest text-[#c9a227] font-bold block mb-2">Bespoke Services</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white">Our Signature Treatments</h2>
+                <div class="w-20 h-1 gold-gradient-bg mx-auto my-4 rounded-full"></div>
+                <p class="text-gray-400 text-sm sm:text-base">Meticulously designed grooming solutions crafted for gentlemen who value sharp perfection.</p>
+            </div>
+
+            <!-- Services Cards Grid (8 Services) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Service 1 -->
+                <div class="group bg-[#1e1e1e] border border-white/10 rounded-2xl overflow-hidden shadow-xl hover:border-amber-500/50 transition-all duration-300 flex flex-col reveal">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&q=80&auto=format&fit=crop" 
+                             alt="Men's Haircuts" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] via-transparent to-transparent"></div>
+                        <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 border border-amber-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            PKR 1,500
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-1">30-45 Mins</div>
+                            <h3 class="text-xl font-bold font-heading text-white mb-2 group-hover:text-amber-400 transition-colors">Men's Haircuts</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">Precision skin fades, scissor cuts, textured crops, and signature styling tailored to your facial structure.</p>
+                        </div>
+                        <a href="#contact" onclick="selectService('Men\'s Haircut')" class="inline-flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-white group-hover:text-amber-400 pt-3 border-t border-white/10 transition-colors">
+                            <span>Book This Service</span>
+                            <i class="fa-solid fa-arrow-right text-amber-400"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group bg-[#1e1e1e] border border-white/10 rounded-2xl overflow-hidden shadow-xl hover:border-amber-500/50 transition-all duration-300 flex flex-col reveal">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80&auto=format&fit=crop" 
+                             alt="Beard Grooming & Shaping" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] via-transparent to-transparent"></div>
+                        <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 border border-amber-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            PKR 1,000
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-1">25 Mins</div>
+                            <h3 class="text-xl font-bold font-heading text-white mb-2 group-hover:text-amber-400 transition-colors">Beard Grooming & Shaping</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">Sculpting, line-up edging, beard trimming, application of organic beard butter and essential oils.</p>
+                        </div>
+                        <a href="#contact" onclick="selectService('Beard Grooming')" class="inline-flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-white group-hover:text-amber-400 pt-3 border-t border-white/10 transition-colors">
+                            <span>Book This Service</span>
+                            <i class="fa-solid fa-arrow-right text-amber-400"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group bg-[#1e1e1e] border border-white/10 rounded-2xl overflow-hidden shadow-xl hover:border-amber-500/50 transition-all duration-300 flex flex-col reveal">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&q=80&auto=format&fit=crop" 
+                             alt="Hot Towel Shave" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] via-transparent to-transparent"></div>
+                        <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 border border-amber-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            PKR 1,200
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-1">30 Mins</div>
+                            <h3 class="text-xl font-bold font-heading text-white mb-2 group-hover:text-amber-400 transition-colors">Hot Towel Shave</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">Traditional straight-razor shave with steaming eucalyptus towels, rich lather, and soothing aftershave balm.</p>
+                        </div>
+                        <a href="#contact" onclick="selectService('Hot Towel Shave')" class="inline-flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-white group-hover:text-amber-400 pt-3 border-t border-white/10 transition-colors">
+                            <span>Book This Service</span>
+                            <i class="fa-solid fa-arrow-right text-amber-400"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="group bg-[#1e1e1e] border border-white/10 rounded-2xl overflow-hidden shadow-xl hover:border-amber-500/50 transition-all duration-300 flex flex-col reveal">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80&auto=format&fit=crop" 
+                             alt="Hair Coloring" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] via-transparent to-transparent"></div>
+                        <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 border border-amber-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            PKR 2,500
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-1">45 Mins</div>
+                            <h3 class="text-xl font-bold font-heading text-white mb-2 group-hover:text-amber-400 transition-colors">Hair Coloring & Blending</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">Natural grey coverage, beard coloring, or custom full-hair color transformations using ammonia-free dyes.</p>
+                        </div>
+                        <a href="#contact" onclick="selectService('Hair Coloring')" class="inline-flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-white group-hover:text-amber-400 pt-3 border-t border-white/10 transition-colors">
+                            <span>Book This Service</span>
+                            <i class="fa-solid fa-arrow-right text-amber-400"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="group bg-[#1e1e1e] border border-white/10 rounded-2xl overflow-hidden shadow-xl hover:border-amber-500/50 transition-all duration-300 flex flex-col reveal">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=800&q=80&auto=format&fit=crop" 
+                             alt="Hair Treatments" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] via-transparent to-transparent"></div>
+                        <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 border border-amber-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            PKR 2,000
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-1">40 Mins</div>
+                            <h3 class="text-xl font-bold font-heading text-white mb-2 group-hover:text-amber-400 transition-colors">Keratin & Scalp Detox</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">Deep protein hair reconstruction, anti-dandruff scalp detox therapy, and moisturizing mask therapy.</p>
+                        </div>
+                        <a href="#contact" onclick="selectService('Hair Treatments')" class="inline-flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-white group-hover:text-amber-400 pt-3 border-t border-white/10 transition-colors">
+                            <span>Book This Service</span>
+                            <i class="fa-solid fa-arrow-right text-amber-400"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="group bg-[#1e1e1e] border border-white/10 rounded-2xl overflow-hidden shadow-xl hover:border-amber-500/50 transition-all duration-300 flex flex-col reveal">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=800&q=80&auto=format&fit=crop" 
+                             alt="Scalp Massage" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] via-transparent to-transparent"></div>
+                        <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 border border-amber-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            PKR 1,500
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-1">20 Mins</div>
+                            <h3 class="text-xl font-bold font-heading text-white mb-2 group-hover:text-amber-400 transition-colors">Relaxing Scalp Massage</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">Stimulating head, neck, and shoulder pressure-point massage to boost circulation and relieve strain.</p>
+                        </div>
+                        <a href="#contact" onclick="selectService('Scalp Massage')" class="inline-flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-white group-hover:text-amber-400 pt-3 border-t border-white/10 transition-colors">
+                            <span>Book This Service</span>
+                            <i class="fa-solid fa-arrow-right text-amber-400"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="group bg-[#1e1e1e] border border-white/10 rounded-2xl overflow-hidden shadow-xl hover:border-amber-500/50 transition-all duration-300 flex flex-col reveal">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80&auto=format&fit=crop" 
+                             alt="Facial Treatments" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] via-transparent to-transparent"></div>
+                        <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 border border-amber-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            PKR 3,000
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-1">45 Mins</div>
+                            <h3 class="text-xl font-bold font-heading text-white mb-2 group-hover:text-amber-400 transition-colors">Gentleman's Facial Therapy</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">Deep pore cleansing, activated charcoal detox, steam exfoliation, and skin hydrating therapy.</p>
+                        </div>
+                        <a href="#contact" onclick="selectService('Facial Treatments')" class="inline-flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-white group-hover:text-amber-400 pt-3 border-t border-white/10 transition-colors">
+                            <span>Book This Service</span>
+                            <i class="fa-solid fa-arrow-right text-amber-400"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="group bg-[#1e1e1e] border border-white/10 rounded-2xl overflow-hidden shadow-xl hover:border-amber-500/50 transition-all duration-300 flex flex-col reveal">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=800&q=80&auto=format&fit=crop" 
+                             alt="Kids Haircuts" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] via-transparent to-transparent"></div>
+                        <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 border border-amber-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            PKR 1,000
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-1">25 Mins</div>
+                            <h3 class="text-xl font-bold font-heading text-white mb-2 group-hover:text-amber-400 transition-colors">Junior Gentleman Cut</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed mb-4">Patient, stylish haircuts for young gentlemen in a friendly, comfortable setting.</p>
+                        </div>
+                        <a href="#contact" onclick="selectService('Kids Haircuts')" class="inline-flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-white group-hover:text-amber-400 pt-3 border-t border-white/10 transition-colors">
+                            <span>Book This Service</span>
+                            <i class="fa-solid fa-arrow-right text-amber-400"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ABOUT SECTION -->
+    <section id="about" class="py-24 px-4 bg-[#181818] border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left Image Grid & Floating Badge -->
+                <div class="relative reveal">
+                    <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80&auto=format&fit=crop" 
+                             alt="Barber working at Elite Salon" 
+                             class="w-full h-[500px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    </div>
+
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -right-2 sm:right-6 bg-[#222222] border border-amber-500/40 rounded-2xl p-6 shadow-2xl gold-glow hidden sm:flex items-center gap-4">
+                        <div class="w-14 h-14 rounded-xl gold-gradient-bg flex items-center justify-center text-black font-extrabold text-2xl">
+                            12+
+                        </div>
+                        <div>
+                            <div class="text-white font-bold text-lg font-heading">Years of Mastery</div>
+                            <div class="text-xs text-amber-400/90 font-medium">DHA Phase 6, Karachi</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content Column -->
+                <div class="space-y-6 reveal">
+                    <span class="text-xs uppercase tracking-widest text-[#c9a227] font-bold block">About Elite Salon</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white leading-tight">
+                        Redefining Male Grooming in <span class="gold-gradient-text">Karachi</span>
+                    </h2>
+                    
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed font-light">
+                        Located in the prestigious Bokhari Commercial area in DHA Phase 6, Karachi, <strong>Elite Salon</strong> was established with a singular vision: to deliver world-class barbering and male grooming tailored to the modern gentleman.
+                    </p>
+
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        We blend centuries-old barbering traditions with modern styling techniques. From precision fades to therapeutic skin treatments, our master barbers ensure every client leaves with renewed confidence and effortless style.
+                    </p>
+
+                    <!-- Feature Checkmark List -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full gold-gradient-bg flex items-center justify-center text-black text-xs font-bold mt-0.5">✓</div>
+                            <span class="text-xs sm:text-sm text-gray-200 font-medium">Internationally trained barbers</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full gold-gradient-bg flex items-center justify-center text-black text-xs font-bold mt-0.5">✓</div>
+                            <span class="text-xs sm:text-sm text-gray-200 font-medium">100% Sanitized equipment</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full gold-gradient-bg flex items-center justify-center text-black text-xs font-bold mt-0.5">✓</div>
+                            <span class="text-xs sm:text-sm text-gray-200 font-medium">Premium imported grooming products</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full gold-gradient-bg flex items-center justify-center text-black text-xs font-bold mt-0.5">✓</div>
+                            <span class="text-xs sm:text-sm text-gray-200 font-medium">Private VIP grooming suites</span>
+                        </div>
+                    </div>
+
+                    <!-- Callout Quote -->
+                    <div class="p-4 rounded-xl bg-[#242424] border-l-4 border-amber-500 text-xs sm:text-sm italic text-gray-300">
+                        "A man's haircut isn't just grooming — it's his signature statement to the world."
+                    </div>
+
+                    <div class="pt-4 flex items-center gap-6">
+                        <a href="#contact" class="gold-gradient-bg text-black font-bold text-xs uppercase tracking-widest px-6 py-3.5 rounded-xl hover:brightness-110 transition-all shadow-md">
+                            Experience Elite Salon
+                        </a>
+                        <div class="flex items-center gap-3">
+                            <div class="text-xs font-semibold text-white">Direct Line:</div>
+                            <a href="tel:03055311702" class="text-xs text-amber-400 font-bold hover:underline">0305 5311702</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. IMAGE GALLERY WITH LIGHTBOX MODAL -->
+    <section id="gallery" class="py-24 px-4 bg-[#121212] relative">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-xs uppercase tracking-widest text-[#c9a227] font-bold block mb-2">Visual Showcase</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white">Our Craft in Pictures</h2>
+                <div class="w-20 h-1 gold-gradient-bg mx-auto my-4 rounded-full"></div>
+                <p class="text-gray-400 text-sm sm:text-base">Explore our portfolio of sharp cuts, immaculate beard sculpting, and premium salon vibes.</p>
+            </div>
+
+            <!-- 6-Item Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Item 1 -->
+                <div class="gallery-item group relative h-72 rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-lg reveal"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1200&q=80&auto=format&fit=crop', 'Precision Skin Fade & Styling')">
+                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&q=80&auto=format&fit=crop" 
+                         alt="Skin Fade Styling" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-1">Haircraft</span>
+                        <h4 class="text-lg font-bold font-heading text-white">Precision Skin Fade & Styling</h4>
+                        <div class="text-amber-400 text-xs mt-2 font-medium flex items-center gap-1">
+                            <i class="fa-solid fa-expand"></i> Click to enlarge
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gallery-item group relative h-72 rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-lg reveal"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1200&q=80&auto=format&fit=crop', 'Sculpted Beard Line-Up')">
+                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80&auto=format&fit=crop" 
+                         alt="Beard Line Up" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-1">Beard Care</span>
+                        <h4 class="text-lg font-bold font-heading text-white">Sculpted Beard Line-Up</h4>
+                        <div class="text-amber-400 text-xs mt-2 font-medium flex items-center gap-1">
+                            <i class="fa-solid fa-expand"></i> Click to enlarge
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-item group relative h-72 rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-lg reveal"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=1200&q=80&auto=format&fit=crop', 'Hot Towel Therapy Ritual')">
+                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&q=80&auto=format&fit=crop" 
+                         alt="Hot Towel Treatment" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-1">Spa Shave</span>
+                        <h4 class="text-lg font-bold font-heading text-white">Hot Towel Therapy Ritual</h4>
+                        <div class="text-amber-400 text-xs mt-2 font-medium flex items-center gap-1">
+                            <i class="fa-solid fa-expand"></i> Click to enlarge
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-item group relative h-72 rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-lg reveal"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=80&auto=format&fit=crop', 'Luxury Salon Workstation')">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80&auto=format&fit=crop" 
+                         alt="Salon Interior" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-1">Ambience</span>
+                        <h4 class="text-lg font-bold font-heading text-white">Luxury Salon Workstation</h4>
+                        <div class="text-amber-400 text-xs mt-2 font-medium flex items-center gap-1">
+                            <i class="fa-solid fa-expand"></i> Click to enlarge
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-item group relative h-72 rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-lg reveal"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200&q=80&auto=format&fit=crop', 'Master Barber in Action')">
+                    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80&auto=format&fit=crop" 
+                         alt="Barber in action" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-1">Mastery</span>
+                        <h4 class="text-lg font-bold font-heading text-white">Master Barber in Action</h4>
+                        <div class="text-amber-400 text-xs mt-2 font-medium flex items-center gap-1">
+                            <i class="fa-solid fa-expand"></i> Click to enlarge
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-item group relative h-72 rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-lg reveal"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=1200&q=80&auto=format&fit=crop', 'Scalp Treatment & Wash')">
+                    <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=800&q=80&auto=format&fit=crop" 
+                         alt="Scalp wash" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-1">Treatments</span>
+                        <h4 class="text-lg font-bold font-heading text-white">Scalp Treatment & Relaxing Wash</h4>
+                        <div class="text-amber-400 text-xs mt-2 font-medium flex items-center gap-1">
+                            <i class="fa-solid fa-expand"></i> Click to enlarge
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl hidden flex-col items-center justify-center p-4 transition-all duration-300">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-amber-400 text-3xl focus:outline-none z-50">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl w-full text-center">
+            <img id="lightboxImage" src="" alt="Lightbox image" class="max-h-[80vh] mx-auto rounded-2xl shadow-2xl border border-white/10 object-contain">
+            <p id="lightboxCaption" class="mt-4 text-gray-200 text-base font-heading italic"></p>
+        </div>
+    </div>
+
+    <!-- 8. TESTIMONIALS SLIDER SECTION -->
+    <section id="testimonials" class="py-24 px-4 bg-[#181818] border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-xs uppercase tracking-widest text-[#c9a227] font-bold block mb-2">Client Testimonials</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white">What Gentlemen Say</h2>
+                <div class="w-20 h-1 gold-gradient-bg mx-auto my-4 rounded-full"></div>
+            </div>
+
+            <!-- Slider Container -->
+            <div class="relative bg-[#222222] border border-white/10 rounded-3xl p-8 sm:p-12 shadow-2xl reveal" id="testimonialContainer">
+                <div class="text-amber-400 text-4xl mb-6"><i class="fa-solid fa-quote-left"></i></div>
+
+                <!-- Slides Wrapper -->
+                <div class="min-h-[180px] flex items-center justify-center relative">
+                    
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide transition-all duration-500 text-center w-full">
+                        <p class="text-lg sm:text-2xl text-gray-200 font-light italic mb-8 leading-relaxed">
+                            "Hands down the best men's salon in DHA Phase 6! The hot towel shave and beard sculpting are unmatched in Karachi. Super professional staff and a luxury environment."
+                        </p>
+                        <div class="flex items-center justify-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80&auto=format&fit=crop" 
+                                 alt="Tariq Mansoor" class="w-14 h-14 rounded-full object-cover border-2 border-amber-400">
+                            <div class="text-left">
+                                <h4 class="text-white font-bold font-heading text-base">Tariq Mansoor</h4>
+                                <div class="text-xs text-amber-400 font-medium">DHA Phase 6 Resident</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide hidden transition-all duration-500 text-center w-full">
+                        <p class="text-lg sm:text-2xl text-gray-200 font-light italic mb-8 leading-relaxed">
+                            "I've been a regular for over 3 years now. Consistent precision haircuts every single visit. Their attention to detail and scalp massages are worth every rupee."
+                        </p>
+                        <div class="flex items-center justify-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80&auto=format&fit=crop" 
+                                 alt="Kamran Ahmed" class="w-14 h-14 rounded-full object-cover border-2 border-amber-400">
+                            <div class="text-left">
+                                <h4 class="text-white font-bold font-heading text-base">Kamran Ahmed</h4>
+                                <div class="text-xs text-amber-400 font-medium">Corporate Executive</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide hidden transition-all duration-500 text-center w-full">
+                        <p class="text-lg sm:text-2xl text-gray-200 font-light italic mb-8 leading-relaxed">
+                            "Top tier service! Brought my son for his haircut too, and the team treated him like royalty. Clean, hygienic, and very polite team."
+                        </p>
+                        <div class="flex items-center justify-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80&auto=format&fit=crop" 
+                                 alt="Bilal Sheikh" class="w-14 h-14 rounded-full object-cover border-2 border-amber-400">
+                            <div class="text-left">
+                                <h4 class="text-white font-bold font-heading text-base">Bilal Sheikh</h4>
+                                <div class="text-xs text-amber-400 font-medium">Business Owner</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="flex items-center justify-between mt-8 pt-6 border-t border-white/5">
+                    <button onclick="prevTestimonial()" class="w-10 h-10 rounded-full bg-white/5 hover:bg-amber-400 hover:text-black transition-colors text-white flex items-center justify-center">
+                        <i class="fa-solid fa-chevron-left text-sm"></i>
+                    </button>
+
+                    <!-- Dot Navigation -->
+                    <div class="flex items-center gap-3" id="testimonialDots">
+                        <button onclick="setTestimonial(0)" class="dot-btn w-3 h-3 rounded-full bg-amber-400 transition-all"></button>
+                        <button onclick="setTestimonial(1)" class="dot-btn w-3 h-3 rounded-full bg-gray-600 transition-all"></button>
+                        <button onclick="setTestimonial(2)" class="dot-btn w-3 h-3 rounded-full bg-gray-600 transition-all"></button>
+                    </div>
+
+                    <button onclick="nextTestimonial()" class="w-10 h-10 rounded-full bg-white/5 hover:bg-amber-400 hover:text-black transition-colors text-white flex items-center justify-center">
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ ACCORDION SECTION -->
+    <section id="faq" class="py-24 px-4 bg-[#121212] relative">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-xs uppercase tracking-widest text-[#c9a227] font-bold block mb-2">Got Questions?</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white">Frequently Asked Questions</h2>
+                <div class="w-20 h-1 gold-gradient-bg mx-auto my-4 rounded-full"></div>
+            </div>
+
+            <div class="space-y-4">
+
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-[#1e1e1e] border border-white/10 rounded-2xl overflow-hidden reveal">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left font-semibold text-white text-base sm:text-lg flex items-center justify-between gap-4 focus:outline-none">
+                        <span>Do I need to book an appointment in advance?</span>
+                        <i class="fa-solid fa-chevron-down text-amber-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        Walk-ins are welcome based on availability, but we strongly recommend booking an appointment online or calling 0305 5311702 to ensure zero waiting time with your preferred barber.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-[#1e1e1e] border border-white/10 rounded-2xl overflow-hidden reveal">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left font-semibold text-white text-base sm:text-lg flex items-center justify-between gap-4 focus:outline-none">
+                        <span>Where is Elite Salon located in DHA Karachi?</span>
+                        <i class="fa-solid fa-chevron-down text-amber-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        We are located at Plot No 42-C, Bokhari Commercial Lane 1, DHA Phase 6, Karachi. Ample parking is available directly in front of the salon.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-[#1e1e1e] border border-white/10 rounded-2xl overflow-hidden reveal">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left font-semibold text-white text-base sm:text-lg flex items-center justify-between gap-4 focus:outline-none">
+                        <span>What hygiene protocols do you follow?</span>
+                        <i class="fa-solid fa-chevron-down text-amber-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        Hygiene is our top priority. We use disposable razor blades for every client, UV sterilizers for all metal instruments, fresh single-use capes, and sanitized towels.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-[#1e1e1e] border border-white/10 rounded-2xl overflow-hidden reveal">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left font-semibold text-white text-base sm:text-lg flex items-center justify-between gap-4 focus:outline-none">
+                        <span>What products do you use for hair & skin treatments?</span>
+                        <i class="fa-solid fa-chevron-down text-amber-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        We exclusive use high-grade, imported professional grooming brands and organic essential oils to protect your hair and skin health.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-[#1e1e1e] border border-white/10 rounded-2xl overflow-hidden reveal">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left font-semibold text-white text-base sm:text-lg flex items-center justify-between gap-4 focus:outline-none">
+                        <span>Do you offer home services or wedding packages?</span>
+                        <i class="fa-solid fa-chevron-down text-amber-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">
+                        Yes! We offer customized Groom & Groomsmen Packages both at our salon and on-location for wedding events across Karachi. Contact us for package details.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. CONTACT SECTION & BOOKING FORM -->
+    <section id="contact" class="py-24 px-4 bg-[#181818] border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-xs uppercase tracking-widest text-[#c9a227] font-bold block mb-2">Get In Touch</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white">Book Your Appointment</h2>
+                <div class="w-20 h-1 gold-gradient-bg mx-auto my-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+                <!-- Left Column: Location Info Cards -->
+                <div class="lg:col-span-5 space-y-6 reveal">
+                    <div class="bg-[#222222] border border-white/10 rounded-2xl p-6 shadow-xl flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl gold-gradient-bg flex items-center justify-center text-black text-xl shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold font-heading text-lg mb-1">Salon Address</h4>
+                            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                                PLOT NO 42-C BOKHARI COMM LANE 1 PH 6 PHASE-6 DEFENCE, KARACHI, PAKISTAN
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#222222] border border-white/10 rounded-2xl p-6 shadow-xl flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl gold-gradient-bg flex items-center justify-center text-black text-xl shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold font-heading text-lg mb-1">Phone & WhatsApp</h4>
+                            <p class="text-gray-300 text-sm">0305 5311702</p>
+                            <a href="https://wa.me/923055311702?text=Hi%20Elite%20Salon%2C%20I%20would%20like%20to%20book%20an%20appointment" 
+                               target="_blank" class="text-amber-400 text-xs font-semibold hover:underline mt-1 inline-block">
+                                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#222222] border border-white/10 rounded-2xl p-6 shadow-xl flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl gold-gradient-bg flex items-center justify-center text-black text-xl shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold font-heading text-lg mb-1">Email Inquiry</h4>
+                            <p class="text-gray-300 text-sm">mir27614@gmail.com</p>
+                            <span class="text-gray-400 text-xs">Quick response within 2 hours</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#222222] border border-white/10 rounded-2xl p-6 shadow-xl flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl gold-gradient-bg flex items-center justify-center text-black text-xl shrink-0">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold font-heading text-lg mb-1">Salon Hours</h4>
+                            <p class="text-gray-300 text-xs sm:text-sm">Monday – Sunday: 10:00 AM – 10:00 PM</p>
+                            <span class="text-amber-400 text-xs font-medium">Open 7 days a week</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Form -->
+                <div class="lg:col-span-7 bg-[#222222] border border-white/10 rounded-3xl p-8 shadow-2xl reveal">
+                    <form id="bookingForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Full Name -->
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-300 font-semibold mb-2">Full Name *</label>
+                                <input type="text" id="formName" required placeholder="e.g. Ali Khan" 
+                                       class="w-full bg-[#181818] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-amber-400 text-sm">
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-300 font-semibold mb-2">Phone / WhatsApp *</label>
+                                <input type="tel" id="formPhone" required placeholder="0300 1234567" 
+                                       class="w-full bg-[#181818] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-amber-400 text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Select Service -->
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-300 font-semibold mb-2">Select Service *</label>
+                                <select id="formService" required class="w-full bg-[#181818] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-400 text-sm">
+                                    <option value="">Choose a treatment...</option>
+                                    <option value="Men's Haircut">Men's Haircut (PKR 1,500)</option>
+                                    <option value="Beard Grooming">Beard Grooming & Shaping (PKR 1,000)</option>
+                                    <option value="Hot Towel Shave">Hot Towel Shave (PKR 1,200)</option>
+                                    <option value="Hair Coloring">Hair Coloring & Blending (PKR 2,500)</option>
+                                    <option value="Hair Treatments">Keratin & Scalp Detox (PKR 2,000)</option>
+                                    <option value="Scalp Massage">Scalp Massage (PKR 1,500)</option>
+                                    <option value="Facial Treatments">Gentleman's Facial (PKR 3,000)</option>
+                                    <option value="Kids Haircuts">Junior Gentleman Cut (PKR 1,000)</option>
+                                </select>
+                            </div>
+
+                            <!-- Date Picker -->
+                            <div>
+                                <label class="block text-xs uppercase tracking-wider text-gray-300 font-semibold mb-2">Preferred Date *</label>
+                                <input type="date" id="formDate" required class="w-full bg-[#181818] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-400 text-sm">
+                            </div>
+                        </div>
+
+                        <!-- Special Instructions -->
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-gray-300 font-semibold mb-2">Special Notes / Barber Preference</label>
+                            <textarea id="formMessage" rows="3" placeholder="Tell us your haircut preferences or special requests..." 
+                                      class="w-full bg-[#181818] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-amber-400 text-sm"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full gold-gradient-bg text-black font-bold text-sm uppercase tracking-widest py-4 rounded-xl hover:brightness-110 transition-all shadow-xl gold-glow flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Confirm Booking Request
+                        </button>
+
+                    </form>
+
+                    <!-- Success State Modal Container -->
+                    <div id="formSuccess" class="hidden text-center py-8 space-y-4">
+                        <div class="w-16 h-16 rounded-full gold-gradient-bg flex items-center justify-center text-black text-3xl mx-auto shadow-lg">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold font-heading text-white">Booking Request Received!</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed max-w-md mx-auto">
+                            Thank you, <span id="confirmName" class="text-amber-400 font-bold"></span>! Your request for <span id="confirmService" class="text-amber-400 font-bold"></span> has been noted. Our team will contact you shortly to confirm your slot.
+                        </p>
+                        <button onclick="resetBookingForm()" class="bg-white/10 hover:bg-white/20 text-white font-semibold text-xs uppercase tracking-wider px-6 py-2.5 rounded-xl transition-all">
+                            Book Another Slot
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FOOTER -->
+    <footer class="bg-black border-t border-white/10 py-16 px-4 text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            
+            <!-- Col 1: Brand Info -->
+            <div class="space-y-4">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl gold-gradient-bg flex items-center justify-center text-black font-bold text-xl">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold font-heading text-white block leading-none">ELITE <span class="gold-gradient-text">SALON</span></span>
+                        <span class="text-[10px] uppercase tracking-widest text-amber-400">Men's Grooming</span>
+                    </div>
+                </a>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                    Karachi's premier destination for bespoke haircuts, luxury hot towel shaves, and modern male grooming excellence.
+                </p>
+                <div class="flex items-center gap-3 text-lg pt-2">
+                    <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-amber-400 hover:text-black flex items-center justify-center transition-colors text-white"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-amber-400 hover:text-black flex items-center justify-center transition-colors text-white"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/923055311702" class="w-9 h-9 rounded-full bg-white/5 hover:bg-amber-400 hover:text-black flex items-center justify-center transition-colors text-white"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div>
+                <h4 class="text-white font-bold font-heading text-base mb-4 uppercase tracking-wider border-b border-amber-500/30 pb-2 inline-block">Navigation</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#home" class="hover:text-amber-400 transition-colors">Home</a></li>
+                    <li><a href="#services" class="hover:text-amber-400 transition-colors">Our Services</a></li>
+                    <li><a href="#about" class="hover:text-amber-400 transition-colors">About Us</a></li>
+                    <li><a href="#gallery" class="hover:text-amber-400 transition-colors">Visual Gallery</a></li>
+                    <li><a href="#testimonials" class="hover:text-amber-400 transition-colors">Customer Reviews</a></li>
+                    <li><a href="#contact" class="hover:text-amber-400 transition-colors">Book Appointment</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Services -->
+            <div>
+                <h4 class="text-white font-bold font-heading text-base mb-4 uppercase tracking-wider border-b border-amber-500/30 pb-2 inline-block">Top Services</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#services" class="hover:text-amber-400 transition-colors">Precision Haircuts</a></li>
+                    <li><a href="#services" class="hover:text-amber-400 transition-colors">Beard Shaping & Line-up</a></li>
+                    <li><a href="#services" class="hover:text-amber-400 transition-colors">Hot Towel Straight Razor Shave</a></li>
+                    <li><a href="#services" class="hover:text-amber-400 transition-colors">Hair & Beard Color Blending</a></li>
+                    <li><a href="#services" class="hover:text-amber-400 transition-colors">Gentleman's Facial Therapy</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Address -->
+            <div>
+                <h4 class="text-white font-bold font-heading text-base mb-4 uppercase tracking-wider border-b border-amber-500/30 pb-2 inline-block">Contact Info</h4>
+                <div class="space-y-3 text-xs">
+                    <p class="flex items-start gap-2">
+                        <i class="fa-solid fa-location-dot text-amber-400 mt-0.5"></i>
+                        <span>Bokhari Comm Lane 1, DHA Phase 6, Karachi</span>
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-amber-400"></i>
+                        <span>0305 5311702</span>
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-amber-400"></i>
+                        <span>mir27614@gmail.com</span>
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <i class="fa-solid fa-clock text-amber-400"></i>
+                        <span>10:00 AM – 10:00 PM (Mon-Sun)</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+            <p>© 2026 Elite Salon. All rights reserved.</p>
+            <p class="text-amber-400/80">Website Created by <strong>Muhammad Siddique</strong></p>
+        </div>
+    </footer>
+
+    <!-- 12. FLOATING WHATSAPP BUTTON (Bottom-Right) -->
+    <a href="https://wa.me/923055311702?text=Hi%20Elite%20Salon%2C%20I%20would%20like%20to%20book%20an%20appointment" 
+       target="_blank" 
+       rel="noopener"
+       class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl transition-transform hover:scale-110 group gold-glow"
+       aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="absolute right-16 bg-black/90 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg border border-white/10">
+            Book via WhatsApp
+        </span>
+    </a>
+
+    <!-- 13. BACK TO TOP BUTTON (Bottom-Left) -->
+    <button id="backToTopBtn" 
+            onclick="scrollToTop()" 
+            class="fixed bottom-6 left-6 z-50 bg-black/80 hover:bg-[#c9a227] hover:text-black border border-amber-500/30 text-white w-12 h-12 rounded-xl flex items-center justify-center text-lg shadow-xl opacity-0 pointer-events-none transition-all duration-300"
+            aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ADVANCED JAVASCRIPT FEATURES -->
+    <script>
+        // 1. SCROLL REVEAL ANIMATIONS
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // 2. ANIMATED COUNTERS
+        let countersTriggered = false;
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !countersTriggered) {
+                    countersTriggered = true;
+                    animateCounters();
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const statsContainer = document.getElementById('statsContainer');
+        if (statsContainer) statsObserver.observe(statsContainer);
+
+        function animateCounters() {
+            document.querySelectorAll('.counter').forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const suffix = counter.getAttribute('data-suffix') || '';
+                let count = 0;
+                const duration = 2000;
+                const increment = Math.max(1, Math.floor(target / (duration / 16)));
+
+                const timer = setInterval(() => {
+                    count += increment;
+                    if (count >= target) {
+                        count = target;
+                        clearInterval(timer);
+                    }
+                    counter.innerText = count.toLocaleString() + suffix;
+                }, 16);
+            });
+        }
+
+        // 3. NAVBAR SCROLL EFFECT & BACK TO TOP VISIBILITY
+        const navbar = document.getElementById('navbar');
+        const navContainer = document.getElementById('navContainer');
+        const backToTopBtn = document.getElementById('backToTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navContainer.classList.remove('bg-black/40');
+                navContainer.classList.add('bg-black/90', 'border-amber-500/40', 'gold-glow');
+            } else {
+                navContainer.classList.add('bg-black/40');
+                navContainer.classList.remove('bg-black/90', 'border-amber-500/40', 'gold-glow');
+            }
+
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                backToTopBtn.classList.add('opacity-100');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                backToTopBtn.classList.remove('opacity-100');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 4. MOBILE MENU TOGGLE
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // 5. GALLERY LIGHTBOX MODAL
+        function openLightbox(imgUrl, caption) {
+            const modal = document.getElementById('lightboxModal');
+            document.getElementById('lightboxImage').src = imgUrl;
+            document.getElementById('lightboxCaption').innerText = caption;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightboxModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        document.getElementById('lightboxModal').addEventListener('click', (e) => {
+            if (e.target.id === 'lightboxModal') closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // 6. TESTIMONIAL CAROUSEL SLIDER
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.dot-btn');
+
+        function showSlide(index) {
+            slides.forEach((s, i) => {
+                if (i === index) {
+                    s.classList.remove('hidden');
+                } else {
+                    s.classList.add('hidden');
+                }
+            });
+            dots.forEach((d, i) => {
+                if (i === index) {
+                    d.classList.remove('bg-gray-600');
+                    d.classList.add('bg-amber-400');
+                } else {
+                    d.classList.remove('bg-amber-400');
+                    d.classList.add('bg-gray-600');
+                }
+            });
+            currentSlide = index;
+        }
+
+        function nextTestimonial() {
+            let next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
+
+        function prevTestimonial() {
+            let prev = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(prev);
+        }
+
+        function setTestimonial(index) {
+            showSlide(index);
+        }
+
+        let slideInterval = setInterval(nextTestimonial, 6000);
+        const testimonialContainer = document.getElementById('testimonialContainer');
+        if (testimonialContainer) {
+            testimonialContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+            testimonialContainer.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextTestimonial, 6000);
+            });
+        }
+
+        // 7. FAQ ACCORDION
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (content.classList.contains('hidden')) {
+                document.querySelectorAll('.faq-content').forEach(el => el.classList.add('hidden'));
+                document.querySelectorAll('.faq-item i').forEach(i => i.classList.remove('rotate-180'));
+
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // 8. SERVICE SELECTION FROM CARDS
+        function selectService(serviceName) {
+            const selectEl = document.getElementById('formService');
+            if (selectEl) {
+                selectEl.value = serviceName;
+            }
+        }
+
+        // 9. FORM VALIDATION AND SUBMISSION
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('formName').value.trim();
+            const phone = document.getElementById('formPhone').value.trim();
+            const service = document.getElementById('formService').value;
+
+            if (!name || !phone || !service) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            document.getElementById('confirmName').innerText = name;
+            document.getElementById('confirmService').innerText = service;
+
+            document.getElementById('bookingForm').classList.add('hidden');
+            document.getElementById('formSuccess').classList.remove('hidden');
+        }
+
+        function resetBookingForm() {
+            document.getElementById('bookingForm').reset();
+            document.getElementById('bookingForm').classList.remove('hidden');
+            document.getElementById('formSuccess').classList.add('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateInput = document.getElementById('formDate');
+            if (dateInput) {
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.min = today;
+                dateInput.value = today;
+            }
+        });
+    </script>
+</body>
+</html>
