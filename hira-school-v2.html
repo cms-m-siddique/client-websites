@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hira Public School | Primary & Secondary Education in Karachi</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#27ae60',
+                light: '#2ecc71',
+                dark: '#1e8449',
+                50: '#eafaf1',
+                100: '#d5f5e3',
+                200: '#abebc6',
+              },
+              secondary: {
+                DEFAULT: '#2c3e50',
+                hover: '#1a252f',
+                light: '#34495e',
+                50: '#ebedef',
+              }
+            },
+            fontFamily: {
+              playfair: ['Playfair Display', 'serif'],
+              poppins: ['Poppins', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .gradient-overlay {
+        background: linear-gradient(135deg, rgba(39, 174, 96, 0.88) 0%, rgba(44, 62, 80, 0.92) 100%);
+      }
+    </style>
+</head>
+<body class="font-poppins text-gray-800 bg-slate-50 antialiased selection:bg-primary selection:text-white">
+
+    <!-- 1. PREVIEW BANNER -->
+    <div class="bg-primary-light text-gray-900 font-medium text-sm py-2 px-4 text-center sticky top-0 z-50 shadow-sm flex items-center justify-center gap-2">
+        <span class="inline-block animate-bounce">✨</span>
+        <span>This is a preview created by <strong>Muhammad Siddique</strong> — let me know what you think!</span>
+    </div>
+
+    <!-- 2. STICKY NAVBAR -->
+    <nav id="navbar" class="fixed top-[36px] left-0 right-0 z-40 transition-all duration-300 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-primary text-white font-playfair font-bold text-2xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform border border-white/20">
+                        H
+                    </div>
+                    <div>
+                        <span class="font-playfair font-bold text-xl md:text-2xl tracking-tight block leading-none nav-title">Hira Public School</span>
+                        <span class="text-[10px] tracking-widest uppercase font-medium opacity-80 block mt-1 nav-subtitle">Est. 1992 • Manzoor Colony</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#about" class="nav-link hover:text-primary-light transition-colors">About</a>
+                    <a href="#programs" class="nav-link hover:text-primary-light transition-colors">Programs</a>
+                    <a href="#facilities" class="nav-link hover:text-primary-light transition-colors">Facilities</a>
+                    <a href="#gallery" class="nav-link hover:text-primary-light transition-colors">Gallery</a>
+                    <a href="#testimonials" class="nav-link hover:text-primary-light transition-colors">Alumni & Reviews</a>
+                    <a href="#faq" class="nav-link hover:text-primary-light transition-colors">FAQ</a>
+                    <a href="#contact" class="nav-link hover:text-primary-light transition-colors">Contact</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="#contact" class="bg-primary hover:bg-primary-dark text-white font-semibold px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 inline-flex items-center gap-2 text-sm">
+                        <i class="fa-solid fa-graduation-cap"></i> Admissions Open 2025-26
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-secondary/95 backdrop-blur-md border-t border-white/10 text-white px-4 pt-3 pb-6 space-y-3">
+            <a href="#about" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10">About School</a>
+            <a href="#programs" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10">Academic Programs</a>
+            <a href="#facilities" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10">Facilities & Labs</a>
+            <a href="#gallery" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10">Campus Gallery</a>
+            <a href="#testimonials" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10">Reviews & Alumni</a>
+            <a href="#faq" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10">Admissions FAQ</a>
+            <a href="#contact" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10">Contact & Apply</a>
+            <div class="pt-2">
+                <a href="#contact" class="block text-center bg-primary text-white font-semibold py-2.5 rounded-full shadow">
+                    🎓 Apply For Admission
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. HERO SECTION -->
+    <section class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden bg-secondary text-white">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=1600&q=80&auto=format&fit=crop" alt="Hira Public School Campus" class="w-full h-full object-cover">
+            <div class="absolute inset-0 gradient-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 border border-white/20 backdrop-blur-md text-primary-light font-medium text-xs sm:text-sm">
+                        <span class="w-2 h-2 rounded-full bg-primary-light animate-ping"></span>
+                        Founded in 1992 • Over 25 Years of Educational Excellence
+                    </div>
+
+                    <h1 class="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                        Preparing Students For Success in <span class="text-primary-light italic">This World & Hereafter</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-emerald-100 font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        A distinguished institution serving over 2,500 students in Manzoor Colony, Karachi under the principalship of <strong>Khurshid Ahmed</strong>.
+                    </p>
+
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#contact" class="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-center">
+                            Apply For Admission 2025–26
+                        </a>
+                        <a href="#facilities" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/30 font-semibold px-8 py-4 rounded-full backdrop-blur-md transition-all text-center">
+                            Explore Labs & Campus
+                        </a>
+                    </div>
+
+                    <!-- Highlight Badges -->
+                    <div class="pt-6 grid grid-cols-3 gap-3 border-t border-white/15 text-xs sm:text-sm">
+                        <div class="p-2 rounded-lg bg-white/5 backdrop-blur-xs">
+                            <i class="fa-solid fa-users-line text-primary-light mb-1 text-base block"></i>
+                            <span class="font-semibold block">2500+ Students</span>
+                            <span class="text-emerald-100 text-[11px]">Enrolled Capacity</span>
+                        </div>
+                        <div class="p-2 rounded-lg bg-white/5 backdrop-blur-xs">
+                            <i class="fa-solid fa-award text-primary-light mb-1 text-base block"></i>
+                            <span class="font-semibold block">26 A+ Board Grades</span>
+                            <span class="text-emerald-100 text-[11px]">+ 60 A Grades</span>
+                        </div>
+                        <div class="p-2 rounded-lg bg-white/5 backdrop-blur-xs">
+                            <i class="fa-solid fa-flask-vial text-primary-light mb-1 text-base block"></i>
+                            <span class="font-semibold block">Chemical Labs</span>
+                            <span class="text-emerald-100 text-[11px]">Science & Library</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Feature Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white/10 border border-white/20 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl relative overflow-hidden">
+                        <div class="absolute -right-12 -top-12 w-36 h-36 bg-primary/20 rounded-full blur-2xl"></div>
+                        <div class="flex items-center justify-between border-b border-white/15 pb-4 mb-6">
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-primary-light font-semibold">Leadership & Legacy</span>
+                                <h3 class="font-playfair text-2xl font-bold text-white">Principal Khurshid Ahmed</h3>
+                            </div>
+                            <div class="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center text-primary-light text-xl font-bold">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                        </div>
+
+                        <p class="text-emerald-100 text-sm mb-6 leading-relaxed">
+                            Established in 1992 to empower the Muslim community with modern science, language literacy, and moral character.
+                        </p>
+
+                        <div class="space-y-3 mb-6 text-sm">
+                            <div class="flex items-center gap-3 text-emerald-100">
+                                <i class="fa-solid fa-circle-check text-primary-light"></i>
+                                <span>25+ Years Proven Board Exam Success</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-emerald-100">
+                                <i class="fa-solid fa-circle-check text-primary-light"></i>
+                                <span>Annual School Magazine "Karwan"</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-emerald-100">
+                                <i class="fa-solid fa-circle-check text-primary-light"></i>
+                                <span>Sports Teams & Educational Field Trips</span>
+                            </div>
+                        </div>
+
+                        <a href="#contact" class="block w-full py-3.5 px-4 bg-primary hover:bg-primary-dark text-white font-bold text-center rounded-xl transition-all shadow">
+                            Inquire About Admissions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ANIMATED STATS SECTION -->
+    <section class="py-12 bg-white relative z-20 -mt-8 mx-4 sm:mx-8 lg:mx-auto max-w-7xl rounded-2xl shadow-xl border border-gray-100">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 px-6">
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-emerald-100 text-primary flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900">
+                    <span class="counter" data-target="25">0</span>+
+                </div>
+                <p class="text-xs sm:text-sm text-gray-500 font-medium">Years Of Service (Est. 1992)</p>
+            </div>
+
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-blue-100 text-secondary flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <div class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900">
+                    <span class="counter" data-target="2500">0</span>+
+                </div>
+                <p class="text-xs sm:text-sm text-gray-500 font-medium">Enrolled Students</p>
+            </div>
+
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-emerald-100 text-primary flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900">
+                    <span class="counter" data-target="26">0</span>
+                </div>
+                <p class="text-xs sm:text-sm text-gray-500 font-medium">A+ Board Exam Achievers</p>
+            </div>
+
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-blue-100 text-secondary flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-medal"></i>
+                </div>
+                <div class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900">
+                    <span class="counter" data-target="60">0</span>
+                </div>
+                <p class="text-xs sm:text-sm text-gray-500 font-medium">A Grade Board Achievers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ABOUT SECTION -->
+    <section id="about" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Image Column -->
+                <div class="relative reveal">
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?w=800&q=80&auto=format&fit=crop" alt="Students studying at Hira Public School" class="w-full h-[450px] object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-secondary text-white p-6 rounded-2xl shadow-xl z-20 hidden sm:block max-w-xs">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa-solid fa-book-quran text-primary-light text-2xl"></i>
+                            <span class="font-playfair font-bold text-lg">Moral & Academic</span>
+                        </div>
+                        <p class="text-xs text-gray-300">Empowering future leaders with knowledge, integrity, and faith since 1992.</p>
+                    </div>
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-primary/20 rounded-full blur-xl -z-0"></div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="space-y-6 reveal">
+                    <div>
+                        <span class="text-primary font-bold text-sm tracking-widest uppercase">About Hira Public School</span>
+                        <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+                            Over 25 Years Of Quality Education & Character Building
+                        </h2>
+                    </div>
+
+                    <p class="text-gray-600 leading-relaxed">
+                        Founded in <strong>1992</strong> under the leadership of Principal <strong>Khurshid Ahmed</strong>, Hira Public School was established to serve the Muslim community in Manzoor Colony, Karachi. Today, with over 2,500 students, we stand as a beacon of academic excellence and Islamic moral values.
+                    </p>
+
+                    <p class="text-gray-600 leading-relaxed">
+                        Our overarching mission is to prepare students for success in both this world and the hereafter. We achieve this by blending rigorous scientific study with strong ethical instruction, state-of-the-art chemical laboratories, and rich co-curricular opportunities.
+                    </p>
+
+                    <!-- Feature Checklist -->
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <p class="text-sm text-gray-700 font-medium">Proven Board Exam Excellence (26 A+ and 60 A Grades in Board Exams)</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <p class="text-sm text-gray-700 font-medium">Fully Equipped Science & Chemical Laboratories for Hands-On Learning</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <p class="text-sm text-gray-700 font-medium">Annual Student Literary Publication — School Magazine "Karwan"</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <p class="text-sm text-gray-700 font-medium">Team Sports, Educational Field Trips & Character Building Activities</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex items-center gap-6">
+                        <div>
+                            <span class="block text-xs text-gray-400 font-semibold uppercase">Location</span>
+                            <span class="text-sm font-bold text-gray-800">Manzoor Colony, Karachi</span>
+                        </div>
+                        <div class="h-8 w-px bg-gray-200"></div>
+                        <div>
+                            <span class="block text-xs text-gray-400 font-semibold uppercase">Contact Phone</span>
+                            <span class="text-sm font-bold text-gray-800">0213-5397556</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SERVICES / ACADEMIC PROGRAMS GRID -->
+    <section id="programs" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">Academic Programs</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+                    Comprehensive Learning Stages
+                </h2>
+                <p class="text-gray-600 mt-3 text-base">
+                    From early childhood development to high school Matriculation readiness.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col reveal">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80&auto=format&fit=crop" alt="Preschool Education" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                            Age 25 Months+
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-playfair text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors">
+                                Preschool Education
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                                Gentle, nurturing early environment developing core language skills, sensory motor abilities, initial numbers, and social interaction.
+                            </p>
+                        </div>
+                        <ul class="mt-6 pt-4 border-t border-gray-200 text-xs text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Early Language & Alphabets</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Play-Based Social Skills</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Safe Nurturing Environment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col reveal">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&q=80&auto=format&fit=crop" alt="Primary Education" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                            Class 1 to 5
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-playfair text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors">
+                                Primary Education
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                                Comprehensive academic curriculum focusing on Mathematics, Science, English, Urdu, Social Studies, and foundational Islamic Values.
+                            </p>
+                        </div>
+                        <ul class="mt-6 pt-4 border-t border-gray-200 text-xs text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Mathematics & Problem Solving</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Science Exploration & Literacy</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Moral & Character Development</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col reveal">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80&auto=format&fit=crop" alt="Secondary Education" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                            Class 6 to 10 (Matric)
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-playfair text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors">
+                                Secondary Education
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                                Rigorous Board Exam preparation in Physics, Chemistry, Biology, Mathematics, and Computer Science with hands-on lab practicals.
+                            </p>
+                        </div>
+                        <ul class="mt-6 pt-4 border-t border-gray-200 text-xs text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Board Examination Focus (26 A+ Record)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Chemical & Science Practical Labs</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Leadership & Career Guidance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FACILITIES SECTION -->
+    <section id="facilities" class="py-20 bg-secondary text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-primary-light font-bold text-sm tracking-widest uppercase">Campus Infrastructure</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl font-bold mt-2">
+                    Modern School Facilities & Student Life
+                </h2>
+                <p class="text-gray-300 mt-3 text-base">
+                    Supporting balanced academic, physical, and creative growth for 2500+ students.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Facility 1 -->
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-light/50 hover:bg-white/10 transition-all duration-300 group reveal">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 text-primary-light flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-2 text-white">Chemical & Science Labs</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Equipped laboratories for Chemistry, Physics, and Biology experiments, enabling students to master practical board concepts.
+                    </p>
+                </div>
+
+                <!-- Facility 2 -->
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-light/50 hover:bg-white/10 transition-all duration-300 group reveal">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 text-primary-light flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-2 text-white">Comprehensive Library</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        A rich library filled with academic reference books, encyclopedia collections, Islamic literature, and quiet study zones.
+                    </p>
+                </div>
+
+                <!-- Facility 3 -->
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-light/50 hover:bg-white/10 transition-all duration-300 group reveal">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 text-primary-light flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-newspaper"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-2 text-white">Annual Magazine "Karwan"</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Our flagship annual student magazine showcasing essays, poetry, scientific write-ups, and artistic contributions by students.
+                    </p>
+                </div>
+
+                <!-- Facility 4 -->
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-light/50 hover:bg-white/10 transition-all duration-300 group reveal">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 text-primary-light flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-futbol"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-2 text-white">Team Sports & Athletics</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Promoting physical fitness, team spirit, and sportsmanship through cricket, football, table tennis, and annual sports days.
+                    </p>
+                </div>
+
+                <!-- Facility 5 -->
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-light/50 hover:bg-white/10 transition-all duration-300 group reveal">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 text-primary-light flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bus-simple"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-2 text-white">Educational Field Trips</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Regular outdoor educational visits to historical sites, science museums, and nature reserves to broaden student horizons.
+                    </p>
+                </div>
+
+                <!-- Facility 6 -->
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-light/50 hover:bg-white/10 transition-all duration-300 group reveal">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/20 text-primary-light flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-2 text-white">Computer Studies Lab</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Modern computer laboratory providing digital literacy, coding foundations, and office productivity skills.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. IMAGE GALLERY SECTION -->
+    <section id="gallery" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">Photo Gallery</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+                    Life At Hira Public School
+                </h2>
+                <p class="text-gray-600 mt-3 text-base">
+                    Click any thumbnail to view in full size. Exploring learning, laboratories, and student achievements!
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-card group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 reveal"
+                     data-src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1200&q=80&auto=format&fit=crop"
+                     data-title="Hira School Library"
+                     data-desc="Quiet study atmosphere and expansive book selection.">
+                    <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800&q=80&auto=format&fit=crop" alt="School Library" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-xs uppercase tracking-wider text-primary-light font-bold">Academic Facility</span>
+                        <h4 class="font-playfair text-lg font-bold">School Library</h4>
+                        <p class="text-xs text-gray-200 mt-1">Click to enlarge</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-card group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 reveal"
+                     data-src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1200&q=80&auto=format&fit=crop"
+                     data-title="Chemical & Science Laboratory"
+                     data-desc="Hands-on Chemistry experiments preparing students for Board practical exams.">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80&auto=format&fit=crop" alt="Science Laboratory" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-xs uppercase tracking-wider text-primary-light font-bold">Laboratories</span>
+                        <h4 class="font-playfair text-lg font-bold">Chemical Science Laboratory</h4>
+                        <p class="text-xs text-gray-200 mt-1">Click to enlarge</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-card group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 reveal"
+                     data-src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80&auto=format&fit=crop"
+                     data-title="Team Sports & Athletics"
+                     data-desc="Active physical education, outdoor sports matches, and teamwork.">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80&auto=format&fit=crop" alt="Team Sports" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-xs uppercase tracking-wider text-primary-light font-bold">Sports & Fitness</span>
+                        <h4 class="font-playfair text-lg font-bold">Team Sports & Playground</h4>
+                        <p class="text-xs text-gray-200 mt-1">Click to enlarge</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-card group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 reveal"
+                     data-src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80&auto=format&fit=crop"
+                     data-title="Annual School Magazine 'Karwan'"
+                     data-desc="Publishing student literary works, creative essays, and scientific research.">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80&auto=format&fit=crop" alt="Karwan Magazine Writing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-xs uppercase tracking-wider text-primary-light font-bold">Literary Excellence</span>
+                        <h4 class="font-playfair text-lg font-bold">Annual Magazine "Karwan"</h4>
+                        <p class="text-xs text-gray-200 mt-1">Click to enlarge</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-card group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 reveal"
+                     data-src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=1200&q=80&auto=format&fit=crop"
+                     data-title="Educational Field Trips"
+                     data-desc="Experiential learning tours to science centers and historic sights.">
+                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&q=80&auto=format&fit=crop" alt="Field Trips" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-xs uppercase tracking-wider text-primary-light font-bold">Outdoors</span>
+                        <h4 class="font-playfair text-lg font-bold">Educational Field Trips</h4>
+                        <p class="text-xs text-gray-200 mt-1">Click to enlarge</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-card group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 reveal"
+                     data-src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&q=80&auto=format&fit=crop"
+                     data-title="Academic Excellence & Board Results"
+                     data-desc="Celebrating 26 A+ and 60 A grades in Matriculation Board Examinations.">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80&auto=format&fit=crop" alt="Board Achievers" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-xs uppercase tracking-wider text-primary-light font-bold">Achievements</span>
+                        <h4 class="font-playfair text-lg font-bold">Board Examination Achievers</h4>
+                        <p class="text-xs text-gray-200 mt-1">Click to enlarge</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden backdrop-blur-md flex items-center justify-center p-4">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white text-3xl hover:text-primary-light focus:outline-none transition-colors">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl w-full text-center space-y-4">
+            <img id="lightbox-img" src="" alt="Enlarged gallery photo" class="max-h-[80vh] mx-auto rounded-xl shadow-2xl object-contain border border-white/10">
+            <h3 id="lightbox-title" class="font-playfair text-2xl font-bold text-white"></h3>
+            <p id="lightbox-desc" class="text-sm text-gray-300 max-w-lg mx-auto"></p>
+        </div>
+    </div>
+
+    <!-- 9. TESTIMONIALS SECTION -->
+    <section id="testimonials" class="py-20 bg-secondary text-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <span class="text-primary-light font-bold text-sm tracking-widest uppercase">Alumni & Parent Voices</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl font-bold mt-2">
+                    What Our Community Says
+                </h2>
+            </div>
+
+            <div class="relative bg-white/10 border border-white/15 rounded-3xl p-8 sm:p-12 backdrop-blur-md shadow-2xl min-h-[280px] flex items-center">
+                <div id="testimonial-slider" class="w-full">
+                    <div class="testimonial-slide space-y-6 text-center">
+                        <div class="flex justify-center text-primary-light text-lg gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="font-playfair text-xl sm:text-2xl italic leading-relaxed text-emerald-50">
+                            "Hira Public School laid the foundation for my engineering career. Under Principal Khurshid Ahmed's guidance, we received top-tier science education and moral values that stay with me every day."
+                        </p>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">Engr. Tariq Mehmood</h4>
+                            <p class="text-xs text-emerald-200">Alumnus & Civil Engineer • Karachi</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide space-y-6 text-center hidden">
+                        <div class="flex justify-center text-primary-light text-lg gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="font-playfair text-xl sm:text-2xl italic leading-relaxed text-emerald-50">
+                            "The science lab practicals and dedicated teachers helped my daughter secure an A+ in her Matric Board exams. Hira Public School is truly the best school in Manzoor Colony!"
+                        </p>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">Mrs. Shabana Rehan</h4>
+                            <p class="text-xs text-emerald-200">Parent of Secondary Student</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide space-y-6 text-center hidden">
+                        <div class="flex justify-center text-primary-light text-lg gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="font-playfair text-xl sm:text-2xl italic leading-relaxed text-emerald-50">
+                            "Publishing my first article in our annual magazine 'Karwan' gave me the confidence to pursue journalism. The school nurtures talent in every field!"
+                        </p>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">Mohammad Farhan</h4>
+                            <p class="text-xs text-emerald-200">Karwan Magazine Contributor & Student</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="slider-prev" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button id="slider-next" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="flex justify-center gap-2 mt-6" id="slider-dots">
+                <button class="dot-btn w-3 h-3 rounded-full bg-primary-light transition-all" data-index="0"></button>
+                <button class="dot-btn w-3 h-3 rounded-full bg-white/30 hover:bg-white/60 transition-all" data-index="1"></button>
+                <button class="dot-btn w-3 h-3 rounded-full bg-white/30 hover:bg-white/60 transition-all" data-index="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ ACCORDION -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">Information Center</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-gray-600 mt-3 text-base">
+                    Find answers regarding admissions, board curriculum, science labs, and school life.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-gray-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <span>What curriculum and Board syllabus does Hira Public School follow?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 py-4 text-sm text-gray-600 border-t border-gray-100 leading-relaxed bg-white">
+                        Hira Public School follows the Karachi Board of Secondary Education curriculum. We prepare secondary students rigorously for Board Examinations in Science and General groups, with a stellar record of 26 A+ grades and 60 A grades.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-gray-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <span>What is the minimum age for Preschool admission?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 py-4 text-sm text-gray-600 border-t border-gray-100 leading-relaxed bg-white">
+                        Children who are 25 months (2+ years) or older are eligible for our Preschool / Playgroup section. We focus on gentle social acclimatization, basic literacy, and motor skills.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-gray-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <span>What science and laboratory facilities are available on campus?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 py-4 text-sm text-gray-600 border-t border-gray-100 leading-relaxed bg-white">
+                        Our campus houses dedicated Chemical, Physics, and Biology laboratories equipped with modern instruments, safety protocols, and experienced lab instructors to conduct all compulsory secondary practicals.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-gray-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <span>How can students submit contributions for the annual magazine "Karwan"?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 py-4 text-sm text-gray-600 border-t border-gray-100 leading-relaxed bg-white">
+                        Students from Primary and Secondary classes can submit original essays, poems, drawings, and articles in English or Urdu to the editorial board headed by senior teachers during the second term of the academic year.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-gray-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <span>Where is the school located and what are the office hours?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 py-4 text-sm text-gray-600 border-t border-gray-100 leading-relaxed bg-white">
+                        The school is situated at <strong>G-7/1, Allama Iqbal Road, Manzoor Colony, Karachi</strong>. Admission office hours are Monday through Saturday, from 8:00 AM to 1:30 PM.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. CONTACT SECTION & ADMISSION FORM -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">Admissions & Contact</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+                    Apply For Admission Today
+                </h2>
+                <p class="text-gray-600 mt-3 text-base">
+                    Join over 2,500 students at Hira Public School. Fill out the form below or visit our Manzoor Colony campus!
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12">
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-6 reveal">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 space-y-6">
+                        <h3 class="font-playfair text-2xl font-bold text-gray-900">Contact Details</h3>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-primary flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">School Address</h4>
+                                <p class="text-sm text-gray-600 mt-1">G-7/1, Allama Iqbal Road, Manzoor Colony, Karachi, Pakistan</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-primary flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Landline Phone</h4>
+                                <p class="text-sm text-gray-600 mt-1">
+                                    <a href="tel:02135397556" class="hover:text-primary transition-colors">0213-5397556</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-primary flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Email Address</h4>
+                                <p class="text-sm text-gray-600 mt-1">
+                                    <a href="mailto:hpss.edu@gmail.com" class="hover:text-primary transition-colors">hpss.edu@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-secondary flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Principal</h4>
+                                <p class="text-sm text-gray-600 mt-1">Khurshid Ahmed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-secondary text-white p-6 rounded-2xl shadow-lg flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold shrink-0">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Over 25 Years of Legacy</h4>
+                            <p class="text-xs text-gray-300 mt-0.5">Serving the Muslim community with distinction since 1992.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7 reveal">
+                    <form id="admission-form" class="bg-white p-8 sm:p-10 rounded-2xl shadow-xl border border-gray-100 space-y-6" novalidate>
+                        <h3 class="font-playfair text-2xl font-bold text-gray-900">Admission Inquiry Form</h3>
+
+                        <!-- Success Banner -->
+                        <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-800 p-4 rounded-xl text-sm flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-green-600 text-lg mt-0.5"></i>
+                            <div>
+                                <strong class="block font-bold">Inquiry Received Successfully!</strong>
+                                <span>Thank you for contacting Hira Public School. Our admissions desk will review your details and reach out within 24 hours.</span>
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <!-- Parent Name -->
+                            <div>
+                                <label for="parent-name" class="block text-xs font-bold text-gray-700 uppercase mb-2">Student / Parent Name *</label>
+                                <input type="text" id="parent-name" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-sm" placeholder="e.g. Khurshid / Rehan">
+                                <p class="error-msg text-xs text-red-500 mt-1 hidden">Please enter your name.</p>
+                            </div>
+
+                            <!-- Phone -->
+                            <div>
+                                <label for="phone" class="block text-xs font-bold text-gray-700 uppercase mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-sm" placeholder="03XX-XXXXXXX or 021-XXXXXXX">
+                                <p class="error-msg text-xs text-red-500 mt-1 hidden">Please enter a valid phone number.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <!-- Email -->
+                            <div>
+                                <label for="email" class="block text-xs font-bold text-gray-700 uppercase mb-2">Email Address *</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-sm" placeholder="name@example.com">
+                                <p class="error-msg text-xs text-red-500 mt-1 hidden">Please enter a valid email address.</p>
+                            </div>
+
+                            <!-- Program Choice -->
+                            <div>
+                                <label for="program" class="block text-xs font-bold text-gray-700 uppercase mb-2">Select Program *</label>
+                                <select id="program" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-sm bg-white">
+                                    <option value="">Select admission level...</option>
+                                    <option value="preschool">Preschool (25 Months+)</option>
+                                    <option value="primary">Primary Education (Class 1-5)</option>
+                                    <option value="secondary">Secondary Education / Matric (Class 6-10)</option>
+                                </select>
+                                <p class="error-msg text-xs text-red-500 mt-1 hidden">Please select a program.</p>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <label for="message" class="block text-xs font-bold text-gray-700 uppercase mb-2">Message or Academic History</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-sm" placeholder="Provide previous school details, class applying for, or specific questions..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Admission Form
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FOOTER -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-12 gap-8 pb-12 border-b border-gray-800">
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-primary text-white font-playfair font-bold text-xl flex items-center justify-center">
+                            H
+                        </div>
+                        <span class="font-playfair font-bold text-2xl text-white">Hira Public School</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Founded in 1992. Over 25 years of educational quality and Islamic values serving 2,500+ students in Manzoor Colony, Karachi.
+                    </p>
+                    <p class="text-xs text-primary-light font-semibold">Principal: Khurshid Ahmed • Matric Board Achievers</p>
+                </div>
+
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="font-bold text-sm tracking-wider uppercase text-gray-200">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#about" class="hover:text-primary-light transition-colors">About Hira School</a></li>
+                        <li><a href="#programs" class="hover:text-primary-light transition-colors">Preschool, Primary & Secondary</a></li>
+                        <li><a href="#facilities" class="hover:text-primary-light transition-colors">Chemical Labs & Library</a></li>
+                        <li><a href="#gallery" class="hover:text-primary-light transition-colors">Annual Magazine "Karwan"</a></li>
+                        <li><a href="#faq" class="hover:text-primary-light transition-colors">Admissions FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="font-bold text-sm tracking-wider uppercase text-gray-200">Contact Manzoor Colony</h4>
+                    <p class="text-sm text-gray-400">G-7/1, Allama Iqbal Road, Manzoor Colony, Karachi</p>
+                    <p class="text-sm text-gray-400">Phone: 0213-5397556</p>
+                    <p class="text-sm text-gray-400">Email: hpss.edu@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+                <p>&copy; 2026 Hira Public School. All rights reserved.</p>
+                <p>Preparing Students for Success in This World & Hereafter</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 13. FLOATING WHATSAPP BUTTON (Bottom Right) -->
+    <a href="https://wa.me/922135397556?text=Hi%20Hira%20Public%20School%2C%20I%20would%20like%20to%20inquire%20about%202025-26%20admissions."
+       target="_blank" rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl flex items-center justify-center text-3xl transition-transform hover:scale-110 group"
+       title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="absolute right-16 bg-gray-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
+            Chat on WhatsApp
+        </span>
+    </a>
+
+    <!-- 14. BACK TO TOP BUTTON (Bottom Left) -->
+    <button id="back-to-top"
+            class="fixed bottom-6 left-6 z-40 w-12 h-12 bg-primary hover:bg-primary-dark text-white rounded-full shadow-2xl hidden flex items-center justify-center text-xl transition-all transform hover:scale-110"
+            title="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- JAVASCRIPT ENGINE -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // --- 1. Sticky Navbar Scroll Effect & Mobile Menu ---
+        const navbar = document.getElementById('navbar');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) {
+            navbar.classList.add('glass-nav', 'shadow-lg', 'text-gray-800');
+            navbar.classList.remove('text-white');
+            document.querySelectorAll('.nav-link').forEach(el => el.classList.add('text-gray-700'));
+            document.querySelectorAll('.nav-title').forEach(el => el.classList.add('text-gray-900'));
+            document.querySelectorAll('.nav-subtitle').forEach(el => el.classList.add('text-primary'));
+          } else {
+            navbar.classList.remove('glass-nav', 'shadow-lg', 'text-gray-800');
+            navbar.classList.add('text-white');
+            document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('text-gray-700'));
+            document.querySelectorAll('.nav-title').forEach(el => el.classList.remove('text-gray-900'));
+            document.querySelectorAll('.nav-subtitle').forEach(el => el.classList.remove('text-primary'));
+          }
+
+          if (window.scrollY > 300) {
+            backToTopBtn.classList.remove('hidden');
+          } else {
+            backToTopBtn.classList.add('hidden');
+          }
+        });
+
+        // Toggle Mobile Menu
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          if (mobileMenu.classList.contains('hidden')) {
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+          } else {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-xmark');
+          }
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+          });
+        });
+
+        // Back to top click
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // --- 2. Scroll Reveal Animations (IntersectionObserver) ---
+        const reveals = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+            }
+          });
+        }, { threshold: 0.15 });
+
+        reveals.forEach(el => revealObserver.observe(el));
+
+        // --- 3. Animated Counter Stats ---
+        const counters = document.querySelectorAll('.counter');
+        let animated = false;
+
+        const countObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !animated) {
+              animated = true;
+              counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const stepTime = 30;
+                const steps = duration / stepTime;
+                const increment = target / steps;
+                let current = 0;
+
+                const timer = setInterval(() => {
+                  current += increment;
+                  if (current >= target) {
+                    counter.textContent = target;
+                    clearInterval(timer);
+                  } else {
+                    counter.textContent = Math.ceil(current);
+                  }
+                }, stepTime);
+              });
+            }
+          });
+        }, { threshold: 0.5 });
+
+        if (counters.length > 0) {
+          countObserver.observe(counters[0].parentElement.parentElement);
+        }
+
+        // --- 4. Lightbox Modal ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxDesc = document.getElementById('lightbox-desc');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        document.querySelectorAll('.gallery-card').forEach(card => {
+          card.addEventListener('click', () => {
+            const src = card.getAttribute('data-src');
+            const title = card.getAttribute('data-title');
+            const desc = card.getAttribute('data-desc');
+
+            lightboxImg.src = src;
+            lightboxTitle.textContent = title;
+            lightboxDesc.textContent = desc;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          });
+        });
+
+        const closeLightbox = () => {
+          lightbox.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) closeLightbox();
+        });
+
+        // --- 5. Testimonial Auto-Advancing Carousel ---
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.dot-btn');
+        const prevBtn = document.getElementById('slider-prev');
+        const nextBtn = document.getElementById('slider-next');
+        let currentSlide = 0;
+        let slideInterval;
+
+        const showSlide = (index) => {
+          slides.forEach((slide, i) => {
+            if (i === index) {
+              slide.classList.remove('hidden');
+            } else {
+              slide.classList.add('hidden');
+            }
+          });
+          dots.forEach((dot, i) => {
+            if (i === index) {
+              dot.classList.add('bg-primary-light');
+              dot.classList.remove('bg-white/30');
+            } else {
+              dot.classList.remove('bg-primary-light');
+              dot.classList.add('bg-white/30');
+            }
+          });
+          currentSlide = index;
+        };
+
+        const nextSlide = () => {
+          let next = (currentSlide + 1) % slides.length;
+          showSlide(next);
+        };
+
+        const prevSlide = () => {
+          let prev = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(prev);
+        };
+
+        const startSlider = () => {
+          slideInterval = setInterval(nextSlide, 6000);
+        };
+
+        const stopSlider = () => {
+          clearInterval(slideInterval);
+        };
+
+        nextBtn.addEventListener('click', () => { stopSlider(); nextSlide(); startSlider(); });
+        prevBtn.addEventListener('click', () => { stopSlider(); prevSlide(); startSlider(); });
+
+        dots.forEach(dot => {
+          dot.addEventListener('click', (e) => {
+            stopSlider();
+            const index = parseInt(e.target.getAttribute('data-index'));
+            showSlide(index);
+            startSlider();
+          });
+        });
+
+        startSlider();
+
+        // --- 6. FAQ Accordion ---
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.faq-icon');
+
+            document.querySelectorAll('.faq-content').forEach(c => {
+              if (c !== content) c.classList.add('hidden');
+            });
+            document.querySelectorAll('.faq-icon').forEach(i => {
+              if (i !== icon) i.classList.remove('rotate-180');
+            });
+
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+          });
+        });
+
+        // --- 7. Live Form Validation & Submission ---
+        const form = document.getElementById('admission-form');
+        const parentName = document.getElementById('parent-name');
+        const phone = document.getElementById('phone');
+        const email = document.getElementById('email');
+        const program = document.getElementById('program');
+        const successBanner = document.getElementById('form-success');
+
+        const validateEmail = (str) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(str);
+        const validatePhone = (str) => str.trim().length >= 7;
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          let isValid = true;
+
+          if (parentName.value.trim() === '') {
+            parentName.nextElementSibling.classList.remove('hidden');
+            parentName.classList.add('border-red-500');
+            isValid = false;
+          } else {
+            parentName.nextElementSibling.classList.add('hidden');
+            parentName.classList.remove('border-red-500');
+          }
+
+          if (!validatePhone(phone.value)) {
+            phone.nextElementSibling.classList.remove('hidden');
+            phone.classList.add('border-red-500');
+            isValid = false;
+          } else {
+            phone.nextElementSibling.classList.add('hidden');
+            phone.classList.remove('border-red-500');
+          }
+
+          if (!validateEmail(email.value)) {
+            email.nextElementSibling.classList.remove('hidden');
+            email.classList.add('border-red-500');
+            isValid = false;
+          } else {
+            email.nextElementSibling.classList.add('hidden');
+            email.classList.remove('border-red-500');
+          }
+
+          if (program.value === '') {
+            program.nextElementSibling.classList.remove('hidden');
+            program.classList.add('border-red-500');
+            isValid = false;
+          } else {
+            program.nextElementSibling.classList.add('hidden');
+            program.classList.remove('border-red-500');
+          }
+
+          if (isValid) {
+            successBanner.classList.remove('hidden');
+            form.reset();
+            setTimeout(() => {
+              successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+          }
+        });
+      });
+    </script>
+</body>
+</html>
