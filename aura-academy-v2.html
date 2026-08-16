@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Aura Academy | Montessori & Early Learning School in Karachi</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#8e44ad',
+                light: '#a55eca',
+                dark: '#6c3483',
+                50: '#f8f4fb',
+                100: '#f1e6f7',
+                200: '#e2ccf0',
+              },
+              secondary: {
+                DEFAULT: '#f1c40f',
+                hover: '#d4ac0d',
+                light: '#f9e79f',
+                dark: '#b7950b',
+              }
+            },
+            fontFamily: {
+              playfair: ['Playfair Display', 'serif'],
+              poppins: ['Poppins', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .gradient-overlay {
+        background: linear-gradient(135deg, rgba(113, 54, 131, 0.92) 0%, rgba(44, 19, 56, 0.85) 100%);
+      }
+    </style>
+</head>
+<body class="font-poppins text-gray-800 bg-slate-50 antialiased selection:bg-primary selection:text-white">
+
+    <!-- 1. PREVIEW BANNER -->
+    <div class="bg-secondary text-gray-900 font-medium text-sm py-2 px-4 text-center sticky top-0 z-50 shadow-sm flex items-center justify-center gap-2">
+        <span class="inline-block animate-bounce">✨</span>
+        <span>This is a preview created by <strong>Muhammad Siddique</strong> — let me know what you think!</span>
+    </div>
+
+    <!-- 2. STICKY NAVBAR -->
+    <nav id="navbar" class="fixed top-[36px] left-0 right-0 z-40 transition-all duration-300 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-secondary text-primary-dark font-playfair font-bold text-2xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                        A
+                    </div>
+                    <div>
+                        <span class="font-playfair font-bold text-xl md:text-2xl tracking-tight block leading-none nav-title">The Aura Academy</span>
+                        <span class="text-[10px] tracking-widest uppercase font-medium opacity-80 block mt-1 nav-subtitle">Montessori & Early Learning</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#about" class="nav-link hover:text-secondary transition-colors">About</a>
+                    <a href="#programs" class="nav-link hover:text-secondary transition-colors">Programs</a>
+                    <a href="#focus" class="nav-link hover:text-secondary transition-colors">Focus Areas</a>
+                    <a href="#gallery" class="nav-link hover:text-secondary transition-colors">Gallery</a>
+                    <a href="#testimonials" class="nav-link hover:text-secondary transition-colors">Reviews</a>
+                    <a href="#faq" class="nav-link hover:text-secondary transition-colors">FAQ</a>
+                    <a href="#contact" class="nav-link hover:text-secondary transition-colors">Contact</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="#contact" class="bg-secondary hover:bg-secondary-hover text-gray-900 font-semibold px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 inline-flex items-center gap-2 text-sm">
+                        <i class="fa-solid fa-graduation-cap text-primary"></i> Admissions Open 2025-26
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-primary-dark/95 backdrop-blur-md border-t border-white/10 text-white px-4 pt-3 pb-6 space-y-3">
+            <a href="#about" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10">About Us</a>
+            <a href="#programs" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10">Programs</a>
+            <a href="#focus" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10">Focus Areas</a>
+            <a href="#gallery" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10">Gallery</a>
+            <a href="#testimonials" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10">Parent Reviews</a>
+            <a href="#faq" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10">FAQ</a>
+            <a href="#contact" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10">Contact & Apply</a>
+            <div class="pt-2">
+                <a href="#contact" class="block text-center bg-secondary text-gray-900 font-semibold py-2.5 rounded-full shadow">
+                    ✨ Apply Now (20% Off)
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. HERO SECTION -->
+    <section class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden bg-gray-900 text-white">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=1600&q=80&auto=format&fit=crop" alt="Montessori Classroom Children" class="w-full h-full object-cover">
+            <div class="absolute inset-0 gradient-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 border border-white/20 backdrop-blur-md text-secondary font-medium text-xs sm:text-sm">
+                        <span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+                        Admissions Open 2025–26 • Gulshan-e-Maymar, Karachi
+                    </div>
+
+                    <h1 class="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                        Where Curious Young Minds Discover <span class="text-secondary italic">Joyful Learning</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-purple-100 font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        A modern Montessori sanctuary where children flourish through hands-on creativity, caring guidance, and character-building play.
+                    </p>
+
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#contact" class="w-full sm:w-auto bg-secondary hover:bg-secondary-hover text-gray-900 font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 text-center">
+                            Apply For Admission (20% Discount)
+                        </a>
+                        <a href="#programs" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/30 font-semibold px-8 py-4 rounded-full backdrop-blur-md transition-all text-center">
+                            Explore Programs
+                        </a>
+                    </div>
+
+                    <!-- Highlight Badges -->
+                    <div class="pt-6 grid grid-cols-3 gap-3 border-t border-white/15 text-xs sm:text-sm">
+                        <div class="p-2 rounded-lg bg-white/5 backdrop-blur-xs">
+                            <i class="fa-solid fa-child text-secondary mb-1 text-base block"></i>
+                            <span class="font-semibold block">Ages 3+ to 5+</span>
+                            <span class="text-purple-200 text-[11px]">Montessori to K2</span>
+                        </div>
+                        <div class="p-2 rounded-lg bg-white/5 backdrop-blur-xs">
+                            <i class="fa-solid fa-shapes text-secondary mb-1 text-base block"></i>
+                            <span class="font-semibold block">Hands-On Play</span>
+                            <span class="text-purple-200 text-[11px]">Creativity & Math</span>
+                        </div>
+                        <div class="p-2 rounded-lg bg-white/5 backdrop-blur-xs">
+                            <i class="fa-solid fa-shield-heart text-secondary mb-1 text-base block"></i>
+                            <span class="font-semibold block">Safe Environment</span>
+                            <span class="text-purple-200 text-[11px]">Caring Educators</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Promo Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white/10 border border-white/20 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl relative overflow-hidden">
+                        <div class="absolute -right-12 -top-12 w-36 h-36 bg-secondary/20 rounded-full blur-2xl"></div>
+                        <div class="flex items-center justify-between border-b border-white/15 pb-4 mb-6">
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-secondary font-semibold">Special Offer</span>
+                                <h3 class="font-playfair text-2xl font-bold text-white">20% Tuition Discount</h3>
+                            </div>
+                            <div class="w-12 h-12 rounded-2xl bg-secondary/20 flex items-center justify-center text-secondary text-xl font-bold">
+                                %
+                            </div>
+                        </div>
+
+                        <p class="text-purple-100 text-sm mb-6 leading-relaxed">
+                            Enroll today for the 2025-26 academic year. Discount applicable for the <strong>first 50 registered students</strong>!
+                        </p>
+
+                        <div class="space-y-3 mb-6 text-sm">
+                            <div class="flex items-center gap-3 text-purple-100">
+                                <i class="fa-solid fa-circle-check text-secondary"></i>
+                                <span>No Hidden Admission Charges</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-purple-100">
+                                <i class="fa-solid fa-circle-check text-secondary"></i>
+                                <span>Complete Learning Material Provided</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-purple-100">
+                                <i class="fa-solid fa-circle-check text-secondary"></i>
+                                <span>Personalized Teacher Attention</span>
+                            </div>
+                        </div>
+
+                        <a href="#contact" class="block w-full py-3.5 px-4 bg-secondary hover:bg-secondary-hover text-gray-900 font-bold text-center rounded-xl transition-all shadow">
+                            Claim Discount & Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ANIMATED STATS SECTION -->
+    <section class="py-12 bg-white relative z-20 -mt-8 mx-4 sm:mx-8 lg:mx-auto max-w-7xl rounded-2xl shadow-xl border border-gray-100">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 px-6">
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-purple-100 text-primary flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-cubes"></i>
+                </div>
+                <div class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900">
+                    <span class="counter" data-target="3">0</span>
+                </div>
+                <p class="text-xs sm:text-sm text-gray-500 font-medium">Core Learning Programs</p>
+            </div>
+
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-yellow-100 text-yellow-700 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-percent"></i>
+                </div>
+                <div class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900">
+                    <span class="counter" data-target="20">0</span>%
+                </div>
+                <p class="text-xs sm:text-sm text-gray-500 font-medium">Discount (First 50)</p>
+            </div>
+
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-purple-100 text-primary flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <div class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900">
+                    <span class="counter" data-target="6">0</span>
+                </div>
+                <p class="text-xs sm:text-sm text-gray-500 font-medium">Development Focus Areas</p>
+            </div>
+
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-yellow-100 text-yellow-700 flex items-center justify-center text-xl font-bold">
+                    <i class="fa-solid fa-smile-beam"></i>
+                </div>
+                <div class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900">
+                    <span class="counter" data-target="100">0</span>%
+                </div>
+                <p class="text-xs sm:text-sm text-gray-500 font-medium">Joyful Hands-On Care</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ABOUT SECTION -->
+    <section id="about" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Image Column -->
+                <div class="relative reveal">
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80&auto=format&fit=crop" alt="Child Learning at Montessori" class="w-full h-[450px] object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-xl z-20 hidden sm:block max-w-xs">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fa-solid fa-heart text-secondary text-2xl"></i>
+                            <span class="font-playfair font-bold text-lg">Caring Guidance</span>
+                        </div>
+                        <p class="text-xs text-purple-100">Building lifelong confidence, emotional resilience, and character through joyful play.</p>
+                    </div>
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-secondary/20 rounded-full blur-xl -z-0"></div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="space-y-6 reveal">
+                    <div>
+                        <span class="text-primary font-bold text-sm tracking-widest uppercase">About The Aura Academy</span>
+                        <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+                            A Healthy, Nurturing Environment For Early Growth
+                        </h2>
+                    </div>
+
+                    <p class="text-gray-600 leading-relaxed">
+                        Located at <strong>A-71, Sector X-1, Gulshan-e-Maymar, Karachi</strong>, The Aura Academy is a modern Montessori early learning school. We believe every child possesses natural curiosity and unique creative potential.
+                    </p>
+
+                    <p class="text-gray-600 leading-relaxed">
+                        Our classrooms are thoughtfully organized to inspire self-directed exploration, hands-on activity, and collaborative play—preparing children for a lifetime of confident learning.
+                    </p>
+
+                    <!-- Feature Checklist -->
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <p class="text-sm text-gray-700 font-medium">Hands-On Montessori Methodology & Specialized Learning Apparatus</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <p class="text-sm text-gray-700 font-medium">Caring, Certified Early Childhood Educators & Individual Guidance</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <p class="text-sm text-gray-700 font-medium">Safe, Sanitized, Healthy Classrooms & Playful Learning Corners</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <p class="text-sm text-gray-700 font-medium">Focus on Character, Self-Reliance, Kindness & Social Harmony</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex items-center gap-6">
+                        <div>
+                            <span class="block text-xs text-gray-400 font-semibold uppercase">Location</span>
+                            <span class="text-sm font-bold text-gray-800">Gulshan-e-Maymar, Karachi</span>
+                        </div>
+                        <div class="h-8 w-px bg-gray-200"></div>
+                        <div>
+                            <span class="block text-xs text-gray-400 font-semibold uppercase">Contact Phone</span>
+                            <span class="text-sm font-bold text-gray-800">021-36350043 / 0370-2833626</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PROGRAMS GRID -->
+    <section id="programs" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">Educational Programs</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+                    Tailored Curriculums For Every Stage
+                </h2>
+                <p class="text-gray-600 mt-3 text-base">
+                    Our multi-stage early childhood programs ensure seamless academic, emotional, and social development.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col reveal">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80&auto=format&fit=crop" alt="Montessori Program" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                            Age 3+ Years
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-playfair text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors">
+                                Montessori Program
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                                Self-directed hands-on activity, sensory exercises, initial phonics, counting, and practical life skills fostering independence.
+                            </p>
+                        </div>
+                        <ul class="mt-6 pt-4 border-t border-gray-200 text-xs text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Practical Life & Sensory Tools</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Phonics Sound Recognition</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Motor Skills & Self-Care Routine</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col reveal">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80&auto=format&fit=crop" alt="K1 Program" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-secondary text-gray-900 text-xs font-bold px-3 py-1 rounded-full shadow">
+                            Age 4+ Years
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-playfair text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors">
+                                Kindergarten 1 (K1)
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                                Structured vocabulary expansion, basic math concepts, story comprehension, creative arts, and group cooperation.
+                            </p>
+                        </div>
+                        <ul class="mt-6 pt-4 border-t border-gray-200 text-xs text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Early Reading & Sight Words</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Numerical Concepts & Shapes</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Expressive Arts & Crafting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 group flex flex-col reveal">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=800&q=80&auto=format&fit=crop" alt="K2 Program" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                            Age 5+ Years
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-playfair text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors">
+                                Kindergarten 2 (K2)
+                            </h3>
+                            <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                                Comprehensive primary readiness! Advanced literacy, sentence writing, math logic, basic scientific inquiry, and social leadership.
+                            </p>
+                        </div>
+                        <ul class="mt-6 pt-4 border-t border-gray-200 text-xs text-gray-600 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Sentence Writing & Fluent Reading</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Addition, Subtraction & Logic</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary"></i> Primary School Transition Readiness</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FOCUS AREAS SECTION -->
+    <section id="focus" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-secondary font-bold text-sm tracking-widest uppercase">Holistic Growth</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl font-bold mt-2">
+                    Our 6 Foundation Pillars Of Early Learning
+                </h2>
+                <p class="text-gray-300 mt-3 text-base">
+                    Every day at The Aura Academy balances cognitive, physical, emotional, and social development.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-secondary/50 hover:bg-white/10 transition-all duration-300 group reveal">
+                    <div class="w-14 h-14 rounded-2xl bg-secondary/20 text-secondary flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-2 text-white">Language Development</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Phonics, vocabulary, story telling, and clear expression in English & Urdu to foster communicative confidence.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-secondary/50 hover:bg-white/10 transition-all duration-300 group reveal">
+                    <div class="w-14 h-14 rounded-2xl bg-secondary/20 text-secondary flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-2 text-white">Mathematical Thinking</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Concrete tactile materials convert abstract numbers into tangible concepts like counting, sorting, patterns, and logic.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-secondary/50 hover:bg-white/10 transition-all duration-300 group reveal">
+                    <div class="w-14 h-14 rounded-2xl bg-secondary/20 text-secondary flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-hand-sparkles"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-2 text-white">Sensory Learning</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Refining all five senses through textures, color classification, sound discrimination, and spatial awareness.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-secondary/50 hover:bg-white/10 transition-all duration-300 group reveal">
+                    <div class="w-14 h-14 rounded-2xl bg-secondary/20 text-secondary flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-2 text-white">Social Skills & Empathy</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Group play, turn-taking, respect for peers, conflict resolution, and developing emotional maturity.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-secondary/50 hover:bg-white/10 transition-all duration-300 group reveal">
+                    <div class="w-14 h-14 rounded-2xl bg-secondary/20 text-secondary flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-2 text-white">Independence & Self-Reliance</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Empowering children to choose activities, tidy their workstations, and take pride in self-accomplishment.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-secondary/50 hover:bg-white/10 transition-all duration-300 group reveal">
+                    <div class="w-14 h-14 rounded-2xl bg-secondary/20 text-secondary flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-2 text-white">Creativity & Arts</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Unleashing imagination with painting, clay modeling, rhythm music, drama, and open-ended creative construction.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. IMAGE GALLERY SECTION -->
+    <section id="gallery" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">Campus Life</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+                    Moments Of Joy & Discovery
+                </h2>
+                <p class="text-gray-600 mt-3 text-base">
+                    Click any image to view in full screen. Explore our vibrant learning atmosphere!
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-card group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 reveal"
+                     data-src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=80&auto=format&fit=crop"
+                     data-title="Sensory Learning Corner"
+                     data-desc="Children exploring tactile materials to sharpen sensory awareness.">
+                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&q=80&auto=format&fit=crop" alt="Sensory Learning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-xs uppercase tracking-wider text-secondary font-bold">Sensory Lab</span>
+                        <h4 class="font-playfair text-lg font-bold">Sensory Learning Corner</h4>
+                        <p class="text-xs text-gray-200 mt-1">Click to enlarge</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 reveal"
+                     data-src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=1200&q=80&auto=format&fit=crop"
+                     data-title="Creative Arts & Crafts Studio"
+                     data-desc="Fostering artistic expression through color, painting, and crafting.">
+                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&q=80&auto=format&fit=crop" alt="Creative Arts" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-xs uppercase tracking-wider text-secondary font-bold">Arts & Expression</span>
+                        <h4 class="font-playfair text-lg font-bold">Creative Arts Studio</h4>
+                        <p class="text-xs text-gray-200 mt-1">Click to enlarge</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 reveal"
+                     data-src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=1200&q=80&auto=format&fit=crop"
+                     data-title="Math & Counting Workshop"
+                     data-desc="Hands-on counting cubes and math beads for early logic.">
+                    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=800&q=80&auto=format&fit=crop" alt="Math Workshop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-xs uppercase tracking-wider text-secondary font-bold">Mathematics</span>
+                        <h4 class="font-playfair text-lg font-bold">Math & Counting Workshop</h4>
+                        <p class="text-xs text-gray-200 mt-1">Click to enlarge</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 reveal"
+                     data-src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1200&q=80&auto=format&fit=crop"
+                     data-title="Language & Storytelling Nook"
+                     data-desc="Interactive reading circles building vocabulary and story imagination.">
+                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80&auto=format&fit=crop" alt="Language Nook" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-xs uppercase tracking-wider text-secondary font-bold">Literacy</span>
+                        <h4 class="font-playfair text-lg font-bold">Storytelling & Reading Nook</h4>
+                        <p class="text-xs text-gray-200 mt-1">Click to enlarge</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 reveal"
+                     data-src="https://images.unsplash.com/photo-1567057419565-4349c49d8a04?w=1200&q=80&auto=format&fit=crop"
+                     data-title="Outdoor Play & Physical Growth"
+                     data-desc="Safe outdoor play area promoting gross motor skills and healthy physical exercise.">
+                    <img src="https://images.unsplash.com/photo-1567057419565-4349c49d8a04?w=800&q=80&auto=format&fit=crop" alt="Outdoor Play" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-xs uppercase tracking-wider text-secondary font-bold">Physical Play</span>
+                        <h4 class="font-playfair text-lg font-bold">Outdoor Activity & Play Area</h4>
+                        <p class="text-xs text-gray-200 mt-1">Click to enlarge</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card group relative rounded-2xl overflow-hidden shadow-md cursor-pointer h-64 reveal"
+                     data-src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=1200&q=80&auto=format&fit=crop"
+                     data-title="Social Collaboration & Friendship"
+                     data-desc="Group activities teaching empathy, sharing, and teamwork.">
+                    <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&q=80&auto=format&fit=crop" alt="Social Circle" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+                        <span class="text-xs uppercase tracking-wider text-secondary font-bold">Social Harmony</span>
+                        <h4 class="font-playfair text-lg font-bold">Group Learning & Circle Time</h4>
+                        <p class="text-xs text-gray-200 mt-1">Click to enlarge</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden backdrop-blur-md flex items-center justify-center p-4">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white text-3xl hover:text-secondary focus:outline-none transition-colors">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl w-full text-center space-y-4">
+            <img id="lightbox-img" src="" alt="Enlarged gallery photo" class="max-h-[80vh] mx-auto rounded-xl shadow-2xl object-contain border border-white/10">
+            <h3 id="lightbox-title" class="font-playfair text-2xl font-bold text-white"></h3>
+            <p id="lightbox-desc" class="text-sm text-gray-300 max-w-lg mx-auto"></p>
+        </div>
+    </div>
+
+    <!-- 9. TESTIMONIALS SECTION -->
+    <section id="testimonials" class="py-20 bg-primary text-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <span class="text-secondary font-bold text-sm tracking-widest uppercase">Parent Feedback</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl font-bold mt-2">
+                    What Parents Say About Aura Academy
+                </h2>
+            </div>
+
+            <div class="relative bg-white/10 border border-white/15 rounded-3xl p-8 sm:p-12 backdrop-blur-md shadow-2xl min-h-[280px] flex items-center">
+                <div id="testimonial-slider" class="w-full">
+                    <div class="testimonial-slide space-y-6 text-center">
+                        <div class="flex justify-center text-secondary text-lg gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="font-playfair text-xl sm:text-2xl italic leading-relaxed text-purple-50">
+                            "The Aura Academy transformed my 4-year-old son's confidence! The Montessori method here is truly authentic. He went from being quiet to enthusiastically showing us countings and phonics every afternoon."
+                        </p>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">Mrs. Ayesha Khan</h4>
+                            <p class="text-xs text-purple-200">Mother of K1 Student • Gulshan-e-Maymar</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide space-y-6 text-center hidden">
+                        <div class="flex justify-center text-secondary text-lg gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="font-playfair text-xl sm:text-2xl italic leading-relaxed text-purple-50">
+                            "Finding a genuine Montessori in Sector X-1 was a dream come true. The teachers are incredibly patient, the campus is clean, and the hands-on activity focus is second to none."
+                        </p>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">Bilal Ahmed</h4>
+                            <p class="text-xs text-purple-200">Parent of Montessori Student</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide space-y-6 text-center hidden">
+                        <div class="flex justify-center text-secondary text-lg gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="font-playfair text-xl sm:text-2xl italic leading-relaxed text-purple-50">
+                            "My daughter loved going to school from day one. The first 50 discount offer made it very accessible, and the quality of attention she receives from teachers is top class!"
+                        </p>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">Sadia Fatima</h4>
+                            <p class="text-xs text-purple-200">Mother of K2 Student</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="slider-prev" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button id="slider-next" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="flex justify-center gap-2 mt-6" id="slider-dots">
+                <button class="dot-btn w-3 h-3 rounded-full bg-secondary transition-all" data-index="0"></button>
+                <button class="dot-btn w-3 h-3 rounded-full bg-white/30 hover:bg-white/60 transition-all" data-index="1"></button>
+                <button class="dot-btn w-3 h-3 rounded-full bg-white/30 hover:bg-white/60 transition-all" data-index="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ ACCORDION -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">Common Questions</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-gray-600 mt-3 text-base">
+                    Everything you need to know about our Montessori admissions and learning structure.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-gray-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <span>What age criteria applies for Montessori, K1, and K2?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 py-4 text-sm text-gray-600 border-t border-gray-100 leading-relaxed bg-white">
+                        Our Montessori program welcomes children starting from 3+ years old. K1 (Kindergarten 1) is designed for ages 4+ years, and K2 (Kindergarten 2) prepares children aged 5+ years for seamless transition into primary grade 1.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-gray-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <span>How does the 20% admission discount offer work?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 py-4 text-sm text-gray-600 border-t border-gray-100 leading-relaxed bg-white">
+                        For the 2025–26 academic session, the first 50 newly admitted students automatically receive a 20% discount on monthly tuition fees throughout their first academic year. You can lock in this discount by submitting an online inquiry or visiting our campus.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-gray-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <span>What is the teacher-to-student ratio in classrooms?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 py-4 text-sm text-gray-600 border-t border-gray-100 leading-relaxed bg-white">
+                        We maintain small, focused class sizes with an optimum teacher-to-student ratio (1:12) plus dedicated classroom assistants. This ensures every child receives individual guidance tailored to their learning speed.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-gray-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <span>Where is the school located in Gulshan-e-Maymar?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 py-4 text-sm text-gray-600 border-t border-gray-100 leading-relaxed bg-white">
+                        We are located at <strong>A-71, Sector X-1, Gulshan-e-Maymar, Karachi</strong>. Our campus is easily accessible, peaceful, and features dedicated drop-off safety zones.
+                    </div>
+                </div>
+
+                <div class="faq-item border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-bold text-gray-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <span>What are the school timings and working days?</span>
+                        <i class="fa-solid fa-chevron-down text-primary transition-transform duration-300 faq-icon"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 py-4 text-sm text-gray-600 border-t border-gray-100 leading-relaxed bg-white">
+                        Montessori & K1 classes run Monday through Thursday from 8:30 AM to 12:30 PM, and Fridays 8:30 AM to 12:00 PM. K2 timing is extended slightly to prepare children for primary schedules.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. CONTACT SECTION & ADMISSION FORM -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-primary font-bold text-sm tracking-widest uppercase">Get In Touch</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+                    Admissions Open — Inquire Today
+                </h2>
+                <p class="text-gray-600 mt-3 text-base">
+                    Visit our Gulshan-e-Maymar campus or fill out the quick form below to reserve your 20% discount spot!
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 space-y-6 reveal">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 space-y-6">
+                        <h3 class="font-playfair text-2xl font-bold text-gray-900">Contact Information</h3>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-purple-100 text-primary flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Campus Address</h4>
+                                <p class="text-sm text-gray-600 mt-1">A-71, Sector X-1, Gulshan-e-Maymar, Karachi, Pakistan</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-purple-100 text-primary flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Phone Numbers</h4>
+                                <p class="text-sm text-gray-600 mt-1">
+                                    <a href="tel:02136350043" class="hover:text-primary transition-colors">PTCL: 021-36350043</a><br>
+                                    <a href="tel:03702833626" class="hover:text-primary transition-colors">Mobile: 0370-2833626</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-purple-100 text-primary flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Email Address</h4>
+                                <p class="text-sm text-gray-600 mt-1">
+                                    <a href="mailto:theauraacademy98@gmail.com" class="hover:text-primary transition-colors">theauraacademy98@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-yellow-100 text-yellow-700 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Visiting Hours</h4>
+                                <p class="text-sm text-gray-600 mt-1">Monday – Saturday: 8:00 AM – 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-primary text-white p-6 rounded-2xl shadow-lg flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-secondary text-gray-900 flex items-center justify-center text-2xl font-bold shrink-0">
+                            %
+                        </div>
+                        <div>
+                            <h4 class="font-bold">20% Discount Reminder</h4>
+                            <p class="text-xs text-purple-100 mt-0.5">First 50 admissions receive an exclusive 20% discount on monthly tuition fees.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 reveal">
+                    <form id="admission-form" class="bg-white p-8 sm:p-10 rounded-2xl shadow-xl border border-gray-100 space-y-6" novalidate>
+                        <h3 class="font-playfair text-2xl font-bold text-gray-900">Admission Inquiry Form</h3>
+
+                        <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-800 p-4 rounded-xl text-sm flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-green-600 text-lg mt-0.5"></i>
+                            <div>
+                                <strong class="block font-bold">Thank you for your inquiry!</strong>
+                                <span>We have received your request. Our admissions officer will contact you within 24 hours to finalize your 20% discount slot.</span>
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="parent-name" class="block text-xs font-bold text-gray-700 uppercase mb-2">Parent / Guardian Name *</label>
+                                <input type="text" id="parent-name" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-sm" placeholder="e.g. Ayesha Khan">
+                                <p class="error-msg text-xs text-red-500 mt-1 hidden">Please enter your full name.</p>
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-xs font-bold text-gray-700 uppercase mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-sm" placeholder="0370-XXXXXXX">
+                                <p class="error-msg text-xs text-red-500 mt-1 hidden">Please enter a valid phone number.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-xs font-bold text-gray-700 uppercase mb-2">Email Address *</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-sm" placeholder="name@example.com">
+                                <p class="error-msg text-xs text-red-500 mt-1 hidden">Please enter a valid email address.</p>
+                            </div>
+
+                            <div>
+                                <label for="program" class="block text-xs font-bold text-gray-700 uppercase mb-2">Select Program *</label>
+                                <select id="program" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-sm bg-white">
+                                    <option value="">Select a program...</option>
+                                    <option value="montessori">Montessori (3+ years)</option>
+                                    <option value="k1">Kindergarten 1 / K1 (4+ years)</option>
+                                    <option value="k2">Kindergarten 2 / K2 (5+ years)</option>
+                                </select>
+                                <p class="error-msg text-xs text-red-500 mt-1 hidden">Please select a program.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-bold text-gray-700 uppercase mb-2">Message or Special Requirements</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all text-sm" placeholder="Tell us about your child's age, previous learning, or any questions..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Admission Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FOOTER -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-12 gap-8 pb-12 border-b border-gray-800">
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-secondary text-primary-dark font-playfair font-bold text-xl flex items-center justify-center">
+                            A
+                        </div>
+                        <span class="font-playfair font-bold text-2xl text-white">The Aura Academy</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Modern Montessori and early learning school in Gulshan-e-Maymar, Karachi. Where children learn through hands-on creativity and joyful play.
+                    </p>
+                    <p class="text-xs text-secondary font-semibold">✨ Admissions 2025–26 Open (First 50 Get 20% Discount)</p>
+                </div>
+
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="font-bold text-sm tracking-wider uppercase text-gray-200">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#about" class="hover:text-secondary transition-colors">About Academy</a></li>
+                        <li><a href="#programs" class="hover:text-secondary transition-colors">Montessori, K1 & K2</a></li>
+                        <li><a href="#focus" class="hover:text-secondary transition-colors">Focus Development</a></li>
+                        <li><a href="#gallery" class="hover:text-secondary transition-colors">Campus Gallery</a></li>
+                        <li><a href="#faq" class="hover:text-secondary transition-colors">Admissions FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="font-bold text-sm tracking-wider uppercase text-gray-200">Contact Gulshan-e-Maymar</h4>
+                    <p class="text-sm text-gray-400">A-71, Sector X-1, Gulshan-e-Maymar, Karachi</p>
+                    <p class="text-sm text-gray-400">PTCL: 021-36350043</p>
+                    <p class="text-sm text-gray-400">Mobile: 0370-2833626</p>
+                    <p class="text-sm text-gray-400">Email: theauraacademy98@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+                <p>&copy; 2026 The Aura Academy. All rights reserved.</p>
+                <p>Designed with care for Early Childhood Education</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 13. FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/923702833626?text=Hi%20The%20Aura%20Academy%2C%20I%20would%20like%20to%20inquire%20about%202025-26%20admissions."
+       target="_blank" rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl flex items-center justify-center text-3xl transition-transform hover:scale-110 group"
+       title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="absolute right-16 bg-gray-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
+            Chat on WhatsApp
+        </span>
+    </a>
+
+    <!-- 14. BACK TO TOP BUTTON -->
+    <button id="back-to-top"
+            class="fixed bottom-6 left-6 z-40 w-12 h-12 bg-primary hover:bg-primary-dark text-white rounded-full shadow-2xl hidden flex items-center justify-center text-xl transition-all transform hover:scale-110"
+            title="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const navbar = document.getElementById('navbar');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) {
+            navbar.classList.add('glass-nav', 'shadow-lg', 'text-gray-800');
+            navbar.classList.remove('text-white');
+            document.querySelectorAll('.nav-link').forEach(el => el.classList.add('text-gray-700'));
+            document.querySelectorAll('.nav-title').forEach(el => el.classList.add('text-gray-900'));
+            document.querySelectorAll('.nav-subtitle').forEach(el => el.classList.add('text-primary'));
+          } else {
+            navbar.classList.remove('glass-nav', 'shadow-lg', 'text-gray-800');
+            navbar.classList.add('text-white');
+            document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('text-gray-700'));
+            document.querySelectorAll('.nav-title').forEach(el => el.classList.remove('text-gray-900'));
+            document.querySelectorAll('.nav-subtitle').forEach(el => el.classList.remove('text-primary'));
+          }
+
+          if (window.scrollY > 300) {
+            backToTopBtn.classList.remove('hidden');
+          } else {
+            backToTopBtn.classList.add('hidden');
+          }
+        });
+
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          if (mobileMenu.classList.contains('hidden')) {
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+          } else {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-xmark');
+          }
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+          });
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        const reveals = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+            }
+          });
+        }, { threshold: 0.15 });
+
+        reveals.forEach(el => revealObserver.observe(el));
+
+        const counters = document.querySelectorAll('.counter');
+        let animated = false;
+
+        const countObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !animated) {
+              animated = true;
+              counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const stepTime = 30;
+                const steps = duration / stepTime;
+                const increment = target / steps;
+                let current = 0;
+
+                const timer = setInterval(() => {
+                  current += increment;
+                  if (current >= target) {
+                    counter.textContent = target;
+                    clearInterval(timer);
+                  } else {
+                    counter.textContent = Math.ceil(current);
+                  }
+                }, stepTime);
+              });
+            }
+          });
+        }, { threshold: 0.5 });
+
+        if (counters.length > 0) {
+          countObserver.observe(counters[0].parentElement.parentElement);
+        }
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxDesc = document.getElementById('lightbox-desc');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        document.querySelectorAll('.gallery-card').forEach(card => {
+          card.addEventListener('click', () => {
+            const src = card.getAttribute('data-src');
+            const title = card.getAttribute('data-title');
+            const desc = card.getAttribute('data-desc');
+
+            lightboxImg.src = src;
+            lightboxTitle.textContent = title;
+            lightboxDesc.textContent = desc;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          });
+        });
+
+        const closeLightbox = () => {
+          lightbox.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) closeLightbox();
+        });
+
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.dot-btn');
+        const prevBtn = document.getElementById('slider-prev');
+        const nextBtn = document.getElementById('slider-next');
+        let currentSlide = 0;
+        let slideInterval;
+
+        const showSlide = (index) => {
+          slides.forEach((slide, i) => {
+            if (i === index) {
+              slide.classList.remove('hidden');
+            } else {
+              slide.classList.add('hidden');
+            }
+          });
+          dots.forEach((dot, i) => {
+            if (i === index) {
+              dot.classList.add('bg-secondary');
+              dot.classList.remove('bg-white/30');
+            } else {
+              dot.classList.remove('bg-secondary');
+              dot.classList.add('bg-white/30');
+            }
+          });
+          currentSlide = index;
+        };
+
+        const nextSlide = () => {
+          let next = (currentSlide + 1) % slides.length;
+          showSlide(next);
+        };
+
+        const prevSlide = () => {
+          let prev = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(prev);
+        };
+
+        const startSlider = () => {
+          slideInterval = setInterval(nextSlide, 6000);
+        };
+
+        const stopSlider = () => {
+          clearInterval(slideInterval);
+        };
+
+        nextBtn.addEventListener('click', () => { stopSlider(); nextSlide(); startSlider(); });
+        prevBtn.addEventListener('click', () => { stopSlider(); prevSlide(); startSlider(); });
+
+        dots.forEach(dot => {
+          dot.addEventListener('click', (e) => {
+            stopSlider();
+            const index = parseInt(e.target.getAttribute('data-index'));
+            showSlide(index);
+            startSlider();
+          });
+        });
+
+        startSlider();
+
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.faq-icon');
+
+            document.querySelectorAll('.faq-content').forEach(c => {
+              if (c !== content) c.classList.add('hidden');
+            });
+            document.querySelectorAll('.faq-icon').forEach(i => {
+              if (i !== icon) i.classList.remove('rotate-180');
+            });
+
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+          });
+        });
+
+        const form = document.getElementById('admission-form');
+        const parentName = document.getElementById('parent-name');
+        const phone = document.getElementById('phone');
+        const email = document.getElementById('email');
+        const program = document.getElementById('program');
+        const successBanner = document.getElementById('form-success');
+
+        const validateEmail = (str) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(str);
+        const validatePhone = (str) => str.trim().length >= 8;
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          let isValid = true;
+
+          if (parentName.value.trim() === '') {
+            parentName.nextElementSibling.classList.remove('hidden');
+            parentName.classList.add('border-red-500');
+            isValid = false;
+          } else {
+            parentName.nextElementSibling.classList.add('hidden');
+            parentName.classList.remove('border-red-500');
+          }
+
+          if (!validatePhone(phone.value)) {
+            phone.nextElementSibling.classList.remove('hidden');
+            phone.classList.add('border-red-500');
+            isValid = false;
+          } else {
+            phone.nextElementSibling.classList.add('hidden');
+            phone.classList.remove('border-red-500');
+          }
+
+          if (!validateEmail(email.value)) {
+            email.nextElementSibling.classList.remove('hidden');
+            email.classList.add('border-red-500');
+            isValid = false;
+          } else {
+            email.nextElementSibling.classList.add('hidden');
+            email.classList.remove('border-red-500');
+          }
+
+          if (program.value === '') {
+            program.nextElementSibling.classList.remove('hidden');
+            program.classList.add('border-red-500');
+            isValid = false;
+          } else {
+            program.nextElementSibling.classList.add('hidden');
+            program.classList.remove('border-red-500');
+          }
+
+          if (isValid) {
+            successBanner.classList.remove('hidden');
+            form.reset();
+            setTimeout(() => {
+              successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+          }
+        });
+      });
+    </script>
+</body>
+</html>
