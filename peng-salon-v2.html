@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peng Salon & SPA | Luxury Salon, Academy & Atelier in DHA Karachi</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#C0A062',
+                        secondaryHover: '#A8884C',
+                        goldLight: '#F7F3EB',
+                        goldBorder: 'rgba(192, 160, 98, 0.3)',
+                        darkText: '#1C1C1C',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(16px);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF0D0 0%, #C0A062 50%, #E8D5B5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-sans bg-black text-gray-200 antialiased selection:bg-secondary selection:text-black">
+
+    <!-- 1. PREVIEW BANNER -->
+    <div class="sticky top-0 z-50 bg-gradient-to-r from-secondary via-amber-600 to-secondary text-black text-xs md:text-sm font-semibold py-2 px-4 text-center shadow-lg flex items-center justify-center gap-2">
+        <svg class="w-4 h-4 text-black animate-pulse shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+        </svg>
+        <span>✨ This is a preview created by Muhammad Siddique — let me know what you think!</span>
+    </div>
+
+    <!-- 2. STICKY NAVBAR -->
+    <nav id="navbar" class="fixed top-9 left-0 right-0 z-40 transition-all duration-300 py-5 px-4 sm:px-8 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full border border-secondary flex items-center justify-center text-secondary shadow-lg group-hover:bg-secondary group-hover:text-black transition-all">
+                    <span class="font-serif font-extrabold text-lg">P</span>
+                </div>
+                <div>
+                    <span id="nav-brand-text" class="font-serif font-bold text-xl md:text-2xl text-white tracking-widest block leading-none">PENG</span>
+                    <span class="text-[10px] uppercase tracking-widest text-secondary block font-medium mt-1">SALON & SPA • EST. 2004</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-8 font-medium text-sm">
+                <a href="#home" class="nav-link text-gray-300 hover:text-secondary transition-colors">Home</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-secondary transition-colors">About Us</a>
+                <a href="#divisions" class="nav-link text-gray-300 hover:text-secondary transition-colors">Divisions</a>
+                <a href="#services" class="nav-link text-gray-300 hover:text-secondary transition-colors">Services</a>
+                <a href="#gallery" class="nav-link text-gray-300 hover:text-secondary transition-colors">Atelier Gallery</a>
+                <a href="#testimonials" class="nav-link text-gray-300 hover:text-secondary transition-colors">Reviews</a>
+                <a href="#faq" class="nav-link text-gray-300 hover:text-secondary transition-colors">FAQ</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-secondary transition-colors">Contact</a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="#contact" class="bg-secondary hover:bg-secondaryHover text-black px-6 py-2.5 rounded-full font-semibold text-sm transition-all transform hover:-translate-y-0.5 shadow-lg shadow-secondary/20">
+                    Reserve Experience
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-secondary p-2 focus:outline-none" aria-label="Toggle Menu">
+                <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-zinc-950 border border-secondary/30 rounded-2xl shadow-2xl mt-4 p-6 text-gray-200 transition-all">
+            <div class="flex flex-col gap-4 font-medium text-base">
+                <a href="#home" class="mobile-link hover:text-secondary transition-colors py-1">Home</a>
+                <a href="#about" class="mobile-link hover:text-secondary transition-colors py-1">About Peng</a>
+                <a href="#divisions" class="mobile-link hover:text-secondary transition-colors py-1">Our Divisions</a>
+                <a href="#services" class="mobile-link hover:text-secondary transition-colors py-1">Luxury Services</a>
+                <a href="#gallery" class="mobile-link hover:text-secondary transition-colors py-1">Atelier Gallery</a>
+                <a href="#testimonials" class="mobile-link hover:text-secondary transition-colors py-1">VIP Testimonials</a>
+                <a href="#faq" class="mobile-link hover:text-secondary transition-colors py-1">FAQ</a>
+                <a href="#contact" class="mobile-link hover:text-secondary transition-colors py-1">Contact DHA Salon</a>
+                <div class="pt-2 border-t border-zinc-800">
+                    <a href="#contact" class="mobile-link block text-center bg-secondary text-black py-3 rounded-xl font-bold">
+                        Reserve VIP Slot
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-zinc-950 overflow-hidden pt-20">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=1600&q=80&auto=format&fit=crop" alt="Luxury Spa & Salon Interior" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black/60"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-black/40 to-black"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 text-center lg:text-left grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 border border-secondary/30 text-secondary text-xs sm:text-sm font-semibold tracking-widest uppercase">
+                    <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                    ✨ KHAYABAN-E-ITTEHAD, PHASE 2 DHA KARACHI
+                </div>
+
+                <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight">
+                    Redefining <br>
+                    <span class="gold-gradient-text">Luxury Beauty & Atelier</span>
+                </h1>
+
+                <p class="text-gray-300 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+                    Established in <strong class="text-white">2004</strong>, Peng Salon & SPA is Karachi's signature destination for bespoke salon rituals, professional beauty academy training, and high-fashion couture styling at Atelier By Peng.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 pt-4">
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-secondary hover:bg-secondaryHover text-black font-bold rounded-full shadow-xl shadow-secondary/20 transition-all transform hover:-translate-y-1 text-center flex items-center justify-center gap-2">
+                        <span>Book VIP Reservation</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                    <a href="#divisions" class="w-full sm:w-auto px-8 py-4 border border-secondary/50 text-secondary hover:bg-secondary/10 font-medium rounded-full transition-all text-center">
+                        Explore Academy & Atelier
+                    </a>
+                </div>
+
+                <div class="pt-8 flex flex-wrap items-center justify-center lg:justify-start gap-8 text-xs text-gray-400 border-t border-zinc-800">
+                    <div class="flex items-center gap-2">
+                        <span class="text-secondary font-bold">✓</span> Salon For Him & Her
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-secondary font-bold">✓</span> Peng Beauty Academy
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-secondary font-bold">✓</span> Atelier By Peng
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Feature Card -->
+            <div class="lg:col-span-5 hidden lg:block">
+                <div class="glass-dark p-6 rounded-3xl border border-secondary/30 text-gray-200 shadow-2xl relative overflow-hidden group">
+                    <div class="relative h-80 rounded-2xl overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=800&q=80&auto=format&fit=crop" alt="Peng Luxury Salon Experience" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-secondary text-black text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+                            Atelier Division
+                        </span>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-serif font-bold text-xl text-white">Couture Bridal & Runway Looks</h3>
+                        <p class="text-xs text-gray-400">Custom hair sculpturing and avant-garde makeup designed by master stylists at Atelier By Peng.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-zinc-800">
+                            <span class="text-xs text-secondary font-semibold uppercase tracking-wider">Mon-Sun: 10:00 AM - 7:30 PM</span>
+                            <a href="#contact" class="text-secondary font-bold text-sm hover:underline">
+                                Request Consultation &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ANIMATED STATS SECTION -->
+    <section class="py-16 bg-zinc-950 border-y border-zinc-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center" id="stats-container">
+                <div class="p-6 rounded-2xl bg-zinc-900/60 border border-secondary/20 reveal">
+                    <div class="font-serif text-4xl sm:text-5xl font-extrabold gold-gradient-text mb-2">
+                        <span class="counter" data-target="22">0</span>+
+                    </div>
+                    <div class="text-xs sm:text-sm font-semibold text-gray-300 uppercase tracking-wider">Years Excellence</div>
+                    <div class="text-xs text-gray-500 mt-1">Established 2004</div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-zinc-900/60 border border-secondary/20 reveal">
+                    <div class="font-serif text-4xl sm:text-5xl font-extrabold gold-gradient-text mb-2">
+                        <span class="counter" data-target="25000">0</span>+
+                    </div>
+                    <div class="text-xs sm:text-sm font-semibold text-gray-300 uppercase tracking-wider">VIP Guests</div>
+                    <div class="text-xs text-gray-500 mt-1">DHA Karachi Salon</div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-zinc-900/60 border border-secondary/20 reveal">
+                    <div class="font-serif text-4xl sm:text-5xl font-extrabold gold-gradient-text mb-2">
+                        <span class="counter" data-target="3">0</span>
+                    </div>
+                    <div class="text-xs sm:text-sm font-semibold text-gray-300 uppercase tracking-wider">Core Divisions</div>
+                    <div class="text-xs text-gray-500 mt-1">Salon, Academy & Atelier</div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-zinc-900/60 border border-secondary/20 reveal">
+                    <div class="font-serif text-4xl sm:text-5xl font-extrabold gold-gradient-text mb-2">
+                        <span class="counter" data-target="100">0</span>%
+                    </div>
+                    <div class="text-xs sm:text-sm font-semibold text-gray-300 uppercase tracking-wider">Luxury Standard</div>
+                    <div class="text-xs text-gray-500 mt-1">Premier Products</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ABOUT SECTION -->
+    <section id="about" class="py-24 bg-black relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Image Stack -->
+                <div class="lg:col-span-6 relative reveal">
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-secondary/30">
+                        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80&auto=format&fit=crop" alt="Peng Salon Atmosphere" class="w-full h-[480px] object-cover">
+                    </div>
+                    <div class="absolute -bottom-8 -right-4 sm:right-6 z-20 bg-zinc-900/90 p-6 rounded-2xl border border-secondary/40 backdrop-blur-md max-w-xs shadow-2xl">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full border-2 border-secondary flex items-center justify-center text-secondary font-bold font-serif text-lg">
+                                '04
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Established 2004</h4>
+                                <p class="text-xs text-gray-400">Over 2 Decades of Heritage</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Narrative -->
+                <div class="lg:col-span-6 space-y-6 reveal">
+                    <span class="text-xs font-semibold text-secondary uppercase tracking-widest px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20">
+                        About Peng Salon & SPA
+                    </span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                        A Legacy of Luxury, Innovation & Craftsmanship
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base font-light">
+                        Established in <strong>2004</strong> on Khayaban-e-Ittehad, Phase 2 DHA Karachi, <strong>Peng Salon & SPA</strong> has set the benchmark for high-end beauty, therapeutic spa experiences, and bespoke hair design in Pakistan.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed text-sm font-light">
+                        Beyond offering world-class salon experiences for both gentlemen and ladies, Peng expanded into the <strong>Peng Beauty Academy</strong> to train the next generation of salon artisans, and <strong>Atelier By Peng</strong> for high-fashion runway and bridal creations.
+                    </p>
+
+                    <!-- Feature Bullet Points -->
+                    <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-secondary/20 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+                                ✓
+                            </div>
+                            <span class="text-sm font-medium text-gray-200">Dedicated Salon For Him & Her</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-secondary/20 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+                                ✓
+                            </div>
+                            <span class="text-sm font-medium text-gray-200">Peng Professional Academy</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-secondary/20 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+                                ✓
+                            </div>
+                            <span class="text-sm font-medium text-gray-200">Atelier Couture Hair Designs</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-secondary/20 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+                                ✓
+                            </div>
+                            <span class="text-sm font-medium text-gray-200">Strict Hygiene & VIP Suite</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex items-center gap-6">
+                        <a href="#contact" class="px-7 py-3.5 bg-secondary hover:bg-secondaryHover text-black font-bold rounded-full transition-all shadow-lg shadow-secondary/20">
+                            Visit DHA Salon
+                        </a>
+                        <div class="text-xs text-gray-400">
+                            <span class="block font-bold text-white text-sm">Mon - Sun: 10:00 AM - 7:30 PM</span>
+                            Khayaban-e-Ittehad, Phase 2, DHA
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. DIVISIONS & SERVICES GRID -->
+    <section id="divisions" class="py-24 bg-zinc-950 border-t border-zinc-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-xs font-semibold text-secondary uppercase tracking-widest px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20">Our Specialized Divisions</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-3">Excellence Across Every Realm</h2>
+                <p class="text-gray-400 mt-3 text-sm sm:text-base font-light">
+                    Explore our salon, training academy, and haute couture atelier divisions.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="services">
+                <!-- Service 1: Salon For Her -->
+                <div class="group rounded-3xl overflow-hidden bg-zinc-900 border border-secondary/20 hover:border-secondary transition-all duration-300 flex flex-col reveal">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80&auto=format&fit=crop" alt="Salon For Her" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-4 right-4 bg-secondary text-black text-xs font-bold px-3 py-1 rounded-full">For Her</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-white group-hover:text-secondary transition-colors">Salon For Her</h3>
+                            <p class="text-sm text-gray-400 mt-2 leading-relaxed">Couture haircuts, balayage, organic hair gloss treatments, nail spa, and specialized bridal transformations in an opulent private setting.</p>
+                        </div>
+                        <div class="pt-4 border-t border-zinc-800 flex items-center justify-between">
+                            <span class="text-xs font-medium text-secondary">Hair & Skincare</span>
+                            <a href="#contact" class="text-sm font-bold text-secondary hover:underline">Book &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Salon For Him -->
+                <div class="group rounded-3xl overflow-hidden bg-zinc-900 border border-secondary/20 hover:border-secondary transition-all duration-300 flex flex-col reveal">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80&auto=format&fit=crop" alt="Salon For Him" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-4 right-4 bg-zinc-800 text-secondary border border-secondary/40 text-xs font-bold px-3 py-1 rounded-full">For Him</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-white group-hover:text-secondary transition-colors">Salon For Him</h3>
+                            <p class="text-sm text-gray-400 mt-2 leading-relaxed">Executive barbering, razor sharp beard sculpting, charcoal facials, scalp detox, and relaxation massages for modern gentlemen.</p>
+                        </div>
+                        <div class="pt-4 border-t border-zinc-800 flex items-center justify-between">
+                            <span class="text-xs font-medium text-secondary">Grooming Suite</span>
+                            <a href="#contact" class="text-sm font-bold text-secondary hover:underline">Book &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Peng Academy -->
+                <div class="group rounded-3xl overflow-hidden bg-zinc-900 border border-secondary/20 hover:border-secondary transition-all duration-300 flex flex-col reveal">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?w=800&q=80&auto=format&fit=crop" alt="Peng Academy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-4 right-4 bg-secondary text-black text-xs font-bold px-3 py-1 rounded-full">Academy</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-white group-hover:text-secondary transition-colors">Peng Beauty Academy</h3>
+                            <p class="text-sm text-gray-400 mt-2 leading-relaxed">Professional education programs offering diploma courses in cosmetology, hair design, aesthetics, and salon management.</p>
+                        </div>
+                        <div class="pt-4 border-t border-zinc-800 flex items-center justify-between">
+                            <span class="text-xs font-medium text-secondary">Certification Courses</span>
+                            <a href="#contact" class="text-sm font-bold text-secondary hover:underline">Enroll &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4: Atelier By Peng -->
+                <div class="group rounded-3xl overflow-hidden bg-zinc-900 border border-secondary/20 hover:border-secondary transition-all duration-300 flex flex-col reveal">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?w=800&q=80&auto=format&fit=crop" alt="Atelier By Peng" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-4 right-4 bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold px-3 py-1 rounded-full">Atelier</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-white group-hover:text-secondary transition-colors">Atelier By Peng</h3>
+                            <p class="text-sm text-gray-400 mt-2 leading-relaxed">Our couture styling studio creating avant-garde editorial hair, bridal masterpieces, and fashion runway concepts.</p>
+                        </div>
+                        <div class="pt-4 border-t border-zinc-800 flex items-center justify-between">
+                            <span class="text-xs font-medium text-secondary">Custom Styling</span>
+                            <a href="#contact" class="text-sm font-bold text-secondary hover:underline">Consult &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5: Luxury SPA & Therapies -->
+                <div class="group rounded-3xl overflow-hidden bg-zinc-900 border border-secondary/20 hover:border-secondary transition-all duration-300 flex flex-col reveal">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80&auto=format&fit=crop" alt="Luxury SPA Therapies" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-white group-hover:text-secondary transition-colors">Luxury SPA & Body Therapies</h3>
+                            <p class="text-sm text-gray-400 mt-2 leading-relaxed">Aromatherapy, Swedish & deep tissue massages, body scrubs, and hot stone therapies designed for ultimate tranquility.</p>
+                        </div>
+                        <div class="pt-4 border-t border-zinc-800 flex items-center justify-between">
+                            <span class="text-xs font-medium text-secondary">Body Wellness</span>
+                            <a href="#contact" class="text-sm font-bold text-secondary hover:underline">Book &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6: Signature Facials -->
+                <div class="group rounded-3xl overflow-hidden bg-zinc-900 border border-secondary/20 hover:border-secondary transition-all duration-300 flex flex-col reveal">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&q=80&auto=format&fit=crop" alt="Signature Facials" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif font-bold text-xl text-white group-hover:text-secondary transition-colors">Signature Diamond Skincare</h3>
+                            <p class="text-sm text-gray-400 mt-2 leading-relaxed">Advanced clinical facials, anti-aging collagen therapies, microdermabrasion, and skin hydration rituals.</p>
+                        </div>
+                        <div class="pt-4 border-t border-zinc-800 flex items-center justify-between">
+                            <span class="text-xs font-medium text-secondary">Clinical Skincare</span>
+                            <a href="#contact" class="text-sm font-bold text-secondary hover:underline">Book &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. ATELIER GALLERY (WITH LIGHTBOX) -->
+    <section id="gallery" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="text-xs font-semibold text-secondary uppercase tracking-widest px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20">Portfolio</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-3">The Atelier Gallery</h2>
+                <p class="text-gray-400 mt-2 text-sm">Click any photo to open full-screen lightbox modal.</p>
+            </div>
+
+            <!-- 6 Image Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1 -->
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer border border-secondary/20 hover:border-secondary transition-all gallery-item reveal" data-src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=1200&q=80&auto=format&fit=crop" data-caption="Luxury SPA Relaxation Room">
+                    <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=800&q=80&auto=format&fit=crop" alt="SPA Room" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex items-end">
+                        <div>
+                            <h4 class="font-serif font-bold text-lg text-white">Luxury SPA Suite</h4>
+                            <p class="text-xs text-secondary">Click to open lightbox</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer border border-secondary/20 hover:border-secondary transition-all gallery-item reveal" data-src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=1200&q=80&auto=format&fit=crop" data-caption="Executive Barbering Suite">
+                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&q=80&auto=format&fit=crop" alt="Barbering" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex items-end">
+                        <div>
+                            <h4 class="font-serif font-bold text-lg text-white">Salon For Him Suite</h4>
+                            <p class="text-xs text-secondary">Click to open lightbox</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer border border-secondary/20 hover:border-secondary transition-all gallery-item reveal" data-src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80&auto=format&fit=crop" data-caption="Aromatherapy Spa Treatments">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80&auto=format&fit=crop" alt="Aromatherapy" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex items-end">
+                        <div>
+                            <h4 class="font-serif font-bold text-lg text-white">Aromatherapy SPA Ritual</h4>
+                            <p class="text-xs text-secondary">Click to open lightbox</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer border border-secondary/20 hover:border-secondary transition-all gallery-item reveal" data-src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80&auto=format&fit=crop" data-caption="DHA Phase 2 Salon Floor">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80&auto=format&fit=crop" alt="Salon Floor" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex items-end">
+                        <div>
+                            <h4 class="font-serif font-bold text-lg text-white">Khayaban-e-Ittehad Interior</h4>
+                            <p class="text-xs text-secondary">Click to open lightbox</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer border border-secondary/20 hover:border-secondary transition-all gallery-item reveal" data-src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80&auto=format&fit=crop" data-caption="Peng Academy Master Class">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80&auto=format&fit=crop" alt="Academy Session" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex items-end">
+                        <div>
+                            <h4 class="font-serif font-bold text-lg text-white">Peng Academy Workshop</h4>
+                            <p class="text-xs text-secondary">Click to open lightbox</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer border border-secondary/20 hover:border-secondary transition-all gallery-item reveal" data-src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=1200&q=80&auto=format&fit=crop" data-caption="Couture Hair Styling Session">
+                    <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=800&q=80&auto=format&fit=crop" alt="Hair Styling" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex items-end">
+                        <div>
+                            <h4 class="font-serif font-bold text-lg text-white">Atelier Hair Design</h4>
+                            <p class="text-xs text-secondary">Click to open lightbox</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden flex items-center justify-center p-4 transition-all duration-300">
+        <button id="closeLightbox" class="absolute top-6 right-6 text-secondary hover:text-white p-2 focus:outline-none z-10">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <div class="max-w-4xl max-h-[90vh] flex flex-col items-center">
+            <img id="lightboxImg" src="" alt="Full view" class="max-h-[80vh] w-auto rounded-lg shadow-2xl border border-secondary/30 object-contain">
+            <p id="lightboxCaption" class="text-secondary font-serif text-lg mt-4 text-center"></p>
+        </div>
+    </div>
+
+    <!-- 8. TESTIMONIALS SLIDER -->
+    <section id="testimonials" class="py-24 bg-zinc-950 border-t border-zinc-900 overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="text-xs font-semibold text-secondary uppercase tracking-widest px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20">VIP Reviews</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-3">Words From Our Patrons</h2>
+                <p class="text-gray-400 mt-2 text-sm font-light">Trusted by DHA and Clifton's elite since 2004.</p>
+            </div>
+
+            <div class="relative bg-zinc-900/90 rounded-3xl p-8 sm:p-12 border border-secondary/30 shadow-2xl reveal">
+                <!-- Slider Container -->
+                <div id="testimonial-slider" class="relative min-h-[220px]">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide transition-all duration-700 ease-in-out opacity-100">
+                        <div class="flex items-center gap-1 text-secondary mb-4">
+                            ★ ★ ★ ★ ★
+                        </div>
+                        <p class="text-gray-200 font-serif text-lg sm:text-2xl italic leading-relaxed font-light">
+                            "Peng Salon & SPA is in a class of its own. The ambiance at Phase 2 DHA Karachi is remarkably soothing, and their Atelier hairstyling created the most stunning look for my wedding."
+                        </p>
+                        <div class="mt-8 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full border border-secondary bg-black text-secondary font-bold flex items-center justify-center font-serif text-lg">
+                                ZS
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Zahra Shah</h4>
+                                <p class="text-xs text-secondary">DHA Phase 5, Karachi • Patron since 2012</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide transition-all duration-700 ease-in-out opacity-0 absolute inset-0 pointer-events-none">
+                        <div class="flex items-center gap-1 text-secondary mb-4">
+                            ★ ★ ★ ★ ★
+                        </div>
+                        <p class="text-gray-200 font-serif text-lg sm:text-2xl italic leading-relaxed font-light">
+                            "The Salon For Him at Khayaban-e-Ittehad offers world-class barbering and scalp detox therapies. Impeccable hygiene, serene atmosphere, and masterful staff."
+                        </p>
+                        <div class="mt-8 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full border border-secondary bg-black text-secondary font-bold flex items-center justify-center font-serif text-lg">
+                                TM
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Tariq Merchant</h4>
+                                <p class="text-xs text-secondary">Clifton, Karachi • Executive Member</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide transition-all duration-700 ease-in-out opacity-0 absolute inset-0 pointer-events-none">
+                        <div class="flex items-center gap-1 text-secondary mb-4">
+                            ★ ★ ★ ★ ★
+                        </div>
+                        <p class="text-gray-200 font-serif text-lg sm:text-2xl italic leading-relaxed font-light">
+                            "Enrolling in the Peng Beauty Academy gave me the international-standard skills I needed to launch my career. The faculty's passion and mentorship are unmatched!"
+                        </p>
+                        <div class="mt-8 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full border border-secondary bg-black text-secondary font-bold flex items-center justify-center font-serif text-lg">
+                                MA
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Mahnoor Ali</h4>
+                                <p class="text-xs text-secondary">Karachi • Academy Graduate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="flex items-center justify-between mt-8 pt-6 border-t border-zinc-800">
+                    <div class="flex items-center gap-2" id="testimonial-dots">
+                        <button class="dot w-3 h-3 rounded-full bg-secondary transition-all duration-300" data-index="0" aria-label="Slide 1"></button>
+                        <button class="dot w-3 h-3 rounded-full bg-zinc-700 transition-all duration-300" data-index="1" aria-label="Slide 2"></button>
+                        <button class="dot w-3 h-3 rounded-full bg-zinc-700 transition-all duration-300" data-index="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <button id="prevTestimonial" class="w-10 h-10 rounded-full bg-black border border-secondary/40 flex items-center justify-center text-secondary hover:bg-secondary hover:text-black transition-colors" aria-label="Previous">
+                            &larr;
+                        </button>
+                        <button id="nextTestimonial" class="w-10 h-10 rounded-full bg-black border border-secondary/40 flex items-center justify-center text-secondary hover:bg-secondary hover:text-black transition-colors" aria-label="Next">
+                            &rarr;
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ ACCORDION -->
+    <section id="faq" class="py-24 bg-black">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="text-xs font-semibold text-secondary uppercase tracking-widest px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20">Questions & Answers</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-3">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item rounded-2xl bg-zinc-900 border border-secondary/20 overflow-hidden shadow-sm transition-all reveal">
+                    <button class="faq-trigger w-full p-6 text-left font-serif font-semibold text-lg text-white flex justify-between items-center gap-4 hover:text-secondary transition-colors">
+                        <span>Where is Peng Salon & SPA located in DHA Karachi?</span>
+                        <svg class="faq-icon w-5 h-5 text-secondary transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                        <p class="text-gray-400 pb-6 text-sm leading-relaxed">
+                            Our primary flagship salon and spa is located at <strong>Plot 102-C, 2nd Floor, Khayaban-e-Ittehad, Phase 2, DHA Karachi</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item rounded-2xl bg-zinc-900 border border-secondary/20 overflow-hidden shadow-sm transition-all reveal">
+                    <button class="faq-trigger w-full p-6 text-left font-serif font-semibold text-lg text-white flex justify-between items-center gap-4 hover:text-secondary transition-colors">
+                        <span>What are your salon opening hours?</span>
+                        <svg class="faq-icon w-5 h-5 text-secondary transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                        <p class="text-gray-400 pb-6 text-sm leading-relaxed">
+                            Peng Salon & SPA operates 7 days a week, <strong>Monday through Sunday from 10:00 AM to 7:30 PM</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item rounded-2xl bg-zinc-900 border border-secondary/20 overflow-hidden shadow-sm transition-all reveal">
+                    <button class="faq-trigger w-full p-6 text-left font-serif font-semibold text-lg text-white flex justify-between items-center gap-4 hover:text-secondary transition-colors">
+                        <span>Do you offer separate sections for men and women?</span>
+                        <svg class="faq-icon w-5 h-5 text-secondary transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                        <p class="text-gray-400 pb-6 text-sm leading-relaxed">
+                            Yes, we maintain separate, dedicated <strong>Salon For Her</strong> and <strong>Salon For Him</strong> facilities to ensure total privacy and tailored luxury care for all guests.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item rounded-2xl bg-zinc-900 border border-secondary/20 overflow-hidden shadow-sm transition-all reveal">
+                    <button class="faq-trigger w-full p-6 text-left font-serif font-semibold text-lg text-white flex justify-between items-center gap-4 hover:text-secondary transition-colors">
+                        <span>What is Atelier By Peng?</span>
+                        <svg class="faq-icon w-5 h-5 text-secondary transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                        <p class="text-gray-400 pb-6 text-sm leading-relaxed">
+                            Atelier By Peng is our specialized high-fashion and bridal design arm, focused on bespoke hair sculpturing, runway styling, and customized beauty consults for high-profile occasions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item rounded-2xl bg-zinc-900 border border-secondary/20 overflow-hidden shadow-sm transition-all reveal">
+                    <button class="faq-trigger w-full p-6 text-left font-serif font-semibold text-lg text-white flex justify-between items-center gap-4 hover:text-secondary transition-colors">
+                        <span>How can I enroll in the Peng Beauty Academy?</span>
+                        <svg class="faq-icon w-5 h-5 text-secondary transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                        <p class="text-gray-400 pb-6 text-sm leading-relaxed">
+                            You can apply by filling out the online booking form below, emailing us at <strong>support@pengsalon.com</strong>, or calling our academy desk directly at <strong>021-5392623 / 24</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. CONTACT SECTION -->
+    <section id="contact" class="py-24 bg-zinc-950 relative border-t border-zinc-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-8 reveal">
+                    <div>
+                        <span class="text-xs font-semibold text-secondary uppercase tracking-widest px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20">VIP Concierge</span>
+                        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-3">Connect With Us</h2>
+                        <p class="text-gray-400 mt-2 text-sm leading-relaxed">
+                            Reserve your experience at our DHA salon, inquire about Academy courses, or consult with Atelier By Peng.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Card 1 -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-zinc-900/80 border border-secondary/20">
+                            <div class="w-12 h-12 rounded-xl bg-secondary text-black flex items-center justify-center shrink-0 font-bold">
+                                📍
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">DHA Flagship Location</h4>
+                                <p class="text-xs text-gray-400 mt-0.5">Plot 102-C, 2nd Floor, Khayaban-e-Ittehad, Phase 2, DHA Karachi</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-zinc-900/80 border border-secondary/20">
+                            <div class="w-12 h-12 rounded-xl bg-secondary text-black flex items-center justify-center shrink-0 font-bold">
+                                📞
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Phone Lines</h4>
+                                <p class="text-xs text-gray-400 mt-0.5"><a href="tel:0215392623" class="hover:text-secondary font-semibold">021-5392623</a> / <a href="tel:0215392624" class="hover:text-secondary font-semibold">24</a></p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-zinc-900/80 border border-secondary/20">
+                            <div class="w-12 h-12 rounded-xl bg-secondary text-black flex items-center justify-center shrink-0 font-bold">
+                                ✉️
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Email Support</h4>
+                                <p class="text-xs text-gray-400 mt-0.5"><a href="mailto:support@pengsalon.com" class="hover:text-secondary">support@pengsalon.com</a></p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-zinc-900/80 border border-secondary/20">
+                            <div class="w-12 h-12 rounded-xl bg-secondary text-black flex items-center justify-center shrink-0 font-bold">
+                                ⏰
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Salon Operating Hours</h4>
+                                <p class="text-xs text-gray-400 mt-0.5">Monday – Sunday: 10:00 AM – 7:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Form Column -->
+                <div class="lg:col-span-7 bg-zinc-900/90 p-8 sm:p-10 rounded-3xl border border-secondary/30 shadow-2xl reveal">
+                    <h3 class="font-serif text-2xl font-bold text-white mb-6">VIP Reservation Request</h3>
+
+                    <!-- Success Alert Banner -->
+                    <div id="formSuccess" class="hidden mb-6 p-4 bg-amber-950/60 border border-secondary rounded-2xl text-amber-200 text-sm flex items-center gap-3">
+                        <svg class="w-6 h-6 text-secondary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <div>
+                            <strong class="font-bold text-secondary">Reservation Received!</strong>
+                            <p class="text-xs text-gray-300 mt-0.5">Our VIP Concierge will contact you at 021-5392623 to confirm your time slot.</p>
+                        </div>
+                    </div>
+
+                    <form id="bookingForm" class="space-y-5" novalidate>
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-secondary mb-1">Full Name *</label>
+                                <input type="text" id="fullName" class="w-full px-4 py-3 rounded-xl bg-black border border-zinc-700 text-white focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all text-sm" placeholder="e.g. Zahra Shah">
+                                <p id="nameError" class="text-red-400 text-xs mt-1 hidden">Please enter your name.</p>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-secondary mb-1">Phone Number *</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-xl bg-black border border-zinc-700 text-white focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all text-sm" placeholder="0300 1234567">
+                                <p id="phoneError" class="text-red-400 text-xs mt-1 hidden">Please enter phone number.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-secondary mb-1">Email Address *</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-xl bg-black border border-zinc-700 text-white focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all text-sm" placeholder="zahra@example.com">
+                                <p id="emailError" class="text-red-400 text-xs mt-1 hidden">Please enter valid email.</p>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-secondary mb-1">Division / Service *</label>
+                                <select id="serviceSelect" class="w-full px-4 py-3 rounded-xl bg-black border border-zinc-700 text-white focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all text-sm">
+                                    <option value="">-- Select Division --</option>
+                                    <option value="Salon For Her">Salon For Her (Hair & Skincare)</option>
+                                    <option value="Salon For Him">Salon For Him (Barbering & Grooming)</option>
+                                    <option value="Peng Academy">Peng Academy Enrollment</option>
+                                    <option value="Atelier By Peng">Atelier By Peng (Couture Design)</option>
+                                    <option value="Luxury SPA">Luxury SPA & Massage</option>
+                                </select>
+                                <p id="serviceError" class="text-red-400 text-xs mt-1 hidden">Please select division.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-secondary mb-1">Preferred Date *</label>
+                                <input type="date" id="bookingDate" class="w-full px-4 py-3 rounded-xl bg-black border border-zinc-700 text-white focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all text-sm">
+                                <p id="dateError" class="text-red-400 text-xs mt-1 hidden">Please select date.</p>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-secondary mb-1">Time Preference</label>
+                                <select id="timeSlot" class="w-full px-4 py-3 rounded-xl bg-black border border-zinc-700 text-white focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all text-sm">
+                                    <option value="10:00 AM - 01:00 PM">Morning (10:00 AM - 01:00 PM)</option>
+                                    <option value="01:00 PM - 04:00 PM">Afternoon (01:00 PM - 04:00 PM)</option>
+                                    <option value="04:00 PM - 07:30 PM">Evening (04:00 PM - 07:30 PM)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-secondary mb-1">Special Requirements</label>
+                            <textarea id="notes" rows="3" class="w-full px-4 py-3 rounded-xl bg-black border border-zinc-700 text-white focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all text-sm" placeholder="Please mention any specific stylist preference or academy inquiries..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-secondary hover:bg-secondaryHover text-black font-bold rounded-xl shadow-lg transition-all text-base transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                            <span>Submit VIP Reservation</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FOOTER -->
+    <footer class="bg-black text-gray-400 py-16 border-t border-secondary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-zinc-900">
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <h3 class="font-serif font-bold text-2xl text-white tracking-widest">PENG SALON & SPA</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">
+                        Established in 2004 in DHA Karachi. Redefining luxury beauty, training artisans at Peng Academy, and sculpting couture looks at Atelier By Peng.
+                    </p>
+                    <p class="text-xs text-secondary font-semibold">Phase 2, DHA Karachi • Est. 2004</p>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider text-secondary mb-4">Quick Navigation</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-secondary transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-secondary transition-colors">About Peng</a></li>
+                        <li><a href="#divisions" class="hover:text-secondary transition-colors">Our Divisions</a></li>
+                        <li><a href="#gallery" class="hover:text-secondary transition-colors">Atelier Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-secondary transition-colors">Contact DHA</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider text-secondary mb-4">Divisions</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Salon For Her</li>
+                        <li>Salon For Him</li>
+                        <li>Peng Beauty Academy</li>
+                        <li>Atelier By Peng</li>
+                        <li>Luxury SPA & Massages</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider text-secondary mb-4">Contact Information</h4>
+                    <div class="space-y-2 text-sm">
+                        <p>📍 Plot 102-C, 2nd Floor, Khayaban-e-Ittehad, Phase 2, DHA Karachi</p>
+                        <p>📞 021-5392623 / 24</p>
+                        <p>✉️ support@pengsalon.com</p>
+                        <p>⏰ Mon - Sun: 10:00 AM - 7:30 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>© 2026 Peng Salon & SPA. All Rights Reserved.</p>
+                <p>Created for Muhammad Siddique Preview</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 12. FLOATING WHATSAPP BUTTON (BOTTOM-RIGHT) -->
+    <a href="https://wa.me/92215392623?text=Hi%20Peng%20Salon%20%26%20SPA,%20I%20would%20like%20to%20reserve%20a%20VIP%20appointment" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 group" aria-label="WhatsApp Contact">
+        <span class="absolute -top-2 -right-1 w-4 h-4 bg-amber-400 rounded-full animate-ping"></span>
+        <span class="absolute -top-2 -right-1 w-4 h-4 bg-amber-400 rounded-full border-2 border-black"></span>
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+    <!-- 13. BACK TO TOP BUTTON (BOTTOM-LEFT) -->
+    <button id="backToTop" class="fixed bottom-6 left-6 z-40 w-12 h-12 bg-secondary hover:bg-secondaryHover text-black rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none transform translate-y-4 font-bold" aria-label="Back to top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+    </button>
+
+    <!-- ADVANCED JAVASCRIPT LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('bg-black/95', 'shadow-2xl', 'py-3', 'backdrop-blur-md');
+                    navbar.classList.remove('py-5');
+                } else {
+                    navbar.classList.remove('bg-black/95', 'shadow-2xl', 'py-3', 'backdrop-blur-md');
+                    navbar.classList.add('py-5');
+                }
+
+                // Back to Top Visibility
+                const backToTop = document.getElementById('backToTop');
+                if (window.scrollY > 300) {
+                    backToTop.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                    backToTop.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                } else {
+                    backToTop.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                    backToTop.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                }
+            });
+
+            // Back to Top Click
+            document.getElementById('backToTop').addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Mobile Menu Toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeIcon = document.getElementById('close-icon');
+
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                hamburgerIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                });
+            });
+
+            // 2. Scroll Reveal Animations
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // 3. Animated Counters
+            const counters = document.querySelectorAll('.counter');
+            let counted = false;
+
+            const statsSection = document.getElementById('stats-container');
+            if (statsSection) {
+                const statsObserver = new IntersectionObserver((entries) => {
+                    if (entries[0].isIntersecting && !counted) {
+                        counted = true;
+                        counters.forEach(counter => {
+                            const target = +counter.getAttribute('data-target');
+                            const duration = 2000;
+                            const stepTime = 30;
+                            const steps = duration / stepTime;
+                            const increment = target / steps;
+                            let current = 0;
+
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    counter.innerText = target.toLocaleString();
+                                    clearInterval(timer);
+                                } else {
+                                    counter.innerText = Math.ceil(current).toLocaleString();
+                                }
+                            }, stepTime);
+                        });
+                    }
+                }, { threshold: 0.3 });
+                statsObserver.observe(statsSection);
+            }
+
+            // 4. Lightbox Modal
+            const lightboxModal = document.getElementById('lightboxModal');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const lightboxCaption = document.getElementById('lightboxCaption');
+            const closeLightbox = document.getElementById('closeLightbox');
+
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const src = item.getAttribute('data-src');
+                    const caption = item.getAttribute('data-caption');
+                    lightboxImg.src = src;
+                    lightboxCaption.innerText = caption || '';
+                    lightboxModal.classList.remove('hidden');
+                });
+            });
+
+            const hideLightbox = () => lightboxModal.classList.add('hidden');
+            closeLightbox.addEventListener('click', hideLightbox);
+            lightboxModal.addEventListener('click', (e) => {
+                if (e.target === lightboxModal) hideLightbox();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
+                    hideLightbox();
+                }
+            });
+
+            // 5. Testimonial Auto-Advancing Slider
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const dots = document.querySelectorAll('#testimonial-dots .dot');
+            let currentSlide = 0;
+            let slideInterval;
+
+            const showSlide = (index) => {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.remove('opacity-0', 'pointer-events-none');
+                        slide.classList.add('opacity-100');
+                    } else {
+                        slide.classList.add('opacity-0', 'pointer-events-none');
+                        slide.classList.remove('opacity-100');
+                    }
+                });
+
+                dots.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.add('bg-secondary', 'w-6');
+                        dot.classList.remove('bg-zinc-700', 'w-3');
+                    } else {
+                        dot.classList.remove('bg-secondary', 'w-6');
+                        dot.classList.add('bg-zinc-700', 'w-3');
+                    }
+                });
+                currentSlide = index;
+            };
+
+            const nextSlide = () => {
+                const next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            };
+
+            const startSlideTimer = () => {
+                slideInterval = setInterval(nextSlide, 6000);
+            };
+
+            const stopSlideTimer = () => clearInterval(slideInterval);
+
+            document.getElementById('nextTestimonial').addEventListener('click', () => {
+                stopSlideTimer();
+                nextSlide();
+                startSlideTimer();
+            });
+
+            document.getElementById('prevTestimonial').addEventListener('click', () => {
+                stopSlideTimer();
+                const prev = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(prev);
+                startSlideTimer();
+            });
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', (e) => {
+                    stopSlideTimer();
+                    const idx = parseInt(e.target.getAttribute('data-index'));
+                    showSlide(idx);
+                    startSlideTimer();
+                });
+            });
+
+            startSlideTimer();
+
+            // 6. FAQ Accordion
+            document.querySelectorAll('.faq-trigger').forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const item = trigger.closest('.faq-item');
+                    const content = item.querySelector('.faq-content');
+                    const icon = item.querySelector('.faq-icon');
+
+                    const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+                    // Close all
+                    document.querySelectorAll('.faq-content').forEach(c => c.style.maxHeight = '0px');
+                    document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180'));
+
+                    if (!isOpen) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+
+            // 7. Form Live Validation
+            const bookingForm = document.getElementById('bookingForm');
+            const formSuccess = document.getElementById('formSuccess');
+
+            bookingForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                let isValid = true;
+
+                const nameInput = document.getElementById('fullName');
+                const phoneInput = document.getElementById('phone');
+                const emailInput = document.getElementById('email');
+                const serviceSelect = document.getElementById('serviceSelect');
+                const dateInput = document.getElementById('bookingDate');
+
+                // Name validation
+                if (!nameInput.value.trim()) {
+                    document.getElementById('nameError').classList.remove('hidden');
+                    nameInput.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    document.getElementById('nameError').classList.add('hidden');
+                    nameInput.classList.remove('border-red-500');
+                }
+
+                // Phone validation
+                if (!phoneInput.value.trim() || phoneInput.value.trim().length < 8) {
+                    document.getElementById('phoneError').classList.remove('hidden');
+                    phoneInput.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    document.getElementById('phoneError').classList.add('hidden');
+                    phoneInput.classList.remove('border-red-500');
+                }
+
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailInput.value.trim())) {
+                    document.getElementById('emailError').classList.remove('hidden');
+                    emailInput.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    document.getElementById('emailError').classList.add('hidden');
+                    emailInput.classList.remove('border-red-500');
+                }
+
+                // Service validation
+                if (!serviceSelect.value) {
+                    document.getElementById('serviceError').classList.remove('hidden');
+                    serviceSelect.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    document.getElementById('serviceError').classList.add('hidden');
+                    serviceSelect.classList.remove('border-red-500');
+                }
+
+                // Date validation
+                if (!dateInput.value) {
+                    document.getElementById('dateError').classList.remove('hidden');
+                    dateInput.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    document.getElementById('dateError').classList.add('hidden');
+                    dateInput.classList.remove('border-red-500');
+                }
+
+                if (isValid) {
+                    formSuccess.classList.remove('hidden');
+                    bookingForm.reset();
+                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
