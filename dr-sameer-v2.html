@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Sameer Physiotherapy Home Service | #1 Home Physiotherapist in Karachi</title>
+    <meta name="description" content="Karachi's premier home physiotherapy service. 10+ years experience, AHPC-registered. Male & female physiotherapists available 24/7 across all Karachi areas.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2c5282',
+                        primaryDark: '#1a365d',
+                        secondary: '#3182ce',
+                        secondaryLight: '#ebf8ff',
+                        accent: '#319795',
+                        accentGold: '#d69e2e',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .whatsapp-btn {
+            animation: pulse-ring 2s infinite;
+        }
+
+        .lightbox-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-secondary selection:text-white">
+
+    <!-- PREVIEW BANNER -->
+    <div class="bg-gradient-to-r from-primaryDark via-primary to-secondary text-white py-2.5 px-4 text-center text-sm font-medium sticky top-0 z-50 shadow-md flex items-center justify-center space-x-2">
+        <span class="inline-block animate-pulse">✨</span>
+        <span>This is a preview created by <strong>Muhammad Siddique</strong> — let me know what you think!</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <header id="navbar" class="fixed top-[37px] left-0 right-0 z-40 transition-all duration-300 text-white bg-slate-900/70 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-user-doctor text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="block font-serif text-xl sm:text-2xl font-bold tracking-tight text-white group-hover:text-sky-300 transition-colors">Dr. Sameer</span>
+                        <span class="block text-[10px] uppercase tracking-widest text-sky-200 font-semibold">Physiotherapy Home Service</span>
+                    </div>
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-6 font-medium text-sm">
+                    <a href="#about" class="nav-link hover:text-sky-300 transition-colors py-1">About Us</a>
+                    <a href="#services" class="nav-link hover:text-sky-300 transition-colors py-1">Services</a>
+                    <a href="#areas" class="nav-link hover:text-sky-300 transition-colors py-1">Areas Served</a>
+                    <a href="#gallery" class="nav-link hover:text-sky-300 transition-colors py-1">Gallery</a>
+                    <a href="#testimonials" class="nav-link hover:text-sky-300 transition-colors py-1">Testimonials</a>
+                    <a href="#faq" class="nav-link hover:text-sky-300 transition-colors py-1">FAQ</a>
+                    <a href="#contact" class="nav-link hover:text-sky-300 transition-colors py-1">Contact</a>
+                </nav>
+
+                <div class="hidden lg:flex items-center space-x-3">
+                    <a href="tel:+923108548370" class="flex items-center space-x-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2.5 rounded-full font-medium text-xs tracking-wide transition-all border border-white/20">
+                        <i class="fa-solid fa-phone text-sky-300"></i>
+                        <span>+92 3108548370</span>
+                    </a>
+                    <a href="#contact" class="bg-gradient-to-r from-secondary to-primary hover:from-primary hover:to-primaryDark text-white px-5 py-2.5 rounded-full font-medium text-xs uppercase tracking-wider shadow-md hover:shadow-xl transition-all transform hover:-translate-y-0.5">
+                        Book Home Visit
+                    </a>
+                </div>
+
+                <button id="mobileMenuBtn" aria-label="Toggle Menu" class="md:hidden p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-slate-900/95 backdrop-blur-xl border-b border-slate-700 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-md font-medium text-slate-200 hover:text-white hover:bg-slate-800">About Us</a>
+            <a href="#services" class="mobile-link block px-3 py-2 rounded-md font-medium text-slate-200 hover:text-white hover:bg-slate-800">Services</a>
+            <a href="#areas" class="mobile-link block px-3 py-2 rounded-md font-medium text-slate-200 hover:text-white hover:bg-slate-800">Areas Served</a>
+            <a href="#gallery" class="mobile-link block px-3 py-2 rounded-md font-medium text-slate-200 hover:text-white hover:bg-slate-800">Gallery</a>
+            <a href="#testimonials" class="mobile-link block px-3 py-2 rounded-md font-medium text-slate-200 hover:text-white hover:bg-slate-800">Testimonials</a>
+            <a href="#faq" class="mobile-link block px-3 py-2 rounded-md font-medium text-slate-200 hover:text-white hover:bg-slate-800">FAQ</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-md font-medium text-slate-200 hover:text-white hover:bg-slate-800">Contact Us</a>
+            <div class="pt-4 border-t border-slate-700 flex flex-col space-y-2">
+                <a href="tel:+923108548370" class="w-full text-center bg-slate-800 text-sky-300 py-2.5 rounded-lg font-semibold flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+92 3108548370</span>
+                </a>
+                <a href="#contact" class="mobile-link w-full text-center bg-secondary text-white py-2.5 rounded-lg font-semibold">
+                    Book Home Visit Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center pt-28 pb-16 bg-slate-900 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600&q=80&auto=format&fit=crop" alt="Physiotherapy Care" class="w-full h-full object-cover opacity-25">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-primary/80"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-white reveal">
+                    <div class="inline-flex items-center space-x-2 bg-secondary/20 border border-secondary/40 backdrop-blur-md px-4 py-1.5 rounded-full text-sky-300 text-xs sm:text-sm font-medium">
+                        <i class="fa-solid fa-award text-amber-400"></i>
+                        <span>Karachi's #1 Rated At-Home Physiotherapy Care</span>
+                    </div>
+
+                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                        Expert Physiotherapy Delivered Directly To Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-blue-200 to-white">Doorstep</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+                        Recover safely in the comfort and privacy of your home with Karachi's premier AHPC-registered physiotherapy team. 10+ years of clinical excellence, specialized male & female physiotherapists available 24/7 across all Karachi sectors.
+                    </p>
+
+                    <div class="pt-2 flex flex-wrap gap-4 items-center">
+                        <a href="#contact" class="bg-gradient-to-r from-secondary to-primary hover:from-primary hover:to-primaryDark text-white px-8 py-4 rounded-xl font-semibold text-base shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1 flex items-center space-x-3">
+                            <span>Book Home Visit</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="https://wa.me/923108548370?text=Hello%20Dr.%20Sameer,%20I%20would%20like%20to%20book%20a%20home%20physiotherapy%20visit." target="_blank" rel="noopener" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-4 rounded-xl font-semibold text-base shadow-lg transition-all flex items-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>WhatsApp Chat</span>
+                        </a>
+                    </div>
+
+                    <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-800 text-slate-300 text-xs sm:text-sm">
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-clock text-sky-400 text-lg"></i>
+                            <span>24/7 Availability</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-user-nurse text-sky-400 text-lg"></i>
+                            <span>Male & Female Doctors</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-certificate text-sky-400 text-lg"></i>
+                            <span>AHPC Registered</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-house-medical text-sky-400 text-lg"></i>
+                            <span>All Karachi Sectors</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 reveal">
+                    <div class="glass-card rounded-3xl p-6 sm:p-8 text-slate-800 shadow-2xl relative border border-white/50">
+                        <div class="absolute -top-4 -right-4 bg-amber-500 text-white font-bold px-4 py-1 rounded-full text-xs uppercase tracking-wider shadow-lg flex items-center space-x-1">
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <span>5.0 Rated Service</span>
+                        </div>
+
+                        <h2 class="font-serif text-2xl font-bold text-slate-900 mb-2">Schedule A Home Visit</h2>
+                        <p class="text-slate-600 text-xs sm:text-sm mb-6">Fill out the quick form below to request a doctor visit at your convenience.</p>
+
+                        <form id="heroForm" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Patient Name *</label>
+                                <input type="text" id="heroName" required placeholder="e.g. Muhammad Ali" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none text-sm transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number *</label>
+                                <input type="tel" id="heroPhone" required placeholder="e.g. 0310 1234567" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none text-sm transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Treatment Needed *</label>
+                                <select id="heroService" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none text-sm transition-all text-slate-700">
+                                    <option value="">Select Treatment Type</option>
+                                    <option value="Back Pain">Back Pain Treatment</option>
+                                    <option value="Neck Pain">Neck Pain Treatment</option>
+                                    <option value="Stroke Rehab">Stroke Rehabilitation</option>
+                                    <option value="Sports Injury">Sports Injury Recovery</option>
+                                    <option value="Arthritis">Arthritis Management</option>
+                                    <option value="Knee Pain">Knee Pain Treatment</option>
+                                    <option value="Post-Surgery">Post-Surgery Rehab</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Karachi Area *</label>
+                                <select id="heroArea" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none text-sm transition-all text-slate-700">
+                                    <option value="">Select Your Area</option>
+                                    <option value="Gulshan-e-Iqbal">Gulshan-e-Iqbal</option>
+                                    <option value="DHA">DHA (Phases 1-8)</option>
+                                    <option value="Clifton">Clifton</option>
+                                    <option value="Nazimabad">Nazimabad</option>
+                                    <option value="North Nazimabad">North Nazimabad</option>
+                                    <option value="PECHS">PECHS</option>
+                                    <option value="Bahadurabad">Bahadurabad</option>
+                                    <option value="Gulistan-e-Johar">Gulistan-e-Johar</option>
+                                    <option value="Shah Faisal Colony">Shah Faisal Colony</option>
+                                    <option value="North Karachi">North Karachi</option>
+                                    <option value="Federal B Area">Federal B Area</option>
+                                    <option value="Saddar">Saddar</option>
+                                    <option value="Malir">Malir</option>
+                                    <option value="Other">Other Area in Karachi</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-primary hover:bg-primaryDark text-white py-3.5 rounded-xl font-semibold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-calendar-check"></i>
+                                <span>Request Visit Confirmation</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANIMATED STATS SECTION -->
+    <section class="py-12 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-2 reveal">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-secondaryLight text-primary flex items-center justify-center text-xl mb-3">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-primary font-serif">
+                        <span class="counter" data-target="5000">0</span>+
+                    </div>
+                    <div class="text-xs sm:text-sm font-medium text-slate-600 uppercase tracking-wider">Patients Treated</div>
+                </div>
+
+                <div class="space-y-2 reveal">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-secondaryLight text-primary flex items-center justify-center text-xl mb-3">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-primary font-serif">
+                        <span class="counter" data-target="10">0</span>+
+                    </div>
+                    <div class="text-xs sm:text-sm font-medium text-slate-600 uppercase tracking-wider">Years Experience</div>
+                </div>
+
+                <div class="space-y-2 reveal">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-secondaryLight text-primary flex items-center justify-center text-xl mb-3">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-primary font-serif">
+                        <span class="counter" data-target="13">0</span>+
+                    </div>
+                    <div class="text-xs sm:text-sm font-medium text-slate-600 uppercase tracking-wider">Karachi Sectors</div>
+                </div>
+
+                <div class="space-y-2 reveal">
+                    <div class="w-12 h-12 mx-auto rounded-full bg-secondaryLight text-primary flex items-center justify-center text-xl mb-3">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-primary font-serif">
+                        <span class="counter" data-target="100">0</span>%
+                    </div>
+                    <div class="text-xs sm:text-sm font-medium text-slate-600 uppercase tracking-wider">Personalized Care</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative reveal-left">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80&auto=format&fit=crop" alt="Doctor providing physiotherapy home care" class="w-full h-[480px] object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs border border-primaryDark">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i class="fa-solid fa-shield-halved text-2xl text-sky-300"></i>
+                            <span class="font-bold text-lg">AHPC Registered</span>
+                        </div>
+                        <p class="text-xs text-slate-200 leading-relaxed">Certified clinical expertise adhering to international healthcare and rehabilitation standards.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6 reveal-right">
+                    <div class="inline-block px-3 py-1 bg-secondaryLight text-primary font-semibold text-xs rounded-full uppercase tracking-wider">
+                        About Dr. Sameer Physiotherapy
+                    </div>
+
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
+                        Karachi's Premier Home Physiotherapy Service
+                    </h2>
+
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        With over a decade of clinical experience, <strong>Dr. Sameer Physiotherapy Home Service</strong> brings hospital-grade physical rehabilitation directly into the comfort and security of your home. We understand that traveling to clinics can be painful and challenging for stroke patients, elderly individuals, or those suffering from acute back and joint pain.
+                    </p>
+
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Our team includes highly qualified <strong>male and female licensed physiotherapists</strong> equipped with portable modern treatment technology, ensuring complete patient comfort, dignity, and personal care.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-start space-x-3">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-sm font-medium text-slate-700">Male & Female Physiotherapists</span>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-sm font-medium text-slate-700">Customized Rehabilitation Plans</span>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-sm font-medium text-slate-700">Portable Clinical Equipment</span>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <span class="text-sm font-medium text-slate-700">24/7 Flexible Appointments</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex items-center space-x-6 border-t border-slate-200">
+                        <div>
+                            <span class="block text-2xl font-bold font-serif text-primary">Dr. Sameer</span>
+                            <span class="text-xs text-slate-500 uppercase tracking-wider">Lead Consultant Physiotherapist</span>
+                        </div>
+                        <div class="text-xs text-slate-600 border-l border-slate-200 pl-6">
+                            <span class="font-semibold block text-slate-800">Direct Contact:</span>
+                            <span>Physiotherapist542@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES GRID SECTION -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal">
+                <span class="px-3.5 py-1 bg-secondaryLight text-primary font-semibold text-xs rounded-full uppercase tracking-wider">Specialized Treatments</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Comprehensive Physiotherapy Services</h2>
+                <p class="text-slate-600 text-base">We provide evidence-based physical therapy interventions tailored to each patient's condition and recovery goals.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1: Back Pain -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group flex flex-col border border-slate-100 reveal">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581089781785-603411fa81e5?w=800&q=80&auto=format&fit=crop" alt="Back Pain Treatment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+                            Spine Care
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-slate-900 group-hover:text-secondary transition-colors mb-2">Back Pain Treatment</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">Relief for acute & chronic lower back pain, herniated discs, sciatica, posture correction, and spinal decompression.</p>
+                            <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-200 pt-3">
+                                <li class="flex items-center"><i class="fa-solid fa-chevron-right text-secondary text-[10px] mr-2"></i> Sciatica Nerve Decompression</li>
+                                <li class="flex items-center"><i class="fa-solid fa-chevron-right text-secondary text-[10px] mr-2"></i> Lumbar Disc Care & Exercises</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition-colors pt-2">
+                            <span>Book Back Pain Session</span>
+                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Neck Pain -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group flex flex-col border border-slate-100 reveal">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=800&q=80&auto=format&fit=crop" alt="Neck Pain Treatment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+                            Cervical Care
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-slate-900 group-hover:text-secondary transition-colors mb-2">Neck Pain Treatment</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">Targeted therapy for cervical spondylosis, neck stiffness, text-neck posture issues, and radiating shoulder pain.</p>
+                            <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-200 pt-3">
+                                <li class="flex items-center"><i class="fa-solid fa-chevron-right text-secondary text-[10px] mr-2"></i> Cervical Spondylosis Relief</li>
+                                <li class="flex items-center"><i class="fa-solid fa-chevron-right text-secondary text-[10px] mr-2"></i> Shoulder & Muscle Release</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition-colors pt-2">
+                            <span>Book Neck Therapy</span>
+                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Stroke Rehab -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group flex flex-col border border-slate-100 reveal">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80&auto=format&fit=crop" alt="Stroke Rehabilitation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+                            Neuro Rehabilitation
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-slate-900 group-hover:text-secondary transition-colors mb-2">Stroke Rehabilitation</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">Comprehensive neurological rehabilitation for paralysis, motor function recovery, gait retraining, and independent mobility.</p>
+                            <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-200 pt-3">
+                                <li class="flex items-center"><i class="fa-solid fa-chevron-right text-secondary text-[10px] mr-2"></i> Motor Function & Gait Training</li>
+                                <li class="flex items-center"><i class="fa-solid fa-chevron-right text-secondary text-[10px] mr-2"></i> Daily Living Skills Restoration</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition-colors pt-2">
+                            <span>Book Stroke Rehab Visit</span>
+                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Sports Injury -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group flex flex-col border border-slate-100 reveal">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80&auto=format&fit=crop" alt="Sports Injury Recovery" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+                            Sports Medicine
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-slate-900 group-hover:text-secondary transition-colors mb-2">Sports Injury Recovery</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">Fast-track recovery protocols for ligament sprains, muscle tears, tendonitis, and joint stability for active individuals.</p>
+                            <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-200 pt-3">
+                                <li class="flex items-center"><i class="fa-solid fa-chevron-right text-secondary text-[10px] mr-2"></i> Ligament Sprains & Tear Care</li>
+                                <li class="flex items-center"><i class="fa-solid fa-chevron-right text-secondary text-[10px] mr-2"></i> Athletic Mobility Restoration</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition-colors pt-2">
+                            <span>Book Sports Rehab</span>
+                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5: Arthritis Care -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group flex flex-col border border-slate-100 reveal">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80&auto=format&fit=crop" alt="Arthritis Management" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+                            Joint Care
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-slate-900 group-hover:text-secondary transition-colors mb-2">Arthritis Management</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">Specialized therapy for osteoarthritis, rheumatoid arthritis, joint stiffness, and chronic pain management in elderly patients.</p>
+                            <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-200 pt-3">
+                                <li class="flex items-center"><i class="fa-solid fa-chevron-right text-secondary text-[10px] mr-2"></i> Pain & Inflammation Relief</li>
+                                <li class="flex items-center"><i class="fa-solid fa-chevron-right text-secondary text-[10px] mr-2"></i> Gentle Joint Mobility Exercises</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition-colors pt-2">
+                            <span>Book Arthritis Session</span>
+                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6: Post Surgery -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group flex flex-col border border-slate-100 reveal">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&q=80&auto=format&fit=crop" alt="Post-Surgery Rehabilitation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+                            Post-Op Care
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-slate-900 group-hover:text-secondary transition-colors mb-2">Post-Surgery Rehabilitation</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">Guided recovery post knee replacement, hip replacement, fracture repairs, and orthopedic surgical interventions.</p>
+                            <ul class="text-xs text-slate-600 space-y-1.5 border-t border-slate-200 pt-3">
+                                <li class="flex items-center"><i class="fa-solid fa-chevron-right text-secondary text-[10px] mr-2"></i> Knee & Hip Replacement Rehab</li>
+                                <li class="flex items-center"><i class="fa-solid fa-chevron-right text-secondary text-[10px] mr-2"></i> Muscle Strengthening & Weight Bearing</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-primary hover:text-secondary transition-colors pt-2">
+                            <span>Book Post-Op Rehab</span>
+                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AREAS SERVED SECTION -->
+    <section id="areas" class="py-16 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-12 reveal">
+                <span class="px-3.5 py-1 bg-secondary/20 text-sky-300 font-semibold text-xs rounded-full uppercase tracking-wider border border-secondary/30">Coverage Network</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold">Serving All Major Areas Across Karachi</h2>
+                <p class="text-slate-300 text-sm sm:text-base">Our mobile physiotherapists travel across Karachi to provide immediate, high-quality home visit treatment.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                <div class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 p-4 rounded-xl text-center shadow transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center space-y-2 reveal">
+                    <i class="fa-solid fa-location-dot text-sky-400 text-xl"></i>
+                    <span class="font-semibold text-sm text-slate-100">Gulshan-e-Iqbal</span>
+                </div>
+                <div class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 p-4 rounded-xl text-center shadow transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center space-y-2 reveal">
+                    <i class="fa-solid fa-location-dot text-sky-400 text-xl"></i>
+                    <span class="font-semibold text-sm text-slate-100">DHA (Phase 1 to 8)</span>
+                </div>
+                <div class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 p-4 rounded-xl text-center shadow transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center space-y-2 reveal">
+                    <i class="fa-solid fa-location-dot text-sky-400 text-xl"></i>
+                    <span class="font-semibold text-sm text-slate-100">Clifton</span>
+                </div>
+                <div class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 p-4 rounded-xl text-center shadow transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center space-y-2 reveal">
+                    <i class="fa-solid fa-location-dot text-sky-400 text-xl"></i>
+                    <span class="font-semibold text-sm text-slate-100">Nazimabad</span>
+                </div>
+                <div class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 p-4 rounded-xl text-center shadow transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center space-y-2 reveal">
+                    <i class="fa-solid fa-location-dot text-sky-400 text-xl"></i>
+                    <span class="font-semibold text-sm text-slate-100">PECHS</span>
+                </div>
+                <div class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 p-4 rounded-xl text-center shadow transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center space-y-2 reveal">
+                    <i class="fa-solid fa-location-dot text-sky-400 text-xl"></i>
+                    <span class="font-semibold text-sm text-slate-100">North Nazimabad</span>
+                </div>
+                <div class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 p-4 rounded-xl text-center shadow transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center space-y-2 reveal">
+                    <i class="fa-solid fa-location-dot text-sky-400 text-xl"></i>
+                    <span class="font-semibold text-sm text-slate-100">Bahadurabad</span>
+                </div>
+                <div class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 p-4 rounded-xl text-center shadow transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center space-y-2 reveal">
+                    <i class="fa-solid fa-location-dot text-sky-400 text-xl"></i>
+                    <span class="font-semibold text-sm text-slate-100">Gulistan-e-Johar</span>
+                </div>
+                <div class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 p-4 rounded-xl text-center shadow transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center space-y-2 reveal">
+                    <i class="fa-solid fa-location-dot text-sky-400 text-xl"></i>
+                    <span class="font-semibold text-sm text-slate-100">Shah Faisal Colony</span>
+                </div>
+                <div class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 p-4 rounded-xl text-center shadow transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center space-y-2 reveal">
+                    <i class="fa-solid fa-location-dot text-sky-400 text-xl"></i>
+                    <span class="font-semibold text-sm text-slate-100">North Karachi</span>
+                </div>
+                <div class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 p-4 rounded-xl text-center shadow transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center space-y-2 reveal">
+                    <i class="fa-solid fa-location-dot text-sky-400 text-xl"></i>
+                    <span class="font-semibold text-sm text-slate-100">Federal B Area</span>
+                </div>
+                <div class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 p-4 rounded-xl text-center shadow transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center space-y-2 reveal">
+                    <i class="fa-solid fa-location-dot text-sky-400 text-xl"></i>
+                    <span class="font-semibold text-sm text-slate-100">Saddar</span>
+                </div>
+                <div class="bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 p-4 rounded-xl text-center shadow transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-center space-y-2 reveal">
+                    <i class="fa-solid fa-location-dot text-sky-400 text-xl"></i>
+                    <span class="font-semibold text-sm text-slate-100">Malir & Airport</span>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center bg-slate-800/50 p-4 rounded-xl border border-slate-700 reveal">
+                <p class="text-xs sm:text-sm text-slate-300">
+                    <i class="fa-solid fa-circle-info text-sky-400 mr-2"></i>
+                    Don't see your specific sector listed? Call us at <a href="tel:+923108548370" class="text-sky-300 font-bold underline">+92 3108548370</a> to arrange a doctor dispatch to your location.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMAGE GALLERY WITH LIGHTBOX SECTION -->
+    <section id="gallery" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-12 reveal">
+                <span class="px-3.5 py-1 bg-secondaryLight text-primary font-semibold text-xs rounded-full uppercase tracking-wider">Clinical Care Gallery</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Treatment & Patient Care In Action</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Click any image to view full resolution photos of our home therapy sessions and techniques.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery 1 -->
+                <div class="gallery-item group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all reveal"
+                     data-src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80&auto=format&fit=crop"
+                     data-caption="In-home consultation and comprehensive physical assessment.">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80&auto=format&fit=crop" alt="Home Visit Consultation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-sky-300">Consultation</span>
+                            <p class="font-medium text-sm">Comprehensive Physical Assessment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 2 -->
+                <div class="gallery-item group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all reveal"
+                     data-src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=80&auto=format&fit=crop"
+                     data-caption="Stroke rehabilitation exercise restoring limb movement and coordination.">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80&auto=format&fit=crop" alt="Neuro Rehabilitation Session" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-sky-300">Stroke Care</span>
+                            <p class="font-medium text-sm">Neuro-Rehab & Gait Training</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 3 -->
+                <div class="gallery-item group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all reveal"
+                     data-src="https://images.unsplash.com/photo-1581089781785-603411fa81e5?w=1200&q=80&auto=format&fit=crop"
+                     data-caption="Spine alignment therapy for severe back and sciatica pain.">
+                    <img src="https://images.unsplash.com/photo-1581089781785-603411fa81e5?w=800&q=80&auto=format&fit=crop" alt="Spine and Back Therapy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-sky-300">Spine Alignment</span>
+                            <p class="font-medium text-sm">Lumbar & Sciatica Manual Therapy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 4 -->
+                <div class="gallery-item group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all reveal"
+                     data-src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80&auto=format&fit=crop"
+                     data-caption="Guided therapeutic exercises for joint mobility and athletic recovery.">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80&auto=format&fit=crop" alt="Therapeutic Exercise" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-sky-300">Exercise Rehab</span>
+                            <p class="font-medium text-sm">Targeted Joint Strengthening</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 5 -->
+                <div class="gallery-item group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all reveal"
+                     data-src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=1200&q=80&auto=format&fit=crop"
+                     data-caption="Post-surgery knee replacement rehabilitation at home.">
+                    <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&q=80&auto=format&fit=crop" alt="Post Surgery Therapy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-sky-300">Post-Surgery</span>
+                            <p class="font-medium text-sm">Post-Op Knee Mobilization</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery 6 -->
+                <div class="gallery-item group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all reveal"
+                     data-src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&q=80&auto=format&fit=crop"
+                     data-caption="Gentle physical therapy for geriatric patients and arthritis relief.">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80&auto=format&fit=crop" alt="Geriatric Care" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div class="text-white">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-sky-300">Geriatric Care</span>
+                            <p class="font-medium text-sm">Arthritis & Elderly Wellness</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <button id="closeLightbox" aria-label="Close image viewer" class="absolute top-6 right-6 text-white text-3xl hover:text-sky-400 focus:outline-none transition-colors z-10">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="relative max-w-4xl w-full flex flex-col items-center">
+            <img id="lightboxImage" src="" alt="Enlarged View" class="max-h-[80vh] w-auto max-w-full rounded-xl shadow-2xl object-contain border border-slate-700">
+            <p id="lightboxCaption" class="mt-4 text-white text-center text-sm font-medium bg-slate-900/80 px-6 py-2 rounded-full border border-slate-700"></p>
+        </div>
+    </div>
+
+    <!-- TESTIMONIALS SECTION (AUTO SLIDER) -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-12 reveal">
+                <span class="px-3.5 py-1 bg-secondaryLight text-primary font-semibold text-xs rounded-full uppercase tracking-wider">Patient Reviews</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">What Our Patients Say</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Read authentic feedback from families across Karachi who experienced our home care service.</p>
+            </div>
+
+            <div id="testimonialSlider" class="relative bg-slate-50 border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-xl overflow-hidden reveal">
+                <div class="absolute top-6 right-8 text-slate-200 text-7xl font-serif select-none pointer-events-none">“</div>
+                
+                <div id="testimonialTrack" class="relative min-h-[220px] flex items-center">
+                    <div class="testimonial-slide w-full transition-all duration-700 space-y-6">
+                        <div class="flex items-center space-x-1 text-amber-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-base sm:text-lg italic leading-relaxed">
+                            "Dr. Sameer's home visit service was a blessing for my mother after her stroke. The female physiotherapist was incredibly gentle, punctual, and highly skilled. Within 6 weeks of home visits in DHA Phase 6, my mother was able to walk unassisted again."
+                        </p>
+                        <div class="flex items-center space-x-4 pt-4 border-t border-slate-200">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&q=80&auto=format&fit=crop" alt="Mrs. Farida Khan" class="w-12 h-12 rounded-full object-cover border-2 border-primary">
+                            <div>
+                                <h4 class="font-serif font-bold text-slate-900">Mrs. Farida Khan</h4>
+                                <span class="text-xs text-slate-500">DHA Phase 6, Karachi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide w-full transition-all duration-700 space-y-6 hidden">
+                        <div class="flex items-center space-x-1 text-amber-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-base sm:text-lg italic leading-relaxed">
+                            "I suffered severe lower back pain and sciatica for months. Going to clinic appointments was torture. Dr. Sameer came to my home in Gulshan-e-Iqbal, diagnosed the issue, and used traction & manual therapy. 5 sessions in, I am back to work completely pain-free!"
+                        </p>
+                        <div class="flex items-center space-x-4 pt-4 border-t border-slate-200">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80&auto=format&fit=crop" alt="Tariq Ahmed" class="w-12 h-12 rounded-full object-cover border-2 border-primary">
+                            <div>
+                                <h4 class="font-serif font-bold text-slate-900">Tariq Ahmed</h4>
+                                <span class="text-xs text-slate-500">Gulshan-e-Iqbal, Block 13-D</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide w-full transition-all duration-700 space-y-6 hidden">
+                        <div class="flex items-center space-x-1 text-amber-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-base sm:text-lg italic leading-relaxed">
+                            "Post my total knee replacement surgery, traveling was impossible. Dr. Sameer's post-op rehabilitation team conducted sessions right in my lounge in Clifton. Extremely professional, hygienic, and punctual. Highly recommended!"
+                        </p>
+                        <div class="flex items-center space-x-4 pt-4 border-t border-slate-200">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&q=80&auto=format&fit=crop" alt="Ayesha Siddiqui" class="w-12 h-12 rounded-full object-cover border-2 border-primary">
+                            <div>
+                                <h4 class="font-serif font-bold text-slate-900">Ayesha Siddiqui</h4>
+                                <span class="text-xs text-slate-500">Clifton Block 5, Karachi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center space-x-3 mt-8">
+                    <button class="dot-btn w-8 h-3 rounded-full bg-primary transition-all" data-index="0" aria-label="Slide 1"></button>
+                    <button class="dot-btn w-3 h-3 rounded-full bg-slate-300 hover:bg-slate-400 transition-all" data-index="1" aria-label="Slide 2"></button>
+                    <button class="dot-btn w-3 h-3 rounded-full bg-slate-300 hover:bg-slate-400 transition-all" data-index="2" aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section id="faq" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-12 reveal">
+                <span class="px-3.5 py-1 bg-secondaryLight text-primary font-semibold text-xs rounded-full uppercase tracking-wider">Got Questions?</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Frequently Asked Questions</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Find answers regarding booking home visits, doctor availability, and treatment protocols.</p>
+            </div>
+
+            <div class="space-y-4 reveal">
+                <div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-semibold text-slate-900 flex items-center justify-between focus:outline-none hover:text-primary transition-colors">
+                        <span class="text-base sm:text-lg">How do I book a home physiotherapy visit in Karachi?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300 text-sm"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        You can book a visit directly by calling or sending a WhatsApp message to <a href="tel:+923108548370" class="text-primary font-bold">+92 3108548370</a>, or by completing the online form on this website. Our clinical coordinator will confirm your convenient time slot and assign a specialist within 30-60 minutes.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-semibold text-slate-900 flex items-center justify-between focus:outline-none hover:text-primary transition-colors">
+                        <span class="text-base sm:text-lg">Are female physiotherapists available for female patients?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300 text-sm"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        Yes, absolutely. We have dedicated, highly experienced female physiotherapists available for female patients, ensuring complete privacy, cultural respect, and personal comfort.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-semibold text-slate-900 flex items-center justify-between focus:outline-none hover:text-primary transition-colors">
+                        <span class="text-base sm:text-lg">What medical equipment do you bring for the home session?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300 text-sm"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        Our doctors carry portable electrotherapy units (TENS, Ultrasound Therapy, IFT), muscle stimulators, resistance bands, mobility aids, and traction devices necessary to provide complete clinic-standard therapy in your bedroom or lounge.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-semibold text-slate-900 flex items-center justify-between focus:outline-none hover:text-primary transition-colors">
+                        <span class="text-base sm:text-lg">What are your operating hours and weekend availability?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300 text-sm"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        We operate Monday through Saturday 24/7 for regular and emergency appointments. Sunday visits are available upon special advance request to accommodate urgent rehabilitation needs.
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button class="faq-toggle w-full px-6 py-5 text-left font-semibold text-slate-900 flex items-center justify-between focus:outline-none hover:text-primary transition-colors">
+                        <span class="text-base sm:text-lg">How long does each home physiotherapy session last?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300 text-sm"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
+                        Standard treatment sessions typically last between 45 minutes to 1 hour, depending on the complexity of the medical condition, required exercises, and physical modalities applied.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION & BOOKING FORM -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 space-y-8 reveal-left">
+                    <div>
+                        <span class="px-3.5 py-1 bg-secondaryLight text-primary font-semibold text-xs rounded-full uppercase tracking-wider">Direct Contact</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Get In Touch With Dr. Sameer</h2>
+                        <p class="text-slate-600 text-sm mt-3 leading-relaxed">Reach out directly via phone call, WhatsApp message, or book a home visit using the quick form.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <a href="tel:+923108548370" class="flex items-start space-x-4 p-5 bg-slate-50 rounded-2xl border border-slate-200 hover:border-secondary transition-all hover:shadow-md group">
+                            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center text-xl flex-shrink-0 group-hover:bg-secondary transition-colors">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Call / WhatsApp</span>
+                                <h3 class="font-bold text-slate-900 text-base group-hover:text-primary transition-colors">+92 3108548370</h3>
+                                <p class="text-xs text-slate-500">Mon-Sat 24/7 Service</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:Physiotherapist542@gmail.com" class="flex items-start space-x-4 p-5 bg-slate-50 rounded-2xl border border-slate-200 hover:border-secondary transition-all hover:shadow-md group">
+                            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center text-xl flex-shrink-0 group-hover:bg-secondary transition-colors">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Email Inquiry</span>
+                                <h3 class="font-bold text-slate-900 text-base group-hover:text-primary transition-colors">Physiotherapist542@gmail.com</h3>
+                                <p class="text-xs text-slate-500">Response within 2 hours</p>
+                            </div>
+                        </a>
+
+                        <div class="flex items-start space-x-4 p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Operational Hours</span>
+                                <h3 class="font-bold text-slate-900 text-base">Monday - Saturday: 24/7</h3>
+                                <p class="text-xs text-slate-500">Sunday: Available on special request</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-5 bg-slate-50 rounded-2xl border border-slate-200">
+                            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center text-xl flex-shrink-0">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Service Location</span>
+                                <h3 class="font-bold text-slate-900 text-base">Karachi, Pakistan</h3>
+                                <p class="text-xs text-slate-500">Mobile Home Visits Across All Areas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-xl reveal-right">
+                    <h3 class="font-serif text-2xl font-bold text-slate-900 mb-2">Book Your Home Session</h3>
+                    <p class="text-slate-600 text-sm mb-6">Complete this appointment request form and our patient care team will contact you immediately.</p>
+
+                    <form id="contactForm" class="space-y-5">
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Patient Full Name *</label>
+                                <input type="text" id="contactName" required placeholder="Full Name" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none text-sm transition-all">
+                                <span class="text-xs text-rose-500 hidden" id="errName">Please enter patient name</span>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number (WhatsApp) *</label>
+                                <input type="tel" id="contactPhone" required placeholder="03XX XXXXXXX" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none text-sm transition-all">
+                                <span class="text-xs text-rose-500 hidden" id="errPhone">Please enter a valid phone number</span>
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Karachi Area / Sector *</label>
+                                <select id="contactArea" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none text-sm transition-all text-slate-700">
+                                    <option value="">Select Sector</option>
+                                    <option value="Gulshan-e-Iqbal">Gulshan-e-Iqbal</option>
+                                    <option value="DHA">DHA</option>
+                                    <option value="Clifton">Clifton</option>
+                                    <option value="Nazimabad">Nazimabad</option>
+                                    <option value="PECHS">PECHS</option>
+                                    <option value="North Nazimabad">North Nazimabad</option>
+                                    <option value="Bahadurabad">Bahadurabad</option>
+                                    <option value="Gulistan-e-Johar">Gulistan-e-Johar</option>
+                                    <option value="Shah Faisal Colony">Shah Faisal Colony</option>
+                                    <option value="North Karachi">North Karachi</option>
+                                    <option value="Federal B Area">Federal B Area</option>
+                                    <option value="Saddar">Saddar</option>
+                                    <option value="Malir">Malir</option>
+                                    <option value="Other">Other Karachi Area</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Therapist Preference</label>
+                                <select id="contactGender" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none text-sm transition-all text-slate-700">
+                                    <option value="No Preference">No Preference</option>
+                                    <option value="Female Physiotherapist">Female Physiotherapist</option>
+                                    <option value="Male Physiotherapist">Male Physiotherapist</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Select Service *</label>
+                            <select id="contactService" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none text-sm transition-all text-slate-700">
+                                <option value="">Select Service Needed</option>
+                                <option value="Back Pain Treatment">Back Pain Treatment</option>
+                                <option value="Neck Pain Treatment">Neck Pain Treatment</option>
+                                <option value="Stroke Rehabilitation">Stroke Rehabilitation</option>
+                                <option value="Sports Injury Recovery">Sports Injury Recovery</option>
+                                <option value="Arthritis Management">Arthritis Management</option>
+                                <option value="Knee Pain Treatment">Knee Pain Treatment</option>
+                                <option value="Post-Surgery Rehabilitation">Post-Surgery Rehabilitation</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Additional Symptoms / Medical Notes</label>
+                            <textarea id="contactNotes" rows="3" placeholder="Describe symptoms, patient mobility, or specific requirements..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none text-sm transition-all"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary hover:from-primaryDark hover:to-primary text-white py-4 rounded-xl font-bold text-base shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Submit Booking Request</span>
+                        </button>
+
+                        <div id="formSuccess" class="hidden p-4 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded-xl text-sm flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-2xl text-emerald-600"></i>
+                            <div>
+                                <strong class="block font-bold">Booking Request Sent Successfully!</strong>
+                                <span>Dr. Sameer's team will contact you shortly on WhatsApp/Phone.</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-lg bg-secondary text-white flex items-center justify-center">
+                            <i class="fa-solid fa-user-doctor text-xl"></i>
+                        </div>
+                        <span class="font-serif text-xl font-bold text-white">Dr. Sameer</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Karachi's premier home physiotherapy care provider. Dedicated to delivering certified, compassionate rehabilitation directly to your doorstep.
+                    </p>
+                    <div class="text-xs text-slate-300 space-y-1">
+                        <p><strong class="text-white">Phone:</strong> +92 3108548370</p>
+                        <p><strong class="text-white">Email:</strong> Physiotherapist542@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-serif text-white font-bold text-base">Quick Links</h4>
+                    <ul class="text-xs space-y-2">
+                        <li><a href="#about" class="hover:text-sky-400 transition-colors">About Dr. Sameer</a></li>
+                        <li><a href="#services" class="hover:text-sky-400 transition-colors">Treatments Offered</a></li>
+                        <li><a href="#areas" class="hover:text-sky-400 transition-colors">Karachi Coverage Areas</a></li>
+                        <li><a href="#gallery" class="hover:text-sky-400 transition-colors">Treatment Gallery</a></li>
+                        <li><a href="#testimonials" class="hover:text-sky-400 transition-colors">Patient Feedback</a></li>
+                        <li><a href="#faq" class="hover:text-sky-400 transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-serif text-white font-bold text-base">Treatments</h4>
+                    <ul class="text-xs space-y-2">
+                        <li>Stroke Rehabilitation</li>
+                        <li>Back & Sciatica Pain Relief</li>
+                        <li>Cervical Neck Therapy</li>
+                        <li>Sports Injury Recovery</li>
+                        <li>Arthritis Joint Care</li>
+                        <li>Post-Op Knee/Hip Rehab</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-serif text-white font-bold text-base">Popular Sectors</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Gulshan-e-Iqbal, DHA Phase 1-8, Clifton, PECHS, Nazimabad, North Nazimabad, Johar, Saddar, Malir & surrounding areas.
+                    </p>
+                    <a href="#contact" class="inline-block bg-slate-800 hover:bg-slate-700 text-sky-300 text-xs px-4 py-2 rounded-lg font-semibold border border-slate-700 transition-colors mt-2">
+                        Request Doctor Dispatch
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between">
+                <p>&copy; 2026 Dr. Sameer Physiotherapy Home Service. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0 text-slate-400">Upgraded Preview Created by <span class="text-sky-300 font-semibold">Muhammad Siddique</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/923108548370?text=Hello%20Dr.%20Sameer,%20I%20would%20like%20to%20book%20a%20home%20physiotherapy%20visit." target="_blank" rel="noopener" aria-label="Chat on WhatsApp" class="whatsapp-btn fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl z-50 transition-transform transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- FLOATING BACK-TO-TOP BUTTON -->
+    <button id="backToTop" aria-label="Back to top" class="fixed bottom-6 left-6 bg-primary hover:bg-primaryDark text-white w-12 h-12 rounded-full hidden items-center justify-center text-lg shadow-xl z-50 transition-all duration-300 border border-white/20">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            const navbar = document.getElementById('navbar');
+            const navLinks = document.querySelectorAll('.nav-link');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.remove('bg-slate-900/70', 'text-white');
+                    navbar.classList.add('bg-white', 'text-slate-800', 'shadow-md');
+                    navLinks.forEach(a => {
+                        a.classList.remove('text-white');
+                        a.classList.add('text-slate-700');
+                    });
+                } else {
+                    navbar.classList.add('bg-slate-900/70', 'text-white');
+                    navbar.classList.remove('bg-white', 'text-slate-800', 'shadow-md');
+                    navLinks.forEach(a => {
+                        a.classList.add('text-white');
+                        a.classList.remove('text-slate-700');
+                    });
+                }
+            });
+
+            const backToTopBtn = document.getElementById('backToTop');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.remove('hidden');
+                    backToTopBtn.classList.add('flex');
+                } else {
+                    backToTopBtn.classList.add('hidden');
+                    backToTopBtn.classList.remove('flex');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            reveals.forEach(el => revealObserver.observe(el));
+
+            const counters = document.querySelectorAll('.counter');
+            let counterAnimated = false;
+
+            const animateCounters = () => {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const duration = 2000;
+                    const stepTime = 30;
+                    const steps = duration / stepTime;
+                    const increment = target / steps;
+                    let current = 0;
+
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            counter.innerText = target;
+                            clearInterval(timer);
+                        } else {
+                            counter.innerText = Math.ceil(current);
+                        }
+                    }, stepTime);
+                });
+            };
+
+            const statsSection = document.querySelector('.counter')?.closest('section');
+            if (statsSection) {
+                const statsObserver = new IntersectionObserver((entries) => {
+                    if (entries[0].isIntersecting && !counterAnimated) {
+                        animateCounters();
+                        counterAnimated = true;
+                    }
+                }, { threshold: 0.2 });
+                statsObserver.observe(statsSection);
+            }
+
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightboxModal = document.getElementById('lightboxModal');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxCaption = document.getElementById('lightboxCaption');
+            const closeLightbox = document.getElementById('closeLightbox');
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const src = item.getAttribute('data-src');
+                    const caption = item.getAttribute('data-caption');
+                    lightboxImage.src = src;
+                    lightboxCaption.innerText = caption;
+                    lightboxModal.classList.remove('hidden');
+                    document.body.classList.add('lightbox-open');
+                });
+            });
+
+            const hideLightbox = () => {
+                lightboxModal.classList.add('hidden');
+                document.body.classList.remove('lightbox-open');
+            };
+
+            closeLightbox.addEventListener('click', hideLightbox);
+            lightboxModal.addEventListener('click', (e) => {
+                if (e.target === lightboxModal) hideLightbox();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
+                    hideLightbox();
+                }
+            });
+
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const dotBtns = document.querySelectorAll('.dot-btn');
+            let currentSlide = 0;
+            let slideInterval;
+
+            const showSlide = (index) => {
+                slides.forEach((s, i) => {
+                    if (i === index) {
+                        s.classList.remove('hidden');
+                    } else {
+                        s.classList.add('hidden');
+                    }
+                });
+                dotBtns.forEach((d, i) => {
+                    if (i === index) {
+                        d.classList.add('bg-primary', 'w-8');
+                        d.classList.remove('bg-slate-300', 'w-3');
+                    } else {
+                        d.classList.remove('bg-primary', 'w-8');
+                        d.classList.add('bg-slate-300', 'w-3');
+                    }
+                });
+                currentSlide = index;
+            };
+
+            const nextSlide = () => {
+                let next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            };
+
+            const startSlider = () => {
+                slideInterval = setInterval(nextSlide, 6000);
+            };
+
+            dotBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    clearInterval(slideInterval);
+                    const idx = parseInt(e.target.getAttribute('data-index'));
+                    showSlide(idx);
+                    startSlider();
+                });
+            });
+
+            showSlide(0);
+            startSlider();
+
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i');
+                    const isOpen = !content.classList.contains('hidden');
+
+                    document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                    document.querySelectorAll('.faq-toggle i').forEach(i => i.classList.remove('rotate-180'));
+
+                    if (!isOpen) {
+                        content.classList.remove('hidden');
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+
+            const contactForm = document.getElementById('contactForm');
+            const formSuccess = document.getElementById('formSuccess');
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let valid = true;
+
+                const name = document.getElementById('contactName');
+                const phone = document.getElementById('contactPhone');
+                const errName = document.getElementById('errName');
+                const errPhone = document.getElementById('errPhone');
+
+                if (!name.value.trim()) {
+                    errName.classList.remove('hidden');
+                    valid = false;
+                } else {
+                    errName.classList.add('hidden');
+                }
+
+                if (!phone.value.trim() || phone.value.trim().length < 8) {
+                    errPhone.classList.remove('hidden');
+                    valid = false;
+                } else {
+                    errPhone.classList.add('hidden');
+                }
+
+                if (valid) {
+                    formSuccess.classList.remove('hidden');
+                    contactForm.reset();
+                    setTimeout(() => {
+                        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 100);
+                }
+            });
+
+            const heroForm = document.getElementById('heroForm');
+            heroForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you! Your request for a Dr. Sameer Home Visit has been received. Our team will contact you shortly.');
+                heroForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>
